@@ -1,0 +1,128 @@
+{
+  "config": {
+    "seed": 40,
+    "dimensions": [
+      16,
+      16384
+    ],
+    "blocks": 9,
+    "warmup_steps": 30,
+    "timed_steps": 100,
+    "lr": 0.01,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "weight_decay": 0.0,
+    "step_cap": 0.1,
+    "safeguard_scale": 200.0,
+    "gradient": "precomputed standard normal; identical across methods"
+  },
+  "runtime_seconds": 3.65736250000009,
+  "environment": {
+    "python": "3.11.4",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel",
+    "device": "cpu",
+    "threads": 1,
+    "cuda_available": false,
+    "cuda_version": null,
+    "gpu": null,
+    "packages": {
+      "torch": "2.1.2+cpu",
+      "torchvision": "0.16.2+cpu",
+      "numpy": "1.26.4",
+      "scipy": "1.17.1",
+      "pandas": "2.3.3",
+      "matplotlib": "3.8.4",
+      "pytest": "8.4.1",
+      "PyYAML": "6.0.1"
+    },
+    "git_commit": "5b756290c741dec9b1231d2d2425df0b13375248",
+    "git_dirty": true,
+    "source_sha256": "ae75eebf6dfc3ac624228deb84fa89ebbd9c65093fa4ded2c197f3d6ffccb80e"
+  },
+  "results": [
+    {
+      "dimension": 16,
+      "method": "adamw",
+      "median_us_per_step": 50.339,
+      "median_paired_time_ratio": 1.0,
+      "ratio_iqr": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "dimension": 16,
+      "method": "adamw_step_clip",
+      "median_us_per_step": 100.34600000000002,
+      "median_paired_time_ratio": 2.004284468378761,
+      "ratio_iqr": [
+        1.6216651105504678,
+        2.696727692085916
+      ]
+    },
+    {
+      "dimension": 16,
+      "method": "adamw_momentum_reset",
+      "median_us_per_step": 176.48900000000003,
+      "median_paired_time_ratio": 4.279247387435445,
+      "ratio_iqr": [
+        3.183080583568302,
+        4.763597067191945
+      ]
+    },
+    {
+      "dimension": 16,
+      "method": "adamw_lr_safeguard",
+      "median_us_per_step": 89.405,
+      "median_paired_time_ratio": 2.02266776808591,
+      "ratio_iqr": [
+        1.3595699277741298,
+        2.0887127000144154
+      ]
+    },
+    {
+      "dimension": 16384,
+      "method": "adamw",
+      "median_us_per_step": 282.92900000000003,
+      "median_paired_time_ratio": 1.0,
+      "ratio_iqr": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "dimension": 16384,
+      "method": "adamw_step_clip",
+      "median_us_per_step": 391.614,
+      "median_paired_time_ratio": 1.4233857359545767,
+      "ratio_iqr": [
+        1.2658434883796101,
+        1.46868700595683
+      ]
+    },
+    {
+      "dimension": 16384,
+      "method": "adamw_momentum_reset",
+      "median_us_per_step": 558.702,
+      "median_paired_time_ratio": 1.9348953987309143,
+      "ratio_iqr": [
+        1.7521438773594031,
+        2.1090575524903175
+      ]
+    },
+    {
+      "dimension": 16384,
+      "method": "adamw_lr_safeguard",
+      "median_us_per_step": 313.48100000000005,
+      "median_paired_time_ratio": 1.0611481394039557,
+      "ratio_iqr": [
+        0.9691890538487364,
+        1.139192770265679
+      ]
+    }
+  ],
+  "timing_scope": "Warmed CPU optimizer plus corrections and gradient assignment; no autograd, HVP, monitor, CSV, init or tracing in timed blocks"
+}

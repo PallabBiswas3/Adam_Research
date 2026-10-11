@@ -39,15 +39,18 @@ def process_peak_rss_bytes():
 
 def environment_metadata(device):
     root = Path(__file__).resolve().parents[3]
+    # Trust only the user's explicitly selected workspace; no global Git mutation.
+    workspace = root.parent
+    git = ["git", "-c", f"safe.directory={workspace.as_posix()}"]
     try:
-        commit = subprocess.run(["git", "rev-parse", "HEAD"], cwd=root, capture_output=True,
+        commit = subprocess.run(git+["rev-parse", "HEAD"], cwd=root, capture_output=True,
                                 text=True, timeout=5, check=True).stdout.strip()
-        dirty = bool(subprocess.run(["git", "status", "--porcelain"], cwd=root,
+        dirty = bool(subprocess.run(git+["status", "--porcelain"], cwd=root,
                                    capture_output=True, text=True, timeout=5).stdout.strip())
     except (OSError, subprocess.SubprocessError):
         commit, dirty = None, None
     digest = hashlib.sha256()
-    for source in sorted((root/"src").rglob("*.py")):
+    for source in sorted(list((root/"src").rglob("*.py"))+list((root/"scripts").glob("*.py"))):
         digest.update(str(source.relative_to(root)).encode())
         digest.update(source.read_bytes())
     versions = {}

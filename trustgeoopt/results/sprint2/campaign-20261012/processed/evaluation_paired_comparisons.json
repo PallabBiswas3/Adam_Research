@@ -1,0 +1,362 @@
+[
+  {
+    "regime": "changing",
+    "method": "adabelief",
+    "paired_seeds": 5,
+    "mean_log10_tail_ratio": 5.940810521262748,
+    "ci95": [
+      3.126635286678587,
+      8.229913541425082
+    ],
+    "individual_log10_ratios": [
+      6.458722436636388,
+      8.300523267772153,
+      0.3534894669901214,
+      9.044899367472363,
+      5.546418067442714
+    ],
+    "note": "Five paired seeds; fixed development selection; positive favors AdamW; floor 1e-12"
+  },
+  {
+    "regime": "changing",
+    "method": "amsgrad",
+    "paired_seeds": 5,
+    "mean_log10_tail_ratio": 0.11556665136936259,
+    "ci95": [
+      -0.06315257187184123,
+      0.3934710584390331
+    ],
+    "individual_log10_ratios": [
+      1.12837143819054e-05,
+      0.655784935997149,
+      -0.1188999482472441,
+      -1.1365747203523857e-05,
+      0.040948351129729714
+    ],
+    "note": "Five paired seeds; fixed development selection; positive favors AdamW; floor 1e-12"
+  },
+  {
+    "regime": "changing",
+    "method": "momentum",
+    "paired_seeds": 5,
+    "mean_log10_tail_ratio": -0.2110293637665873,
+    "ci95": [
+      -0.5844435021204755,
+      -0.00012218188586277204
+    ],
+    "individual_log10_ratios": [
+      -1.0361216304520195e-05,
+      -0.9338137460956856,
+      -0.12076591109901638,
+      -3.338657477493756e-05,
+      -0.0005234138471549446
+    ],
+    "note": "Five paired seeds; fixed development selection; positive favors AdamW; floor 1e-12"
+  },
+  {
+    "regime": "changing",
+    "method": "shampoo",
+    "paired_seeds": 5,
+    "mean_log10_tail_ratio": 8.203009157800249,
+    "ci95": [
+      7.73022208971754,
+      8.675796225882957
+    ],
+    "individual_log10_ratios": [
+      8.168497867923199,
+      7.645608697946769,
+      7.5956975923854815,
+      8.57972667000426,
+      9.025514960741534
+    ],
+    "note": "Five paired seeds; fixed development selection; positive favors AdamW; floor 1e-12"
+  },
+  {
+    "regime": "diagonal",
+    "method": "adabelief",
+    "paired_seeds": 5,
+    "mean_log10_tail_ratio": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "individual_log10_ratios": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "note": "Five paired seeds; fixed development selection; positive favors AdamW; floor 1e-12"
+  },
+  {
+    "regime": "diagonal",
+    "method": "amsgrad",
+    "paired_seeds": 5,
+    "mean_log10_tail_ratio": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "individual_log10_ratios": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "note": "Five paired seeds; fixed development selection; positive favors AdamW; floor 1e-12"
+  },
+  {
+    "regime": "diagonal",
+    "method": "momentum",
+    "paired_seeds": 5,
+    "mean_log10_tail_ratio": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "individual_log10_ratios": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "note": "Five paired seeds; fixed development selection; positive favors AdamW; floor 1e-12"
+  },
+  {
+    "regime": "diagonal",
+    "method": "shampoo",
+    "paired_seeds": 5,
+    "mean_log10_tail_ratio": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "individual_log10_ratios": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "note": "Five paired seeds; fixed development selection; positive favors AdamW; floor 1e-12"
+  },
+  {
+    "regime": "isotropic",
+    "method": "adabelief",
+    "paired_seeds": 5,
+    "mean_log10_tail_ratio": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "individual_log10_ratios": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "note": "Five paired seeds; fixed development selection; positive favors AdamW; floor 1e-12"
+  },
+  {
+    "regime": "isotropic",
+    "method": "amsgrad",
+    "paired_seeds": 5,
+    "mean_log10_tail_ratio": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "individual_log10_ratios": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "note": "Five paired seeds; fixed development selection; positive favors AdamW; floor 1e-12"
+  },
+  {
+    "regime": "isotropic",
+    "method": "momentum",
+    "paired_seeds": 5,
+    "mean_log10_tail_ratio": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "individual_log10_ratios": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "note": "Five paired seeds; fixed development selection; positive favors AdamW; floor 1e-12"
+  },
+  {
+    "regime": "isotropic",
+    "method": "shampoo",
+    "paired_seeds": 5,
+    "mean_log10_tail_ratio": 0.00016091556885777265,
+    "ci95": [
+      8.606044042465527e-13,
+      0.0004827364611932123
+    ],
+    "individual_log10_ratios": [
+      4.3027327229927975e-12,
+      2.560699602040719e-08,
+      0.0008045522329900137,
+      0.0,
+      9.64327466553287e-17
+    ],
+    "note": "Five paired seeds; fixed development selection; positive favors AdamW; floor 1e-12"
+  },
+  {
+    "regime": "noisy",
+    "method": "adabelief",
+    "paired_seeds": 5,
+    "mean_log10_tail_ratio": -0.026482292150639512,
+    "ci95": [
+      -0.2575022998232933,
+      0.15337428157407235
+    ],
+    "individual_log10_ratios": [
+      0.23415919287097833,
+      -0.12796851205335488,
+      0.08428046807845707,
+      -0.45180298147820086,
+      0.12892037182892277
+    ],
+    "note": "Five paired seeds; fixed development selection; positive favors AdamW; floor 1e-12"
+  },
+  {
+    "regime": "noisy",
+    "method": "amsgrad",
+    "paired_seeds": 5,
+    "mean_log10_tail_ratio": 0.06667169064136506,
+    "ci95": [
+      0.013450065601913586,
+      0.1037483359873496
+    ],
+    "individual_log10_ratios": [
+      0.10233276170628854,
+      0.05819213143098365,
+      0.09303356539961566,
+      -0.0353708990456766,
+      0.11517089371561408
+    ],
+    "note": "Five paired seeds; fixed development selection; positive favors AdamW; floor 1e-12"
+  },
+  {
+    "regime": "noisy",
+    "method": "momentum",
+    "paired_seeds": 5,
+    "mean_log10_tail_ratio": -0.21894609824999756,
+    "ci95": [
+      -0.38551224486418667,
+      -0.10599286983104539
+    ],
+    "individual_log10_ratios": [
+      -0.13405028827922796,
+      -0.06390674215877153,
+      -0.17028007126189856,
+      -0.19298461630428188,
+      -0.5335087732458078
+    ],
+    "note": "Five paired seeds; fixed development selection; positive favors AdamW; floor 1e-12"
+  },
+  {
+    "regime": "noisy",
+    "method": "shampoo",
+    "paired_seeds": 5,
+    "mean_log10_tail_ratio": -0.3683701796464696,
+    "ci95": [
+      -0.46793088855722365,
+      -0.24904096976508056
+    ],
+    "individual_log10_ratios": [
+      -0.34684703319333793,
+      -0.42889230399948514,
+      -0.5213050351977652,
+      -0.15648850387752658,
+      -0.38831802196423315
+    ],
+    "note": "Five paired seeds; fixed development selection; positive favors AdamW; floor 1e-12"
+  },
+  {
+    "regime": "rotated",
+    "method": "adabelief",
+    "paired_seeds": 5,
+    "mean_log10_tail_ratio": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "individual_log10_ratios": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "note": "Five paired seeds; fixed development selection; positive favors AdamW; floor 1e-12"
+  },
+  {
+    "regime": "rotated",
+    "method": "amsgrad",
+    "paired_seeds": 5,
+    "mean_log10_tail_ratio": 1.9381053422766342e-13,
+    "ci95": [
+      0.0,
+      5.814316026829903e-13
+    ],
+    "individual_log10_ratios": [
+      9.690526711383171e-13,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "note": "Five paired seeds; fixed development selection; positive favors AdamW; floor 1e-12"
+  },
+  {
+    "regime": "rotated",
+    "method": "momentum",
+    "paired_seeds": 5,
+    "mean_log10_tail_ratio": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "individual_log10_ratios": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "note": "Five paired seeds; fixed development selection; positive favors AdamW; floor 1e-12"
+  },
+  {
+    "regime": "rotated",
+    "method": "shampoo",
+    "paired_seeds": 5,
+    "mean_log10_tail_ratio": 8.773235896248011e-07,
+    "ci95": [
+      1.93478851604972e-07,
+      1.6738271280356064e-06
+    ],
+    "individual_log10_ratios": [
+      1.0102277169968206e-09,
+      9.697790395093253e-07,
+      2.4661154576505696e-06,
+      8.335403530374442e-09,
+      9.413778197167398e-07
+    ],
+    "note": "Five paired seeds; fixed development selection; positive favors AdamW; floor 1e-12"
+  }
+]

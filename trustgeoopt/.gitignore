@@ -4,6 +4,12 @@ __pycache__/
 .venv/
 data/
 results/raw/*/*.pt
+# Generated experiment data stays on disk; commit compact summaries and provenance.
+/results/**/raw/
+/results/**/source_snapshot*.zip
+/results/**/processed/*predictions*.csv.gz
+/results/**/*.pt
+/results/**/*.pth
 *.aux
 *.log
 *.out

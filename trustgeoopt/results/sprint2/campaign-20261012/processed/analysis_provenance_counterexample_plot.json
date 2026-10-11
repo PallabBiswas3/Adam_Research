@@ -1,0 +1,5 @@
+{
+  "input_sha256": "79228c77e1f696064a1fc6781418a9946760572b204c17bebd02a8c1c587b77c",
+  "script_sha256": "b2650a21d46aa612ef722d707c78c3c80c7efd127e65eb417926e119dbba4062",
+  "command": "python scripts/plot_sprint2_counterexample.py --results results/sprint2/campaign-20261012"
+}

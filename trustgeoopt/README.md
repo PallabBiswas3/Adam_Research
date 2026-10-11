@@ -91,3 +91,49 @@ structured baseline remains required for serious CNN/ResNet comparisons.
 Primary campaign grids are guarded by a maximum run count and are not launched here.
 The initial pilots use untuned rates and include measurement overhead; they establish
 reproducibility, not optimizer rankings. See the report for negative findings and next steps.
+
+## Research Sprint 2
+
+The evidence-validation sprint preserves the original pilots. See
+[`research/sprint2_report.md`](research/sprint2_report.md),
+[`research/sprint2_baseline_validation.md`](research/sprint2_baseline_validation.md),
+and [`research/sprint2_reliability_analysis.md`](research/sprint2_reliability_analysis.md).
+The new CPU campaign has independent rate tuning, fresh evaluation seeds, unseen
+reliability configurations, whole-seed bootstrap intervals and an exact published
+online Adam counterexample. The full TrustGeoOpt optimizer remains gated.
+
+Reproduce in a **new** destination (the runner rejects existing campaigns/stages):
+
+```powershell
+python scripts/run_sprint2.py --stage init --output results/sprint2/my-new-campaign
+python scripts/run_sprint2.py --stage baseline --output results/sprint2/my-new-campaign
+python scripts/run_sprint2.py --stage reliability --output results/sprint2/my-new-campaign
+python scripts/run_sprint2.py --stage counterexample --output results/sprint2/my-new-campaign
+python scripts/analyze_sprint2.py --results results/sprint2/my-new-campaign --stage baseline
+python scripts/analyze_sprint2.py --results results/sprint2/my-new-campaign --stage reliability
+```
+
+After reading those findings and the fixed correction protocol:
+
+```powershell
+python scripts/run_sprint2.py --stage corrections --output results/sprint2/my-new-campaign
+python scripts/analyze_sprint2.py --results results/sprint2/my-new-campaign --stage corrections
+python scripts/benchmark_sprint2_corrections.py --results results/sprint2/my-new-campaign
+python scripts/plot_sprint2_counterexample.py --results results/sprint2/my-new-campaign
+python scripts/audit_sprint2.py --results results/sprint2/my-new-campaign
+python -m pytest -q
+```
+
+`adamw_step_clip`, `adamw_momentum_reset` and `adamw_lr_safeguard` are fixed
+first-order research adaptations, not TrustGeoOpt or novel mechanisms. The
+campaign cap is 900 seconds of campaign execution and 900 optimizer attempts;
+the small deterministic scalar counterexample and analysis are separately reported.
+New campaigns snapshot current code; exact historical reproduction uses the
+per-stage source ZIPs and the saved configurations. Corrections were selected
+after inspecting A/B, so their evaluation is explicitly exploratory.
+
+Git keeps compact experiment summaries, plots, configurations and provenance
+manifests. Generated per-run `results/**/raw/` directories, source snapshot ZIPs,
+compressed per-step prediction dumps and model checkpoints are ignored and remain
+on disk. Archive these separately when sharing the complete experimental evidence;
+a normal Git commit does not include them. Previously tracked results remain tracked.

@@ -1,0 +1,6 @@
+{
+  "source_snapshot": "source_snapshot_correction_timing.zip",
+  "snapshot_sha256": "468e858303c0c615945c365f5c8f07b3ce9946d1a6fc83cf065541fd1decb3a8",
+  "source_sha256": "ae75eebf6dfc3ac624228deb84fa89ebbd9c65093fa4ded2c197f3d6ffccb80e",
+  "note": "Source tree preserved after timing and verified against its original source hash; the later audit tool is excluded if necessary"
+}

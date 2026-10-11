@@ -45,6 +45,20 @@ Paired seeds, fixed validation selection, equal tuning budgets, identical schedu
 and full compute accounting are required. Tests never guide hyperparameter selection.
 \section{Results}
 \todo{Import results from saved runs after analysis; no performance claim is made here.}
+\subsection{Sprint 2 evidence validation}
+Independent six-rate CPU tuning with two development seeds, followed by five
+fresh evaluation seeds and 1,200 steps per trial, removes the initial stationary
+quadratic AdamW deficit. A stochastic late-loss gap remains. The projected online
+counterexample of Reddi et al.\ \cite{amsgrad2018} is reproduced separately under
+its specific assumptions. These findings are synthetic evidence, not neural
+benchmark results or a new convergence theorem.
+Whole-seed resampling and held-out configurations show that alignment has only
+a small, regime-dependent conditional advantage at short leads; history does
+not show robust unseen incremental value. Exact quadratic geometry explains
+same-step harmful labels with oracle information. Fixed step clipping, momentum
+reset and conservative rate safeguards do not robustly close the observed noisy
+gap. Full geometric optimizer implementation remains deferred. Detailed source,
+configuration and statistical provenance are in the research Sprint 2 reports.
 \section{Ablations}
 \todo{Rank, refresh, gate, random-direction, damping, diagnostics and safeguards.}
 \section{Limitations}

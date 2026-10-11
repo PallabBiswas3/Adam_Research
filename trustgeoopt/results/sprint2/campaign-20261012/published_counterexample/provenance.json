@@ -1,0 +1,43 @@
+{
+  "config": {
+    "source": "https://arxiv.org/pdf/1904.09237",
+    "location": "Appendix A, Theorem 1; Algorithm 1; footnote 1",
+    "C": 3.0,
+    "alpha": 0.5,
+    "steps": 30000,
+    "x1": 1.0,
+    "beta1": 0.0,
+    "beta2": 0.1,
+    "epsilon": 0.0,
+    "bias_correction": false,
+    "domain": [
+      -1.0,
+      1.0
+    ],
+    "schedule": "alpha/sqrt(t)"
+  },
+  "environment": {
+    "python": "3.11.4",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel",
+    "device": "cpu",
+    "threads": 1,
+    "cuda_available": false,
+    "cuda_version": null,
+    "gpu": null,
+    "packages": {
+      "torch": "2.1.2+cpu",
+      "torchvision": "0.16.2+cpu",
+      "numpy": "1.26.4",
+      "scipy": "1.17.1",
+      "pandas": "2.3.3",
+      "matplotlib": "3.8.4",
+      "pytest": "8.4.1",
+      "PyYAML": "6.0.1"
+    },
+    "git_commit": "5b756290c741dec9b1231d2d2425df0b13375248",
+    "git_dirty": true,
+    "source_sha256": "df8e8c1b400a518b82f9df8c83ef89c421e370b1fc95d416b8fa2ffd1f01a568"
+  },
+  "snapshot_sha256": "9c792042d4782dc1ea8746d86472b47e56472b8c3536d7d4af68ae6c465b50ad"
+}

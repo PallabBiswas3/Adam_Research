@@ -81,12 +81,12 @@
   url: https://arxiv.org/abs/1904.09237
   central_method: Long-term second-moment memory; AMSGrad
   mathematical_contribution: Adam convex counterexample and corrected variants
-  theoretical_assumptions: Online convex setting; theorem constants/full construction pending
+  theoretical_assumptions: Appendix A audited; projected linear losses on [-1,1], C>2, beta1=0, beta2=1/(1+C^2), alpha_t=alpha/sqrt(t), alpha<sqrt(1-beta2), x1=1; no bias correction or epsilon in this construction
   overhead: O(p), extra maximum buffer
   limitations: Long memory can impede adaptation; no off-diagonal correction
   relevance: Must compare known remedy before a new gate
   overlap: Already established reliability remedy
-  extraction_level: Primary metadata and abstract; full failure reproduction pending
+  extraction_level: Primary metadata plus Algorithm 1, footnote 1 and Appendix A full-text extraction in Sprint 2
 - id: adabelief2020
   title: 'AdaBelief Optimizer: Adapting Stepsizes by the Belief in Observed Gradients'
   authors: Juntang Zhuang; Tommy Tang; Yifan Ding; Sekhar Tatikonda; Nicha Dvornek; Xenophon Papademetris; James S. Duncan
@@ -472,4 +472,47 @@
   limitations: Does not certify nonstationary gradient-Hessian tracking
   relevance: Recent streaming estimator option
   overlap: Established/extended streaming PCA; no optimizer novelty inferred
+  extraction_level: Primary metadata and abstract
+- id: restart2012
+  title: Adaptive Restart for Accelerated Gradient Schemes
+  authors: Brendan O'Donoghue; Emmanuel Candes
+  year: 2012
+  venue: arXiv first-posting year; journal publication year not verified in this sprint
+  url: https://arxiv.org/abs/1204.3982
+  full_text: https://arxiv.org/pdf/1204.3982
+  central_method: Function-value and gradient-based momentum restarts
+  mathematical_contribution: Oscillatory accelerated dynamics motivate adaptive restart
+  theoretical_assumptions: Accelerated convex schemes; does not certify an AdamW reset adaptation
+  overhead: Gradient inner product; first-order state reset
+  limitations: Sprint 2 AdamW adaptation is not the original accelerated algorithm
+  relevance: Cheap directional-alignment correction prior art
+  overlap: Restart mechanism established; no novelty claimed
+  extraction_level: Primary metadata and selected full-text observable/restart conditions
+- id: clipping2019
+  title: 'Why gradient clipping accelerates training: A theoretical justification for adaptivity'
+  authors: Jingzhao Zhang; Tianxing He; Suvrit Sra; Ali Jadbabaie
+  year: 2019
+  venue: arXiv first-posting year; proceedings metadata not audited
+  url: https://arxiv.org/abs/1905.11881
+  central_method: Gradient clipping and normalized gradient
+  mathematical_contribution: Relaxed smoothness analysis for adaptive magnitude control
+  theoretical_assumptions: Full theorem constants not extracted
+  overhead: Norm reduction plus gradient scaling
+  limitations: Gradient clipping is not identical to clipping an AdamW displacement
+  relevance: Existing magnitude safeguards; gradient and step clipping must be distinguished
+  overlap: Magnitude control established; no novelty claimed
+  extraction_level: Primary metadata and abstract
+- id: clipping2023
+  title: 'Revisiting Gradient Clipping: Stochastic bias and tight convergence guarantees'
+  authors: Anastasia Koloskova; Hadrien Hendrikx; Sebastian U. Stich
+  year: 2023
+  venue: arXiv first-posting year; final venue not audited
+  url: https://arxiv.org/abs/2305.01588
+  central_method: Deterministic and stochastic clipped SGD
+  mathematical_contribution: Clipping bias and threshold-dependent guarantees
+  theoretical_assumptions: Exact theorem assumptions not extracted
+  overhead: Norm reduction and scaling
+  limitations: Does not establish convergence of the Sprint 2 AdamW step clip
+  relevance: Noise-floor and clipping-bias alternative explanation
+  overlap: Existing cheap correction limitations
   extraction_level: Primary metadata and abstract

@@ -30,5 +30,18 @@
   "deduplication": "canonical URL/arXiv ID; repeated opens merged; query-level duplicate counts not available",
   "excluded_retrieval_mismatches": ["1904.01653: option pricing", "1902.06720: wider-network dynamics outside extraction focus"],
   "access_limits": ["Direct OpenReview SOAP/AMSGrad pages and PDFs challenged", "Google Scholar not directly queried", "Some publisher full texts paywalled", "arXiv AdaBelief PDF returned error; HTML worked"],
-  "source_manifest": "papers.yaml contains canonical URLs, versions, extraction levels and verified/uncertain venues"
+  "source_manifest": "papers.yaml contains canonical URLs, versions, extraction levels and verified/uncertain venues",
+  "sprint2_review": {
+    "date": "2026-10-12",
+    "type": "targeted scoping update; not exhaustive",
+    "questions": ["Precise published Adam failure assumptions", "Existing first-order restart and magnitude remedies", "Overlap with structured adaptive coordinates and refresh"],
+    "queries": ["site:proceedings.mlr.press adaptive restart accelerated gradient schemes ODonoghue Candes 2015", "Adaptive Restart for Accelerated Gradient Schemes arxiv", "site:arxiv.org gradient clipping normalized gradient descent 1905.11881 authors"],
+    "primary_urls": ["https://arxiv.org/pdf/1904.09237", "https://arxiv.org/html/2010.07468v5", "https://proceedings.mlr.press/v80/gupta18a.html", "https://arxiv.org/pdf/1204.3982", "https://arxiv.org/abs/1905.11881", "https://arxiv.org/abs/2305.01588", "https://arxiv.org/html/2409.11321v2", "https://arxiv.org/html/2506.03595v2", "https://arxiv.org/abs/2606.02365"],
+    "excluded_mismatch": "1910.03794: locally stationary Gaussian random fields, not optimization",
+    "total_primary_records_after_update": 35,
+    "new_records": ["restart2012", "clipping2019", "clipping2023"],
+    "upgraded_extraction": "amsgrad2018: Algorithm 1, footnote 1 and Appendix A",
+    "database_total_hits": null,
+    "notes": "sprint2_literature_audit.md records extraction limits; new record years are first arXiv years, not verified publication years"
+  }
 }

@@ -2,12 +2,16 @@ import torch
 
 from .adabelief import AdaBelief
 from .preconditioners import ReferenceShampoo
+from .cheap_corrections import CheapAdamW
 
 
 def make_optimizer(params, config):
     """Reject unknown knobs rather than changing an experiment silently."""
     options = dict(config)
     name = options.pop("name").lower()
+    if name in {"adamw_step_clip", "adamw_momentum_reset", "adamw_lr_safeguard"}:
+        options.setdefault("weight_decay", 0.0)
+        return CheapAdamW(params, correction=name.removeprefix("adamw_"), **options)
     factories = dict(sgd=torch.optim.SGD, momentum=torch.optim.SGD, adam=torch.optim.Adam,
                      adamw=torch.optim.AdamW, adamw_monitor=torch.optim.AdamW,
                      rmsprop=torch.optim.RMSprop, amsgrad=torch.optim.Adam,

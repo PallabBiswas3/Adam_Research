@@ -1,0 +1,17 @@
+{
+  "diagonal/adamw_step_clip": 0.03,
+  "diagonal/adamw_momentum_reset": 0.03,
+  "diagonal/adamw_lr_safeguard": 0.03,
+  "rotated/adamw_step_clip": 0.1,
+  "rotated/adamw_momentum_reset": 0.1,
+  "rotated/adamw_lr_safeguard": 0.3,
+  "isotropic/adamw_step_clip": 0.03,
+  "isotropic/adamw_momentum_reset": 0.03,
+  "isotropic/adamw_lr_safeguard": 0.03,
+  "noisy/adamw_step_clip": 0.01,
+  "noisy/adamw_momentum_reset": 0.01,
+  "noisy/adamw_lr_safeguard": 0.03,
+  "changing/adamw_step_clip": 0.03,
+  "changing/adamw_momentum_reset": 0.1,
+  "changing/adamw_lr_safeguard": 0.1
+}
