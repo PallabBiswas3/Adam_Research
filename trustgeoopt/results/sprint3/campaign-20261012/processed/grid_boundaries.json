@@ -1,0 +1,76 @@
+[
+  {
+    "stage": "stochastic",
+    "key": "falling/momentum",
+    "candidate": {
+      "lr": 0.0003,
+      "momentum": 0.9,
+      "name": "momentum",
+      "schedule": "constant"
+    },
+    "boundary": "upper"
+  },
+  {
+    "stage": "geometry",
+    "key": "clean/rotated/amsgrad",
+    "candidate": {
+      "lr": 0.3,
+      "name": "amsgrad"
+    },
+    "boundary": "upper"
+  },
+  {
+    "stage": "neural",
+    "key": "small/task700/soap",
+    "candidate": {
+      "lr": 0.03,
+      "name": "soap"
+    },
+    "boundary": "upper"
+  },
+  {
+    "stage": "neural",
+    "key": "deep/task700/adamw",
+    "candidate": {
+      "lr": 0.001,
+      "name": "adamw"
+    },
+    "boundary": "lower"
+  },
+  {
+    "stage": "neural",
+    "key": "deep/task700/soap",
+    "candidate": {
+      "lr": 0.001,
+      "name": "soap"
+    },
+    "boundary": "lower"
+  },
+  {
+    "stage": "neural",
+    "key": "fashion/task700/adamw",
+    "candidate": {
+      "lr": 0.001,
+      "name": "adamw"
+    },
+    "boundary": "lower"
+  },
+  {
+    "stage": "neural",
+    "key": "fashion/task700/momentum",
+    "candidate": {
+      "lr": 0.01,
+      "name": "momentum"
+    },
+    "boundary": "lower"
+  },
+  {
+    "stage": "neural",
+    "key": "fashion/task700/soap",
+    "candidate": {
+      "lr": 0.001,
+      "name": "soap"
+    },
+    "boundary": "lower"
+  }
+]

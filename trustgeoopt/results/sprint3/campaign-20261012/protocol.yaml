@@ -1,0 +1,169 @@
+bootstrap_replicates: 2000
+bootstrap_seed: 20261013
+development_seeds:
+- 30
+- 31
+device: cpu
+dimension: 16
+evaluation_seeds:
+- 40
+- 41
+- 42
+- 43
+- 44
+geometry:
+  condition: 1000
+  held_out_noise:
+  - aligned
+  - antialigned
+  history_window: 64
+  rank: 4
+  rates:
+    adamw:
+    - 0.0003
+    - 0.003
+    - 0.01
+    - 0.03
+    - 0.1
+    - 0.3
+    amsgrad:
+    - 0.0003
+    - 0.003
+    - 0.01
+    - 0.03
+    - 0.1
+    - 0.3
+    momentum:
+    - 1.0e-06
+    - 1.0e-05
+    - 0.0001
+    - 0.001
+    - 0.003
+    - 0.01
+    soap:
+    - 0.0003
+    - 0.003
+    - 0.01
+    - 0.03
+    - 0.1
+    - 0.3
+  regimes:
+    clean:
+      noise: isotropic
+      noise_std: 0.0
+    isotropic_noise:
+      noise: isotropic
+      noise_std: 1.0
+    misaligned_noise:
+      noise: misaligned
+      noise_std: 1.0
+max_experiment_seconds: 1800
+max_trials: 1200
+name: sprint3-mechanism-validation
+neural:
+  batch_size: 64
+  data_seed: 700
+  dataset:
+    classes: 2
+    condition: 100
+    dimension: 20
+    test_size: 256
+    train_size: 512
+    validation_size: 256
+  epochs: 20
+  fashion_train_size: 2048
+  fashion_validation_size: 512
+  held_out_data_seed: 701
+  models:
+    deep:
+    - 32
+    - 32
+    - 32
+    - 32
+    - 32
+    - 32
+    fashion:
+    - 32
+    small:
+    - 32
+  rates:
+    adamw:
+    - 0.001
+    - 0.003
+    - 0.01
+    - 0.03
+    momentum:
+    - 0.01
+    - 0.03
+    - 0.1
+    - 0.3
+    soap:
+    - 0.001
+    - 0.003
+    - 0.01
+    - 0.03
+  targets:
+    deep: 0.25
+    fashion: 0.9
+    small: 0.25
+selection_floor: 1.0e-12
+steps: 2400
+stochastic:
+  beta2:
+  - 0.9
+  - 0.99
+  - 0.999
+  momenta:
+  - 0.0
+  - 0.9
+  rates:
+    adamw:
+    - 0.0003
+    - 0.003
+    - 0.03
+    - 0.3
+    momentum:
+    - 1.0e-06
+    - 3.0e-06
+    - 1.0e-05
+    - 3.0e-05
+    - 0.0001
+    - 0.0003
+    shampoo:
+    - 0.01
+    - 0.1
+    - 0.3
+    - 1.0
+    - 3.0
+    - 10.0
+  refresh:
+  - 1
+  - 10
+  regimes:
+    constant:
+      condition: 100
+      dimension: 16
+      kind: noisy
+      noise_condition: 10
+      noise_std: 10.0
+    falling:
+      condition: 100
+      dimension: 16
+      kind: noisy
+      noise_change_step: 1200
+      noise_condition: 10
+      noise_std: 10.0
+      noise_std_after: 0.1
+    rising:
+      condition: 100
+      dimension: 16
+      kind: noisy
+      noise_change_step: 1200
+      noise_condition: 10
+      noise_std: 0.1
+      noise_std_after: 10.0
+  schedules:
+  - constant
+  - cosine
+tail_fraction: 0.2
+threads: 1

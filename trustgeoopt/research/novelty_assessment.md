@@ -1,5 +1,37 @@
 # Novelty assessment and decision gates
 
+## Current decision after Sprint 3
+
+**Continue mechanism validation; defer a new optimizer.** The original noisy
+ranking reproduces but reverses after broader rate/beta/schedule tuning in the
+rising-noise regime. Matched noisy rotation still affects constant-rate AdamW,
+yet Momentum competes with structured SOAP, and Momentum/AMSGrad handle clean
+outliers. Small/deep MLP and Fashion-MNIST subset experiments establish no SOAP
+quality/time advantage. History directions fail the antialigned-noise control.
+See [Sprint 3 report](sprint3_report.md) and [Sprint 4 decision](sprint4_decision.md).
+
+The [updated primary-source audit](sprint3_literature_audit.md) adds stationary
+noise analysis, vector-level equivariance and parameter-basis studies, and
+extracts the assumptions of existing sketch/state-transport methods. These
+mechanisms already occupy the proposed components. The limited diagonal-scaling
+proposition is classical preconditioning reasoning; it is not a novel Adam
+theorem. No optimizer or publication novelty is claimed.
+
+| Gate | Sprint 3 evidence | Decision |
+| --- | --- | --- |
+| A distinctness | strong verified overlap; targeted review not exhaustive | unpassed |
+| B failure mechanism | conditional noisy rotation; seed-sensitive noise-drop errors | retain hypotheses, not a universal Adam deficit |
+| C useful additional information | history fails when noise/curvature disagree | unpassed |
+| D existing remedies insufficient | SGD/AMSGrad/schedules already address key cases | unpassed |
+| E equal-quality efficiency | no structured advantage over cheap methods on tested tasks | unpassed |
+| F neural generalization | bounded multi-seed models executed; geometric cause unisolated | partial validation only |
+| G algorithm/publication | residual practical need and distinct mechanism absent | defer |
+
+An evidence-oriented study remains a legitimate outcome. A new update rule
+requires both a practical residual gap and measured, causally useful information
+that known inexpensive mechanisms lack. The earlier sprint assessments below
+are retained as historical context.
+
 ## Current decision after Sprint 2
 
 **Do not proceed to a full geometric optimizer.** Independent tuning and 1,200

@@ -516,3 +516,74 @@
   relevance: Noise-floor and clipping-bias alternative explanation
   overlap: Existing cheap correction limitations
   extraction_level: Primary metadata and abstract
+
+- id: mandt2017
+  title: Stochastic Gradient Descent as Approximate Bayesian Inference
+  authors: Stephan Mandt; Matthew D. Hoffman; David M. Blei
+  year: 2017
+  venue: JMLR 18(134):1-35
+  url: https://jmlr.org/papers/v18/17-214.html
+  full_text: https://jmlr.org/papers/volume18/17-214/17-214.pdf
+  central_method: Constant-rate SGD diffusion and stationary covariance
+  mathematical_contribution: Local Ornstein-Uhlenbeck stationary analysis
+  theoretical_assumptions: Local positive-definite quadratic; approximately constant
+    Gaussian noise; diffusion approximation; Fisher identity requires an additional
+    statistical assumption
+  limitations: Not a nonlinear Adam theorem
+  overlap: Stationary noise-floor reasoning established
+  extraction_level: Primary full text sections 3 and 5
+- id: galore2024
+  title: 'GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection'
+  authors: Jiawei Zhao; Zhenyu Zhang; Beidi Chen; Zhangyang Wang; Anima Anandkumar;
+    Yuandong Tian
+  year: 2024
+  venue: First arXiv year; proceedings metadata not audited
+  url: https://arxiv.org/abs/2403.03507
+  central_method: Low-rank gradient projection for adaptive state memory
+  limitations: Full theorem assumptions not audited
+  overlap: Low-rank gradient projection already exists
+  extraction_level: Primary abstract and authors repository; HTML unavailable
+- id: vectoradam2022
+  title: VectorAdam for Rotation Equivariant Geometry Optimization
+  authors: Selena Ling; Nicholas Sharp; Alec Jacobson
+  year: 2022
+  venue: NeurIPS 2022
+  url: https://arxiv.org/abs/2205.13599
+  full_text: https://www.dgp.toronto.edu/~zling/vector-adam/vectoradam.pdf
+  central_method: Scalar second moment shared within vector parameters
+  mathematical_contribution: Rotation equivariance Proposition 1
+  theoretical_assumptions: Rotation-invariant objective and corresponding vector state
+    transform
+  limitations: Equivariance is not Hessian inversion; not benchmarked here
+  overlap: Cheap rotationally equivariant adaptive scaling already exists
+  extraction_level: Primary full text Algorithm 1 and Proposition 1
+- id: rotation2025
+  title: Understanding Adam Requires Better Rotation Dependent Assumptions
+  authors: Tianyue Zhang; Lucas Maes; Alan Milligan; Alexia Jolicoeur-Martineau; Ioannis
+    Mitliagkas; Damien Scieur; Simon Lacoste-Julien; Charles Guille-Escuret
+  year: 2025
+  venue: NeurIPS 2025; official proceedings
+  url: https://papers.nips.cc/paper_files/paper/2025/hash/a6ffe4ec7aaa6e7e7d5bd28e14827d3a-Abstract-Conference.html
+  full_text: https://papers.nips.cc/paper_files/paper/2025/file/a6ffe4ec7aaa6e7e7d5bd28e14827d3a-Paper-Conference.pdf
+  central_method: Matched parameter-space rotation experiments
+  mathematical_contribution: SGD momentum rotation equivariance Proposition 1
+  theoretical_assumptions: Orthogonal parameter transform and corresponding initialization
+  limitations: Basis dependence alone does not establish a useful new optimizer
+  overlap: Matched quadratic rotations and update-direction diagnostics already studied
+  extraction_level: Primary full text section 2 and Proposition 1
+- id: gauge2026
+  title: The Loss Does Not See the Basis, but Adam Does
+  authors: Devender Singh
+  year: 2026
+  venue: arXiv preprint; peer review not established
+  url: https://arxiv.org/abs/2608.05136
+  full_text: https://arxiv.org/html/2608.05136v1
+  central_method: Factored-model gauge symmetry and solution selection
+  mathematical_contribution: First-step Adam gauge defect; limited common-scalar flow
+    transfer
+  theoretical_assumptions: Factored model; orthogonal gauge; transfer applies to memoryless
+    common-scalar continuous flow
+  limitations: Different setting from unfactored quadratics; equivariance alone does
+    not imply recovery
+  overlap: Known coordinate-bias mechanism; no novelty inferred
+  extraction_level: Primary full text section 4 and Remark 4.7

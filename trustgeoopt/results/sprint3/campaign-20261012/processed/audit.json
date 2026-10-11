@@ -1,0 +1,16 @@
+{
+  "attempts": 1195,
+  "nonreplication_attempts": 1180,
+  "status_counts": {
+    "success": 1181,
+    "failed": 14,
+    "budget_censored": 0,
+    "budget_not_started": 0
+  },
+  "experiment_seconds": 649.583729500001,
+  "sprint2_artifacts_verified": 2619,
+  "max_replay_tail_loss_difference": 0,
+  "manifest_entries_verified": 4637,
+  "audit_script_sha256": "74feee24c46299e7c939d2da9c8aa91680efa97a802ef83d7b26254dabd0401c",
+  "note": "Prior artifacts read only; source/configuration hashes, complete horizons and tuning-only frozen selections verified"
+}

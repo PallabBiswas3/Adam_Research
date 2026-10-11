@@ -1,0 +1,114 @@
+{
+  "clean/diagonal/adamw": {
+    "lr": 0.03,
+    "name": "adamw"
+  },
+  "clean/diagonal/momentum": {
+    "lr": 0.003,
+    "name": "momentum"
+  },
+  "clean/diagonal/amsgrad": {
+    "lr": 0.03,
+    "name": "amsgrad"
+  },
+  "clean/diagonal/soap": {
+    "lr": 0.003,
+    "name": "soap"
+  },
+  "clean/rotated/adamw": {
+    "lr": 0.1,
+    "name": "adamw"
+  },
+  "clean/rotated/momentum": {
+    "lr": 0.003,
+    "name": "momentum"
+  },
+  "clean/rotated/amsgrad": {
+    "lr": 0.3,
+    "name": "amsgrad"
+  },
+  "clean/rotated/soap": {
+    "lr": 0.003,
+    "name": "soap"
+  },
+  "isotropic_noise/diagonal/adamw": {
+    "lr": 0.003,
+    "name": "adamw"
+  },
+  "isotropic_noise/diagonal/momentum": {
+    "lr": 0.0001,
+    "name": "momentum"
+  },
+  "isotropic_noise/diagonal/amsgrad": {
+    "lr": 0.003,
+    "name": "amsgrad"
+  },
+  "isotropic_noise/diagonal/soap": {
+    "lr": 0.003,
+    "name": "soap"
+  },
+  "isotropic_noise/rotated/adamw": {
+    "lr": 0.01,
+    "name": "adamw"
+  },
+  "isotropic_noise/rotated/momentum": {
+    "lr": 0.0001,
+    "name": "momentum"
+  },
+  "isotropic_noise/rotated/amsgrad": {
+    "lr": 0.03,
+    "name": "amsgrad"
+  },
+  "isotropic_noise/rotated/soap": {
+    "lr": 0.003,
+    "name": "soap"
+  },
+  "misaligned_noise/diagonal/adamw": {
+    "lr": 0.003,
+    "name": "adamw"
+  },
+  "misaligned_noise/diagonal/momentum": {
+    "lr": 0.0001,
+    "name": "momentum"
+  },
+  "misaligned_noise/diagonal/amsgrad": {
+    "lr": 0.003,
+    "name": "amsgrad"
+  },
+  "misaligned_noise/diagonal/soap": {
+    "lr": 0.003,
+    "name": "soap"
+  },
+  "misaligned_noise/rotated/adamw": {
+    "lr": 0.01,
+    "name": "adamw"
+  },
+  "misaligned_noise/rotated/momentum": {
+    "lr": 0.0001,
+    "name": "momentum"
+  },
+  "misaligned_noise/rotated/amsgrad": {
+    "lr": 0.03,
+    "name": "amsgrad"
+  },
+  "misaligned_noise/rotated/soap": {
+    "lr": 0.003,
+    "name": "soap"
+  },
+  "isotropic/diagonal/adamw": {
+    "lr": 0.003,
+    "name": "adamw"
+  },
+  "isotropic/diagonal/momentum": {
+    "lr": 0.001,
+    "name": "momentum"
+  },
+  "isotropic/diagonal/amsgrad": {
+    "lr": 0.003,
+    "name": "amsgrad"
+  },
+  "isotropic/diagonal/soap": {
+    "lr": 0.003,
+    "name": "soap"
+  }
+}

@@ -1,0 +1,1451 @@
+[
+  {
+    "stage": "stochastic",
+    "regime": "rising",
+    "split": "evaluation",
+    "method": "momentum",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.8445183214958396,
+    "ci95": [
+      0.42922302916293287,
+      1.199764956572571
+    ],
+    "paired_differences": [
+      0.7479457100172644,
+      1.045322628312899,
+      1.4314284489620785,
+      0.8802792176921231,
+      0.1176156024948336
+    ]
+  },
+  {
+    "stage": "stochastic",
+    "regime": "rising",
+    "split": "evaluation",
+    "method": "shampoo",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.5017958452616499,
+    "ci95": [
+      0.40936049518269846,
+      0.5942311953406014
+    ],
+    "paired_differences": [
+      0.6015110419577099,
+      0.40697504804595863,
+      0.6593105433816149,
+      0.44951280602435717,
+      0.39166978689860876
+    ]
+  },
+  {
+    "stage": "stochastic",
+    "regime": "constant",
+    "split": "evaluation",
+    "method": "momentum",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.14281065466822992,
+    "ci95": [
+      -0.22700471556639013,
+      0.43301758817992314
+    ],
+    "paired_differences": [
+      0.41378342841135407,
+      0.1837922961830809,
+      0.5768643939469134,
+      0.08382323532135405,
+      -0.544210080521553
+    ]
+  },
+  {
+    "stage": "stochastic",
+    "regime": "constant",
+    "split": "evaluation",
+    "method": "shampoo",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.26606059068635063,
+    "ci95": [
+      -0.1714119730710965,
+      0.8330516344765926
+    ],
+    "paired_differences": [
+      0.3298560781073927,
+      0.042098197769236956,
+      1.394785991033069,
+      -0.06119799848548091,
+      -0.37523931499246477
+    ]
+  },
+  {
+    "stage": "stochastic",
+    "regime": "falling",
+    "split": "evaluation",
+    "method": "momentum",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": -0.6671484836944461,
+    "ci95": [
+      -1.941544992367334,
+      0.5855612131257427
+    ],
+    "paired_differences": [
+      0.9047895485318218,
+      0.10671871001662403,
+      -2.281801383582548,
+      -2.625420452344099,
+      0.5599711589059706
+    ]
+  },
+  {
+    "stage": "stochastic",
+    "regime": "falling",
+    "split": "evaluation",
+    "method": "shampoo",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": -1.145906410415645,
+    "ci95": [
+      -2.428881309148997,
+      0.13706848831770743
+    ],
+    "paired_differences": [
+      0.24635356387130258,
+      -0.4806890144267544,
+      -2.993004560128878,
+      -2.8388542055302373,
+      0.3366621641363432
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "clean/diagonal",
+    "split": "evaluation",
+    "method": "momentum",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": -1.743848907928252,
+    "ci95": [
+      -5.2315467237847555,
+      0.0
+    ],
+    "paired_differences": [
+      0.0,
+      0.0,
+      0.0,
+      -8.71924453964126,
+      0.0
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "clean/diagonal",
+    "split": "evaluation",
+    "method": "amsgrad",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": -1.743848907928252,
+    "ci95": [
+      -5.2315467237847555,
+      0.0
+    ],
+    "paired_differences": [
+      0.0,
+      0.0,
+      0.0,
+      -8.71924453964126,
+      0.0
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "clean/diagonal",
+    "split": "evaluation",
+    "method": "soap",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 4.926692867741045,
+    "ci95": [
+      1.4131704636749496,
+      6.6969305291760675
+    ],
+    "paired_differences": [
+      6.659160431832954,
+      6.709857518802074,
+      6.6959196576411655,
+      -2.096195628943719,
+      6.664722359372754
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "clean/rotated",
+    "split": "evaluation",
+    "method": "momentum",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": -2.4381718649109763,
+    "ci95": [
+      -6.64429991346978,
+      -0.0033206878537693995
+    ],
+    "paired_differences": [
+      -1.6599477724450047,
+      -10.520517264967953,
+      -0.004185135014997954,
+      -3.375077994860476e-14,
+      -0.006209152126890771
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "clean/rotated",
+    "split": "evaluation",
+    "method": "amsgrad",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": -2.4381718649108834,
+    "ci95": [
+      -6.64429991346978,
+      -0.0029158844312068056
+    ],
+    "paired_differences": [
+      -1.6599477724450047,
+      -10.520517264967953,
+      -0.00418513501454143,
+      -3.375077994860476e-14,
+      -0.006209152126883666
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "clean/rotated",
+    "split": "evaluation",
+    "method": "soap",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 4.652293624269509,
+    "ci95": [
+      0.46797101478235315,
+      7.092643832564251
+    ],
+    "paired_differences": [
+      5.398600537350114,
+      -3.3987218341581826,
+      7.064209705629438,
+      7.1374200390362,
+      7.059959673489979
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "isotropic_noise/diagonal",
+    "split": "evaluation",
+    "method": "momentum",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.16877076880985925,
+    "ci95": [
+      -0.09272960606413587,
+      0.3857424163295666
+    ],
+    "paired_differences": [
+      0.3371350893693883,
+      0.3703694630171144,
+      -0.29999866099173644,
+      0.42541903312210794,
+      0.010928919532422032
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "isotropic_noise/diagonal",
+    "split": "evaluation",
+    "method": "amsgrad",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.027089103388113146,
+    "ci95": [
+      -0.05361123103062733,
+      0.15138978606470294
+    ],
+    "paired_differences": [
+      0.005063492175764406,
+      -0.08401015608650919,
+      -0.01400611120235773,
+      0.261743573047041,
+      -0.03334528099337275
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "isotropic_noise/diagonal",
+    "split": "evaluation",
+    "method": "soap",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.2311881096505617,
+    "ci95": [
+      0.1704133835227631,
+      0.30570460102056474
+    ],
+    "paired_differences": [
+      0.25091920979631355,
+      0.1518242758800079,
+      0.20745607968150614,
+      0.1704811430861468,
+      0.37525983980883404
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "isotropic_noise/rotated",
+    "split": "evaluation",
+    "method": "momentum",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": -0.7550699768070139,
+    "ci95": [
+      -1.5909045792561578,
+      0.019632714582015078
+    ],
+    "paired_differences": [
+      0.061136339271160356,
+      -0.0008827223850849109,
+      -1.7430696731407518,
+      -0.02234366086207551,
+      -2.0701901669183176
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "isotropic_noise/rotated",
+    "split": "evaluation",
+    "method": "amsgrad",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": -0.34768166849054466,
+    "ci95": [
+      -0.9159055130861189,
+      0.22054217610502946
+    ],
+    "paired_differences": [
+      0.30087140375125787,
+      0.3388690526785869,
+      -1.1821849621579181,
+      -0.17677003233454225,
+      -1.0191938043901076
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "isotropic_noise/rotated",
+    "split": "evaluation",
+    "method": "soap",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": -0.7021509777751377,
+    "ci95": [
+      -1.3041731726685015,
+      -0.16671376142174127
+    ],
+    "paired_differences": [
+      -0.04762522015714277,
+      -0.24682878396798036,
+      -1.219213818413335,
+      -0.24574479141322025,
+      -1.7513422749240102
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "misaligned_noise/diagonal",
+    "split": "evaluation",
+    "method": "momentum",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.2744325469959752,
+    "ci95": [
+      -0.007824175449025228,
+      0.534284419721578
+    ],
+    "paired_differences": [
+      0.5760693696063721,
+      0.5318194013882287,
+      -0.18978484299997067,
+      0.45564455661868863,
+      -0.0015857496334428234
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "misaligned_noise/diagonal",
+    "split": "evaluation",
+    "method": "amsgrad",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.05443248335868613,
+    "ci95": [
+      -0.05446365127856776,
+      0.22245057033822083
+    ],
+    "paired_differences": [
+      0.03286767927771583,
+      -0.07459633131088328,
+      -0.04745405144023751,
+      0.38956261115743285,
+      -0.02821749089059722
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "misaligned_noise/diagonal",
+    "split": "evaluation",
+    "method": "soap",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.2327246186674381,
+    "ci95": [
+      0.16816432261104164,
+      0.30153593469193896
+    ],
+    "paired_differences": [
+      0.27507598251952103,
+      0.11909807619015522,
+      0.2084514019652215,
+      0.21961353633730862,
+      0.3413840963249841
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "misaligned_noise/rotated",
+    "split": "evaluation",
+    "method": "momentum",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": -0.7052124914229325,
+    "ci95": [
+      -1.6028969137556852,
+      0.13312047705660324
+    ],
+    "paired_differences": [
+      0.1885120850637585,
+      0.14358491740339274,
+      -1.7103170168048814,
+      0.0014083803487137114,
+      -2.149250823125646
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "misaligned_noise/rotated",
+    "split": "evaluation",
+    "method": "amsgrad",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": -0.37658239629131013,
+    "ci95": [
+      -0.9618919945847905,
+      0.2084576547504718
+    ],
+    "paired_differences": [
+      0.30416179978233115,
+      0.30281406352383833,
+      -1.2854565655684547,
+      -0.17031571660148725,
+      -1.0341155625927783
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "misaligned_noise/rotated",
+    "split": "evaluation",
+    "method": "soap",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": -0.7366845358894439,
+    "ci95": [
+      -1.3870857747533785,
+      -0.17496522210291832
+    ],
+    "paired_differences": [
+      -0.07407456492156839,
+      -0.2783231335954468,
+      -1.3046461109738563,
+      -0.224176923538004,
+      -1.8022019464183439
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "isotropic/diagonal",
+    "split": "evaluation",
+    "method": "momentum",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.5298676081779603,
+    "ci95": [
+      0.4622686991567241,
+      0.5974665171991965
+    ],
+    "paired_differences": [
+      0.545115795230821,
+      0.6168750739668052,
+      0.6042333214157758,
+      0.42724014502989505,
+      0.4558737052465047
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "isotropic/diagonal",
+    "split": "evaluation",
+    "method": "amsgrad",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.009205738267195684,
+    "ci95": [
+      -0.0043220111174803845,
+      0.03061088711834028
+    ],
+    "paired_differences": [
+      0.00653140241223138,
+      -0.00711533765716843,
+      -0.0018209471228629592,
+      0.05121279027887948,
+      -0.002779216575101051
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "isotropic/diagonal",
+    "split": "evaluation",
+    "method": "soap",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": -0.009233594006731804,
+    "ci95": [
+      -0.041673228446120585,
+      0.01631926122295808
+    ],
+    "paired_differences": [
+      0.002134538704229083,
+      0.004057775566716382,
+      -0.011016122372194292,
+      -0.07150345852666207,
+      0.030159296594251872
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "aligned/diagonal",
+    "split": "held_out",
+    "method": "momentum",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.5323471548175397,
+    "ci95": [
+      0.3401211825606298,
+      0.6756944932836858
+    ],
+    "paired_differences": [
+      0.6553271019906426,
+      0.7222622364214968,
+      0.1587455151501218,
+      0.6232937895941506,
+      0.5021071309312868
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "aligned/diagonal",
+    "split": "held_out",
+    "method": "amsgrad",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.049115034868750664,
+    "ci95": [
+      -0.08313239379360668,
+      0.2519576319676
+    ],
+    "paired_differences": [
+      0.015237437087895156,
+      -0.1349786858400739,
+      -0.018134293262318302,
+      0.4320189154542122,
+      -0.048568199095961884
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "aligned/diagonal",
+    "split": "held_out",
+    "method": "soap",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.43951835651708115,
+    "ci95": [
+      0.32088619305663374,
+      0.5730660429590239
+    ],
+    "paired_differences": [
+      0.45388619824773,
+      0.2319152555676549,
+      0.4800852456876239,
+      0.35493514006984794,
+      0.6767699430125491
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "aligned/rotated",
+    "split": "held_out",
+    "method": "momentum",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": -0.7035431719952422,
+    "ci95": [
+      -1.5775435227643497,
+      0.1241115566835596
+    ],
+    "paired_differences": [
+      0.1272771594028248,
+      0.18108646103979864,
+      -1.737367647814792,
+      0.0038305425325511067,
+      -2.0925423751365937
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "aligned/rotated",
+    "split": "held_out",
+    "method": "amsgrad",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": -0.35504782464749696,
+    "ci95": [
+      -0.9228688139182868,
+      0.21964209545386376
+    ],
+    "paired_differences": [
+      0.2868129761219742,
+      0.3211576302748289,
+      -1.2181013280082635,
+      -0.15207538967714207,
+      -1.0130330119488824
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "aligned/rotated",
+    "split": "held_out",
+    "method": "soap",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": -0.7447518876272552,
+    "ci95": [
+      -1.4022532660642522,
+      -0.1695336304284197
+    ],
+    "paired_differences": [
+      -0.05849747174432007,
+      -0.2504492597825143,
+      -1.3764739203180594,
+      -0.24011197443547205,
+      -1.79822681185591
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "antialigned/diagonal",
+    "split": "held_out",
+    "method": "momentum",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.04811927532208511,
+    "ci95": [
+      -0.15919309348518906,
+      0.22147867050738673
+    ],
+    "paired_differences": [
+      0.23520214030526465,
+      0.21928506367617895,
+      -0.3094289178930727,
+      0.19841894457404652,
+      -0.10288085405199188
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "antialigned/diagonal",
+    "split": "held_out",
+    "method": "amsgrad",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.024442980153119364,
+    "ci95": [
+      -0.022873013137002917,
+      0.08728046708168855
+    ],
+    "paired_differences": [
+      0.02474419491713542,
+      -0.049298469107418086,
+      0.008786146720104249,
+      0.13961001398941142,
+      -0.0016269857536361787
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "antialigned/diagonal",
+    "split": "held_out",
+    "method": "soap",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.22446281703820517,
+    "ci95": [
+      0.019717062913622473,
+      0.4830445592928159
+    ],
+    "paired_differences": [
+      0.7291705808008482,
+      0.06535315084869908,
+      0.10007929947994354,
+      -0.06610014330461467,
+      0.2938111973661497
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "antialigned/rotated",
+    "split": "held_out",
+    "method": "momentum",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": -0.7603788472405218,
+    "ci95": [
+      -1.5187357787952105,
+      -0.04821456088375329
+    ],
+    "paired_differences": [
+      -0.005005718440149298,
+      -0.22259318536556294,
+      -1.669549007660422,
+      -0.004234091086452452,
+      -1.9005122336500226
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "antialigned/rotated",
+    "split": "held_out",
+    "method": "amsgrad",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": -0.34090695477500926,
+    "ci95": [
+      -0.8763997134274767,
+      0.2173000415673793
+    ],
+    "paired_differences": [
+      0.31024069031905177,
+      0.32324607210944567,
+      -1.1355597038665257,
+      -0.18047331702009828,
+      -1.0219885154169197
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "antialigned/rotated",
+    "split": "held_out",
+    "method": "soap",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": -0.6606004517945788,
+    "ci95": [
+      -1.2699284493801355,
+      -0.17095761171387786
+    ],
+    "paired_differences": [
+      -0.06932375952622616,
+      -0.24059007545567357,
+      -1.0784437022180424,
+      -0.23777523203063167,
+      -1.6768694897423204
+    ]
+  },
+  {
+    "stage": "neural",
+    "regime": "small/task700",
+    "split": "evaluation",
+    "method": "momentum",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.08243117318214661,
+    "ci95": [
+      0.016497569395103717,
+      0.1552512400937365
+    ],
+    "paired_differences": [
+      0.09135428955712221,
+      0.10213858970759548,
+      -0.009262208241437309,
+      0.004828986950635494,
+      0.22309620793681717
+    ]
+  },
+  {
+    "stage": "neural",
+    "regime": "small/task700",
+    "split": "evaluation",
+    "method": "soap",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.255205840171665,
+    "ci95": [
+      0.20835371717022869,
+      0.3146404344046394
+    ],
+    "paired_differences": [
+      0.23904982333169056,
+      0.36702485329566215,
+      0.18292101354650037,
+      0.25395572187995163,
+      0.23307778880452013
+    ]
+  },
+  {
+    "stage": "neural",
+    "regime": "deep/task700",
+    "split": "evaluation",
+    "method": "momentum",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": -0.10195014946883396,
+    "ci95": [
+      -0.18187332691710004,
+      -0.03569952056883678
+    ],
+    "paired_differences": [
+      -0.02213488853374701,
+      -0.06681514016312795,
+      -0.25006868510561964,
+      -0.033706342806780976,
+      -0.13702569073489423
+    ]
+  },
+  {
+    "stage": "neural",
+    "regime": "deep/task700",
+    "split": "evaluation",
+    "method": "soap",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.1148537246211336,
+    "ci95": [
+      0.06785789989574165,
+      0.16090170337863424
+    ],
+    "paired_differences": [
+      0.07165715276801471,
+      0.11380389910986921,
+      0.17623057682541776,
+      0.0410856474164048,
+      0.1714913469859614
+    ]
+  },
+  {
+    "stage": "neural",
+    "regime": "fashion/task700",
+    "split": "evaluation",
+    "method": "momentum",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.005660176527733873,
+    "ci95": [
+      -0.005926257265959201,
+      0.018204592929021525
+    ],
+    "paired_differences": [
+      0.02767911004683926,
+      0.007740458184789023,
+      0.0076400793881529205,
+      -0.015003941300912649,
+      0.00024517631980081056
+    ]
+  },
+  {
+    "stage": "neural",
+    "regime": "fashion/task700",
+    "split": "evaluation",
+    "method": "soap",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.003434271824516344,
+    "ci95": [
+      -0.01798294745665042,
+      0.025840417077005396
+    ],
+    "paired_differences": [
+      0.010965270411973205,
+      0.007973590551976384,
+      0.04717666207624638,
+      -0.023293171255685363,
+      -0.025650992661928884
+    ]
+  },
+  {
+    "stage": "neural",
+    "regime": "small/task701",
+    "split": "held_out",
+    "method": "momentum",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.08421690467089202,
+    "ci95": [
+      0.03995076031113791,
+      0.12801369006042373
+    ],
+    "paired_differences": [
+      0.12918242167917626,
+      0.11758531369783054,
+      0.014156869261013894,
+      0.028100772093471615,
+      0.1320591466229678
+    ]
+  },
+  {
+    "stage": "neural",
+    "regime": "small/task701",
+    "split": "held_out",
+    "method": "soap",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.1004164622946547,
+    "ci95": [
+      0.038571798068847654,
+      0.19383084970103986
+    ],
+    "paired_differences": [
+      0.07483760442752097,
+      0.030943008582891673,
+      0.027026189051094107,
+      0.28446786525527046,
+      0.08480764415649633
+    ]
+  },
+  {
+    "stage": "neural",
+    "regime": "deep/task701",
+    "split": "held_out",
+    "method": "momentum",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": -0.04447438342475816,
+    "ci95": [
+      -0.09896129083820149,
+      0.010012523988685174
+    ],
+    "paired_differences": [
+      -0.12411211184811577,
+      0.017869847833857866,
+      -0.1223043162516308,
+      -0.0019735979915143087,
+      0.008148261133612222
+    ]
+  },
+  {
+    "stage": "neural",
+    "regime": "deep/task701",
+    "split": "held_out",
+    "method": "soap",
+    "baseline": "adamw",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.05765992516347033,
+    "ci95": [
+      0.004623927121686499,
+      0.11807111608826595
+    ],
+    "paired_differences": [
+      -0.009940119729396346,
+      0.015740837506649508,
+      0.013629518780287841,
+      0.114941053059195,
+      0.15392833620061563
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "clean/rotated",
+    "split": "evaluation",
+    "method": "adamw",
+    "baseline": "matched_diagonal",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.6943229569827242,
+    "ci95": [
+      -4.898315338870357,
+      6.314794019831528
+    ],
+    "paired_differences": [
+      1.6599477724450047,
+      10.520517264967953,
+      0.004185135014997954,
+      -8.719244539641226,
+      0.006209152126890771
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "clean/rotated",
+    "split": "evaluation",
+    "method": "momentum",
+    "baseline": "matched_diagonal",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "paired_differences": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "clean/rotated",
+    "split": "evaluation",
+    "method": "amsgrad",
+    "baseline": "matched_diagonal",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 9.272582701669308e-14,
+    "ci95": [
+      0.0,
+      2.753353101070388e-13
+    ],
+    "paired_differences": [
+      0.0,
+      0.0,
+      4.565237077258644e-13,
+      0.0,
+      7.105427357601002e-15
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "clean/rotated",
+    "split": "evaluation",
+    "method": "soap",
+    "baseline": "matched_diagonal",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.4199237135111883,
+    "ci95": [
+      0.38575026779593474,
+      0.46878954584447197
+    ],
+    "paired_differences": [
+      0.39938787796216424,
+      0.4119379120076969,
+      0.37247518300327087,
+      0.5143711283386931,
+      0.4014464662441162
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "isotropic_noise/rotated",
+    "split": "evaluation",
+    "method": "adamw",
+    "baseline": "matched_diagonal",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.9238407456168695,
+    "ci95": [
+      0.34845291299700104,
+      1.5924854043198873
+    ],
+    "paired_differences": [
+      0.2759987500982142,
+      0.3712521854021953,
+      1.4430710121490153,
+      0.44776269398418633,
+      2.081119086450736
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "isotropic_noise/rotated",
+    "split": "evaluation",
+    "method": "momentum",
+    "baseline": "matched_diagonal",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": -3.68594044175552e-15,
+    "ci95": [
+      -8.970602038971265e-15,
+      9.325873406851315e-16
+    ],
+    "paired_differences": [
+      -1.3766765505351941e-14,
+      -3.9968028886505635e-15,
+      0.0,
+      2.886579864025407e-15,
+      -3.552713678800501e-15
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "isotropic_noise/rotated",
+    "split": "evaluation",
+    "method": "amsgrad",
+    "baseline": "matched_diagonal",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.5490699737382116,
+    "ci95": [
+      0.22170331211424524,
+      0.87096704890455
+    ],
+    "paired_differences": [
+      0.5718066616737076,
+      0.7941313941672914,
+      0.27489216119345494,
+      0.009249088602603095,
+      1.0952705630540012
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "isotropic_noise/rotated",
+    "split": "evaluation",
+    "method": "soap",
+    "baseline": "matched_diagonal",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": -0.009498341808829958,
+    "ci95": [
+      -0.033106199814851675,
+      0.016722103612567808
+    ],
+    "paired_differences": [
+      -0.02254567985524214,
+      -0.027400874445792978,
+      0.016401114054174215,
+      0.031536759484819266,
+      -0.04548302828210815
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "misaligned_noise/rotated",
+    "split": "evaluation",
+    "method": "adamw",
+    "baseline": "matched_diagonal",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.9796450384189044,
+    "ci95": [
+      0.4011639426649687,
+      1.6702169357648233
+    ],
+    "paired_differences": [
+      0.3875572845426001,
+      0.38823448398483307,
+      1.5205321738049098,
+      0.45423617626997737,
+      2.147665073492202
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "misaligned_noise/rotated",
+    "split": "evaluation",
+    "method": "momentum",
+    "baseline": "matched_diagonal",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": -3.241851231905457e-15,
+    "ci95": [
+      -8.659739592076221e-15,
+      6.217248937900876e-16
+    ],
+    "paired_differences": [
+      -1.354472090042691e-14,
+      -2.886579864025407e-15,
+      -8.881784197001252e-16,
+      2.4424906541753444e-15,
+      -1.3322676295501878e-15
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "misaligned_noise/rotated",
+    "split": "evaluation",
+    "method": "amsgrad",
+    "baseline": "matched_diagonal",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.5486301587689082,
+    "ci95": [
+      0.20252528428454303,
+      0.8947350332532734
+    ],
+    "paired_differences": [
+      0.6588514050472154,
+      0.7656448788195547,
+      0.28252965967669263,
+      -0.10564215148894274,
+      1.141767001790021
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "misaligned_noise/rotated",
+    "split": "evaluation",
+    "method": "soap",
+    "baseline": "matched_diagonal",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.010235883862022455,
+    "ci95": [
+      -0.002538171134128664,
+      0.02536183586149164
+    ],
+    "paired_differences": [
+      0.03840673710151066,
+      -0.009186725800768958,
+      0.007434660865831777,
+      0.010445716394664739,
+      0.004079030748874057
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "aligned/rotated",
+    "split": "held_out",
+    "method": "adamw",
+    "baseline": "matched_diagonal",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 1.235890326812779,
+    "ci95": [
+      0.5515829366001203,
+      2.04162232475127
+    ],
+    "paired_differences": [
+      0.5280499425878022,
+      0.5411757753816957,
+      1.8961131629649133,
+      0.6194632470616055,
+      2.5946495060678783
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "aligned/rotated",
+    "split": "held_out",
+    "method": "momentum",
+    "baseline": "matched_diagonal",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": -2.930988785010413e-15,
+    "ci95": [
+      -9.859890681696015e-15,
+      2.7089441800853818e-15
+    ],
+    "paired_differences": [
+      -1.554312234475219e-14,
+      -2.4424906541753444e-15,
+      -4.440892098500626e-16,
+      5.995204332975845e-15,
+      -2.220446049250313e-15
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "aligned/rotated",
+    "split": "held_out",
+    "method": "amsgrad",
+    "baseline": "matched_diagonal",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.8317274672965315,
+    "ci95": [
+      0.35991300910126406,
+      1.316802459872088
+    ],
+    "paired_differences": [
+      0.7996254816218813,
+      0.9973120914965985,
+      0.6961461282189683,
+      0.035368941930251196,
+      1.6301846932149577
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "aligned/rotated",
+    "split": "held_out",
+    "method": "soap",
+    "baseline": "matched_diagonal",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.05162008266844267,
+    "ci95": [
+      0.023943761452661062,
+      0.08668715724510725
+    ],
+    "paired_differences": [
+      0.01566627259575215,
+      0.05881126003152648,
+      0.03955399695923001,
+      0.024416132556285497,
+      0.1196527511994192
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "antialigned/rotated",
+    "split": "held_out",
+    "method": "adamw",
+    "baseline": "matched_diagonal",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.8084981225626044,
+    "ci95": [
+      0.26552000757071054,
+      1.3986444174613664
+    ],
+    "paired_differences": [
+      0.2402078587454024,
+      0.44187824904174056,
+      1.3601200897673493,
+      0.20265303566050363,
+      1.7976313795980268
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "antialigned/rotated",
+    "split": "held_out",
+    "method": "momentum",
+    "baseline": "matched_diagonal",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": -2.4424906541753444e-15,
+    "ci95": [
+      -7.727152251391089e-15,
+      1.865174681370263e-15
+    ],
+    "paired_differences": [
+      -1.1546319456101628e-14,
+      -1.3322676295501878e-15,
+      0.0,
+      4.6629367034256575e-15,
+      -3.9968028886505635e-15
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "antialigned/rotated",
+    "split": "held_out",
+    "method": "amsgrad",
+    "baseline": "matched_diagonal",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": 0.443148187634476,
+    "ci95": [
+      0.12815064061368892,
+      0.7343873388420306
+    ],
+    "paired_differences": [
+      0.5257043541473188,
+      0.8144227902586043,
+      0.21577423918071958,
+      -0.11743029534900606,
+      0.7772698499347432
+    ]
+  },
+  {
+    "stage": "geometry",
+    "regime": "antialigned/rotated",
+    "split": "held_out",
+    "method": "soap",
+    "baseline": "matched_diagonal",
+    "status": "complete",
+    "n": 5,
+    "log10_ratio": -0.07656514627017948,
+    "ci95": [
+      -0.3332623328372192,
+      0.12407602064319075
+    ],
+    "paired_differences": [
+      -0.5582864815816719,
+      0.1359350227373679,
+      0.18159708806936337,
+      0.030977946934486633,
+      -0.17304930751044334
+    ]
+  }
+]

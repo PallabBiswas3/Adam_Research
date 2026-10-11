@@ -1,0 +1,38 @@
+{
+  "small/task700/adamw": {
+    "lr": 0.01,
+    "name": "adamw"
+  },
+  "small/task700/momentum": {
+    "lr": 0.03,
+    "name": "momentum"
+  },
+  "small/task700/soap": {
+    "lr": 0.03,
+    "name": "soap"
+  },
+  "deep/task700/adamw": {
+    "lr": 0.001,
+    "name": "adamw"
+  },
+  "deep/task700/momentum": {
+    "lr": 0.1,
+    "name": "momentum"
+  },
+  "deep/task700/soap": {
+    "lr": 0.001,
+    "name": "soap"
+  },
+  "fashion/task700/adamw": {
+    "lr": 0.001,
+    "name": "adamw"
+  },
+  "fashion/task700/momentum": {
+    "lr": 0.01,
+    "name": "momentum"
+  },
+  "fashion/task700/soap": {
+    "lr": 0.001,
+    "name": "soap"
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "protocol": {
+    "name": "sprint3-mechanism-validation",
+    "device": "cpu",
+    "threads": 1,
+    "max_experiment_seconds": 1800,
+    "max_trials": 1200,
+    "development_seeds": [
+      30,
+      31
+    ],
+    "evaluation_seeds": [
+      40,
+      41,
+      42,
+      43,
+      44
+    ],
+    "bootstrap_replicates": 2000,
+    "bootstrap_seed": 20261013,
+    "steps": 2400,
+    "dimension": 16,
+    "tail_fraction": 0.2,
+    "selection_floor": 1e-12,
+    "stochastic": {
+      "regimes": {
+        "rising": {
+          "kind": "noisy",
+          "dimension": 16,
+          "condition": 100,
+          "noise_std": 0.1,
+          "noise_std_after": 10.0,
+          "noise_change_step": 1200,
+          "noise_condition": 10
+        },
+        "constant": {
+          "kind": "noisy",
+          "dimension": 16,
+          "condition": 100,
+          "noise_std": 10.0,
+          "noise_condition": 10
+        },
+        "falling": {
+          "kind": "noisy",
+          "dimension": 16,
+          "condition": 100,
+          "noise_std": 10.0,
+          "noise_std_after": 0.1,
+          "noise_change_step": 1200,
+          "noise_condition": 10
+        }
+      },
+      "rates": {
+        "adamw": [
+          0.0003,
+          0.003,
+          0.03,
+          0.3
+        ],
+        "momentum": [
+          1e-06,
+          3e-06,
+          1e-05,
+          3e-05,
+          0.0001,
+          0.0003
+        ],
+        "shampoo": [
+          0.01,
+          0.1,
+          0.3,
+          1.0,
+          3.0,
+          10.0
+        ]
+      },
+      "beta2": [
+        0.9,
+        0.99,
+        0.999
+      ],
+      "momenta": [
+        0.0,
+        0.9
+      ],
+      "refresh": [
+        1,
+        10
+      ],
+      "schedules": [
+        "constant",
+        "cosine"
+      ]
+    },
+    "geometry": {
+      "condition": 1000,
+      "rank": 4,
+      "history_window": 64,
+      "regimes": {
+        "clean": {
+          "noise_std": 0.0,
+          "noise": "isotropic"
+        },
+        "isotropic_noise": {
+          "noise_std": 1.0,
+          "noise": "isotropic"
+        },
+        "misaligned_noise": {
+          "noise_std": 1.0,
+          "noise": "misaligned"
+        }
+      },
+      "rates": {
+        "adamw": [
+          0.0003,
+          0.003,
+          0.01,
+          0.03,
+          0.1,
+          0.3
+        ],
+        "momentum": [
+          1e-06,
+          1e-05,
+          0.0001,
+          0.001,
+          0.003,
+          0.01
+        ],
+        "amsgrad": [
+          0.0003,
+          0.003,
+          0.01,
+          0.03,
+          0.1,
+          0.3
+        ],
+        "soap": [
+          0.0003,
+          0.003,
+          0.01,
+          0.03,
+          0.1,
+          0.3
+        ]
+      },
+      "held_out_noise": [
+        "aligned",
+        "antialigned"
+      ]
+    },
+    "neural": {
+      "epochs": 20,
+      "batch_size": 64,
+      "fashion_train_size": 2048,
+      "fashion_validation_size": 512,
+      "data_seed": 700,
+      "held_out_data_seed": 701,
+      "rates": {
+        "adamw": [
+          0.001,
+          0.003,
+          0.01,
+          0.03
+        ],
+        "momentum": [
+          0.01,
+          0.03,
+          0.1,
+          0.3
+        ],
+        "soap": [
+          0.001,
+          0.003,
+          0.01,
+          0.03
+        ]
+      },
+      "dataset": {
+        "dimension": 20,
+        "classes": 2,
+        "condition": 100,
+        "train_size": 512,
+        "validation_size": 256,
+        "test_size": 256
+      },
+      "models": {
+        "small": [
+          32
+        ],
+        "deep": [
+          32,
+          32,
+          32,
+          32,
+          32,
+          32
+        ],
+        "fashion": [
+          32
+        ]
+      },
+      "targets": {
+        "small": 0.25,
+        "deep": 0.25,
+        "fashion": 0.9
+      }
+    }
+  },
+  "experiment_seconds": 649.583729500001,
+  "stages": [
+    "replication",
+    "stochastic",
+    "geometry",
+    "neural"
+  ],
+  "trials": 1195,
+  "environment": {
+    "python": "3.11.4",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel",
+    "device": "cpu",
+    "threads": 1,
+    "cuda_available": false,
+    "cuda_version": null,
+    "gpu": null,
+    "packages": {
+      "torch": "2.1.2+cpu",
+      "torchvision": "0.16.2+cpu",
+      "numpy": "1.26.4",
+      "scipy": "1.17.1",
+      "pandas": "2.3.3",
+      "matplotlib": "3.8.4",
+      "pytest": "8.4.1",
+      "PyYAML": "6.0.1"
+    },
+    "git_commit": "75875517abe2446ed11c29fcbc6fc236f1c466e1",
+    "git_dirty": true,
+    "source_sha256": "7198ee061665fa8801038b3a8aa0253c50a90e953125912e1a886444a0b877be"
+  },
+  "snapshot_sha256": "dd3b71cc0366c2de1d43ce5151606bb970897cb4b58b4d0daa3a88e2844a7f49"
+}

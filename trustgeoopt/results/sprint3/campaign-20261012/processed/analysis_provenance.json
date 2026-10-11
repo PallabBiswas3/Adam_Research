@@ -1,0 +1,29 @@
+{
+  "environment": {
+    "python": "3.11.4",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel",
+    "device": "cpu",
+    "threads": 10,
+    "cuda_available": false,
+    "cuda_version": null,
+    "gpu": null,
+    "packages": {
+      "torch": "2.1.2+cpu",
+      "torchvision": "0.16.2+cpu",
+      "numpy": "1.26.4",
+      "scipy": "1.17.1",
+      "pandas": "2.3.3",
+      "matplotlib": "3.8.4",
+      "pytest": "8.4.1",
+      "PyYAML": "6.0.1"
+    },
+    "git_commit": "75875517abe2446ed11c29fcbc6fc236f1c466e1",
+    "git_dirty": true,
+    "source_sha256": "3ee81c47180114246705270939c08d9d88fa2adaed0fbac4801d9870760ded4f"
+  },
+  "snapshot": "source_snapshot_analysis.zip",
+  "snapshot_sha256": "95ba08fcbc5ab61aadf4cd5ae6188cdac9f06c4ee39c2f0af5fc51e7b3597481",
+  "runtime_seconds": 7.392225999999937,
+  "note": "Postprocessing source captured separately; optimizer-run code in the original source_snapshot.zip is unchanged"
+}

@@ -84,7 +84,8 @@ populate data or explicitly change that setting before a planned vision run.
 
 TrustGeoOpt, fixed/periodic/gated corrections deliberately raise an explicit
 `NotImplementedError` in the optimizer factory. Implementing them now would bypass
-the user's evidence gates. Yogi/AdaBound/L-BFGS/K-FAC/SOAP are reviewed, not integrated.
+the user's evidence gates. Yogi/AdaBound/L-BFGS/K-FAC are reviewed, not integrated.
+Sprint 3 separately evaluates a pinned authors' SOAP reference (see below).
 The factor-capped Shampoo reference rejects large factors; a maintained modern
 structured baseline remains required for serious CNN/ResNet comparisons.
 
@@ -137,3 +138,40 @@ manifests. Generated per-run `results/**/raw/` directories, source snapshot ZIPs
 compressed per-step prediction dumps and model checkpoints are ignored and remain
 on disk. Archive these separately when sharing the complete experimental evidence;
 a normal Git commit does not include them. Previously tracked results remain tracked.
+
+## Research Sprint 3
+
+See [`research/sprint3_report.md`](research/sprint3_report.md) and
+[`research/sprint4_decision.md`](research/sprint4_decision.md). The CPU-only
+mechanism study includes exact Sprint 2 replay, broader stochastic tuning,
+coordinate-matched geometry controls, small/deep ReLU MLPs and a Fashion-MNIST
+subset. The frozen protocol specifies 1,195 planned attempts, a 1,200-attempt
+cap and 1,800 seconds of experimental execution. A new optimizer is still gated.
+
+The unmodified authors' preliminary SOAP reference and MIT license are vendored;
+commit and hashes are in `src/trustgeoopt/optimizers/vendor/provenance.json`.
+This is not production distributed Shampoo. Its maximum factor dimension is
+128. Current Meta Shampoo requires newer Python/PyTorch than this environment.
+
+From `trustgeoopt/`, populate Fashion-MNIST using the official dataset resources
+listed in `research/sprint3_data_provenance.json` (or torchvision's download
+facility), then run in a new destination:
+
+```powershell
+python scripts/run_sprint3.py --stage init --output results/sprint3/my-new-campaign
+python scripts/run_sprint3.py --stage replication --output results/sprint3/my-new-campaign
+python scripts/run_sprint3.py --stage stochastic --output results/sprint3/my-new-campaign
+python scripts/run_sprint3.py --stage geometry --output results/sprint3/my-new-campaign
+python scripts/run_sprint3.py --stage neural --output results/sprint3/my-new-campaign
+python scripts/analyze_sprint3.py --output results/sprint3/my-new-campaign
+python scripts/summarize_sprint3_mechanisms.py --output results/sprint3/my-new-campaign
+python scripts/audit_sprint3.py --output results/sprint3/my-new-campaign
+python -m pytest -q
+```
+
+Replication reads the preserved local Sprint 2 protocol/results and is excluded
+from tuning. Fresh selection uses development seeds 30/31 and evaluation seeds
+40–44. Re-executing a completed stage or changing source mid-campaign fails
+clearly; create a new campaign. Raw trajectories and source ZIPs remain locally
+ignored; committed manifests, summaries, selections, comparisons and plots are
+compact. The independent audit reads earlier results without rewriting them.

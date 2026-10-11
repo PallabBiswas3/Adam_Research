@@ -1,0 +1,5 @@
+# Pinned external source/license hashes require byte-for-byte preservation.
+src/trustgeoopt/optimizers/vendor/soap.py -text -whitespace
+src/trustgeoopt/optimizers/vendor/LICENSE -text
+# Captured artifacts carry byte hashes; avoid cross-platform newline rewriting.
+results/sprint3/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
