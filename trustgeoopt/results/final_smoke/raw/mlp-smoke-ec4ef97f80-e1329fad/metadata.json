@@ -1,0 +1,110 @@
+{
+  "experiment_id": "mlp-smoke-ec4ef97f80-e1329fad",
+  "config": {
+    "name": "mlp-smoke",
+    "seed": 0,
+    "device": "cpu",
+    "threads": 1,
+    "epochs": 4,
+    "batch_size": 64,
+    "dataset": {
+      "name": "synthetic",
+      "task": "classification",
+      "dimension": 20,
+      "classes": 2,
+      "condition": 100,
+      "data_seed": 500,
+      "train_size": 512,
+      "validation_size": 128,
+      "test_size": 128
+    },
+    "model": {
+      "name": "mlp",
+      "hidden": [
+        32,
+        32
+      ],
+      "activation": "relu"
+    },
+    "optimizer": {
+      "name": "adamw",
+      "lr": 0.01,
+      "weight_decay": 0.0
+    }
+  },
+  "created_utc": "2026-10-11T19:16:07.035928+00:00",
+  "environment": {
+    "python": "3.11.4",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel",
+    "device": "cpu",
+    "threads": 1,
+    "cuda_available": false,
+    "cuda_version": null,
+    "gpu": null,
+    "packages": {
+      "torch": "2.1.2+cpu",
+      "torchvision": "0.16.2+cpu",
+      "numpy": "1.26.4",
+      "scipy": "1.17.1",
+      "pandas": "2.3.3",
+      "matplotlib": "3.8.4",
+      "pytest": "8.4.1",
+      "PyYAML": "6.0.1"
+    },
+    "git_commit": null,
+    "git_dirty": null,
+    "source_sha256": "6b8e3b876d06ce11194ab4006d39a9f2520a7dcc6c6c8f7614b803d46581196c"
+  },
+  "seed": 0,
+  "dataset": {
+    "name": "synthetic",
+    "task": "classification",
+    "dimension": 20,
+    "classes": 2,
+    "condition": 100,
+    "data_seed": 500,
+    "train_size": 512,
+    "validation_size": 128,
+    "test_size": 128
+  },
+  "optimizer": {
+    "name": "adamw",
+    "lr": 0.01,
+    "weight_decay": 0.0
+  },
+  "status": "success",
+  "errors": [],
+  "warnings": [
+    "CPU RSS is process-lifetime high-water; traced memory excludes tensor storage."
+  ],
+  "timing_scope": "Timed execution after model/dataset/optimizer initialization; imports and setup excluded",
+  "dataset_sizes": [
+    512,
+    128,
+    128
+  ],
+  "resume_from": null,
+  "model_parameters": 1794,
+  "test_evaluated": false,
+  "initial_validation": {
+    "loss": 0.7032269537448883,
+    "accuracy": 0.484375
+  },
+  "runtime_seconds": 0.3207414999997127,
+  "rows": 4,
+  "cpu_process_peak_rss_bytes": 230096896,
+  "python_peak_traced_bytes": 280025,
+  "cuda_peak_allocated_bytes": null,
+  "summary": {
+    "best_validation_loss": 0.17087918519973755,
+    "final_validation": {
+      "loss": 0.17087918519973755,
+      "accuracy": 0.953125
+    },
+    "test": null,
+    "total_steps": 32,
+    "optimizer_seconds": 0.03791499999988446,
+    "diagnostic_seconds": 0.058983299999454175
+  }
+}

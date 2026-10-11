@@ -1,0 +1,19 @@
+checkpoint_interval: 100
+device: cpu
+dtype: float64
+name: failure-pilot
+objective:
+  condition: 100
+  dimension: 16
+  kind: rotated
+optimizer:
+  lr: 0.001
+  name: shampoo
+  weight_decay: 0.0
+parameter_shape:
+- 4
+- 4
+seed: 2
+steps: 100
+target_relative_error: 0.01
+threads: 1

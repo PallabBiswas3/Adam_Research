@@ -1,0 +1,475 @@
+# Verified primary records on 2026-10-12. year=verified publication year when known,
+# else first arXiv year. Venue uncertainty and unextracted details are explicit.
+- id: polyak1964
+  title: Some methods of speeding up the convergence of iteration methods
+  authors: B. T. Polyak
+  year: 1964
+  venue: USSR Computational Mathematics and Mathematical Physics
+  url: https://www.mathnet.ru/eng/zvmmf7713
+  central_method: Multi-step iteration; heavy-ball motivation
+  mathematical_contribution: Acceleration through previous iterates
+  theoretical_assumptions: Full-text theorem assumptions not extracted
+  experiments: Classical iteration problems; neural benchmarks not applicable
+  overhead: One extra parameter-sized momentum buffer in our SGD integration
+  limitations: Momentum does not infer off-diagonal geometry
+  relevance: Momentum alignment control
+  overlap: Established momentum component
+  extraction_level: Primary metadata and abstract
+- id: adagrad2011
+  title: Adaptive Subgradient Methods for Online Learning and Stochastic Optimization
+  authors: John Duchi; Elad Hazan; Yoram Singer
+  year: 2011
+  venue: JMLR 12(61), 2121-2159
+  url: https://jmlr.org/papers/v12/duchi11a.html
+  central_method: Accumulated gradient second moments; diagonal and full metrics
+  mathematical_contribution: Geometry-dependent online regret analysis
+  theoretical_assumptions: Convex online optimization; exact theorem conditions pending extraction
+  overhead: Diagonal O(p); dense full-matrix O(p^2) storage
+  limitations: Accumulation can retain old statistics
+  relevance: Base adaptive geometry and memory trade-off
+  overlap: Already established adaptive matrix preconditioning
+  extraction_level: Primary metadata and abstract
+- id: rmsprop_notes
+  title: Lecture 6 - Neural Networks for Machine Learning
+  authors: Geoffrey Hinton; course slides hosted by Tijmen Tieleman
+  year: null
+  venue: Teaching notes; publication year not verified
+  url: https://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf
+  central_method: RMSProp exponential squared-gradient average
+  mathematical_contribution: Coordinate scaling heuristic; not a peer-reviewed theorem
+  overhead: O(p) state/update
+  limitations: Date/authorship are course attribution, not verified publication metadata
+  relevance: EMA lag comparator
+  overlap: Already established EMA scaling
+  extraction_level: Primary slide PDF; publication date unverified
+- id: adam2015
+  title: 'Adam: A Method for Stochastic Optimization'
+  authors: Diederik P. Kingma; Jimmy Ba
+  year: 2015
+  first_arxiv_year: 2014
+  venue: ICLR 2015 (arXiv comments)
+  url: https://arxiv.org/abs/1412.6980
+  central_method: Bias-corrected first and second gradient moments
+  mathematical_contribution: Adaptive stochastic update; original proof later challenged
+  theoretical_assumptions: Original online-convex analysis is not a valid general convergence certificate
+  overhead: O(p) state/update
+  limitations: EMA/nonconvergence concerns; diagonal coordinates
+  relevance: Core reference
+  overlap: Already established moment equations
+  extraction_level: Primary metadata/abstract plus installed reference equation inspection
+- id: adamw2019
+  title: Decoupled Weight Decay Regularization
+  authors: Ilya Loshchilov; Frank Hutter
+  year: 2019
+  first_arxiv_year: 2017
+  venue: ICLR 2019 (arXiv comments)
+  url: https://arxiv.org/abs/1711.05101
+  central_method: Decouple weight decay from adaptive gradient moments
+  mathematical_contribution: Distinguish L2 penalty from decay for adaptive methods
+  experiments: Image classification; exact model/dataset table not extracted
+  overhead: O(p) state/update
+  limitations: Decay does not add geometric information
+  relevance: Primary comparator and decay contract
+  overlap: Already established decoupled decay
+  extraction_level: Primary metadata/abstract plus installed reference equations
+- id: amsgrad2018
+  title: On the Convergence of Adam and Beyond
+  authors: Sashank J. Reddi; Satyen Kale; Sanjiv Kumar
+  year: 2018
+  first_arxiv_year: 2019
+  venue: ICLR 2018 (arXiv comments)
+  url: https://arxiv.org/abs/1904.09237
+  central_method: Long-term second-moment memory; AMSGrad
+  mathematical_contribution: Adam convex counterexample and corrected variants
+  theoretical_assumptions: Online convex setting; theorem constants/full construction pending
+  overhead: O(p), extra maximum buffer
+  limitations: Long memory can impede adaptation; no off-diagonal correction
+  relevance: Must compare known remedy before a new gate
+  overlap: Already established reliability remedy
+  extraction_level: Primary metadata and abstract; full failure reproduction pending
+- id: adabelief2020
+  title: 'AdaBelief Optimizer: Adapting Stepsizes by the Belief in Observed Gradients'
+  authors: Juntang Zhuang; Tommy Tang; Yifan Ding; Sekhar Tatikonda; Nicha Dvornek; Xenophon Papademetris; James S. Duncan
+  year: 2020
+  venue: NeurIPS 2020 (arXiv journal reference)
+  url: https://arxiv.org/abs/2010.07468
+  full_text: https://arxiv.org/html/2010.07468v5
+  central_method: Gradient-prediction residual second moment
+  mathematical_contribution: Adaptive residual scaling; Algorithm 2 epsilon stabilization
+  theoretical_assumptions: Bounded-below residual statistic; full proof audit pending
+  experiments: ImageNet classification; CIFAR-10 GAN; language modeling
+  overhead: O(p), same-order buffers as Adam
+  limitations: Residual reliability idea already exists; package variants differ
+  relevance: Direct overlap with trust terminology
+  overlap: High; diagnostic residual alone is not novel
+  extraction_level: Primary metadata and selected full-text algorithm
+- id: radam2020
+  title: On the Variance of the Adaptive Learning Rate and Beyond
+  authors: Liyuan Liu; Haoming Jiang; Pengcheng He; Weizhu Chen; Xiaodong Liu; Jianfeng Gao; Jiawei Han
+  year: 2020
+  first_arxiv_year: 2019
+  venue: ICLR 2020 (arXiv comments)
+  url: https://arxiv.org/abs/1908.03265
+  central_method: RAdam early adaptive-rate variance rectification
+  mathematical_contribution: Analysis of warmup and adaptive-rate variance
+  experiments: Image classification; language modeling; translation
+  overhead: O(p)
+  limitations: Targets startup variance; not arbitrary curvature shifts
+  relevance: Cheap instability remedy
+  overlap: Partial; adaptive variance correction established
+  extraction_level: Primary metadata and abstract
+- id: yogi2018
+  title: Adaptive Methods for Nonconvex Optimization
+  authors: Manzil Zaheer; Sashank Reddi; Devendra Sachan; Satyen Kale; Sanjiv Kumar
+  year: 2018
+  venue: NeurIPS 2018
+  url: https://proceedings.neurips.cc/paper/2018/hash/90365351ccc7437a1309dc64e4db32a3-Abstract.html
+  central_method: Yogi; control effective learning-rate growth
+  mathematical_contribution: Stationarity analysis and minibatch-size/variance relation
+  theoretical_assumptions: Stochastic nonconvex setting; full assumptions not extracted
+  overhead: O(p)
+  limitations: Does not capture rotations; implementation pending
+  relevance: Variance-mismatch comparator
+  overlap: Partial; denominator reliability established
+  extraction_level: Official proceedings abstract
+- id: adabound2019
+  title: Adaptive Gradient Methods with Dynamic Bound of Learning Rate
+  authors: Liangchen Luo; Yuanhao Xiong; Yan Liu; Xu Sun
+  year: 2019
+  venue: ICLR 2019 (arXiv comments)
+  url: https://arxiv.org/abs/1902.09843
+  central_method: AdaBound/AMSBound bound effective adaptive rates
+  mathematical_contribution: Smooth transition toward SGD; claimed convergence with bounds
+  theoretical_assumptions: Full theorem conditions not extracted
+  overhead: O(p)
+  limitations: Bound schedule needs tuning; manuscript overlap notice exists
+  relevance: Step-size safeguards can explain gains without geometry
+  overlap: Partial safeguard overlap
+  extraction_level: Primary metadata and abstract
+- id: lbfgs1989
+  title: On the limited memory BFGS method for large scale optimization
+  authors: Dong C. Liu; Jorge Nocedal
+  year: 1989
+  venue: Mathematical Programming 45, 503-528
+  url: https://link.springer.com/article/10.1007/BF01589116
+  central_method: Limited-memory quasi-Newton secant pairs
+  mathematical_contribution: Variable-metric scaling and limited storage
+  theoretical_assumptions: Secant curvature and line-search details require full-text review
+  experiments: Classical nonlinear optimization; no neural scope evidence extracted
+  overhead: O(pk) secant storage; line searches require additional objective/gradient calls
+  limitations: Stochastic gradients complicate curvature pairs
+  relevance: Existing low-memory geometric remedy
+  overlap: Established low-memory curvature; not implemented this iteration
+  extraction_level: Publisher metadata and abstract
+- id: natural1998
+  title: Natural Gradient Works Efficiently in Learning
+  authors: Shun-ichi Amari
+  year: 1998
+  venue: Neural Computation 10(2), 251-276
+  url: https://doi.org/10.1162/089976698300017746
+  central_method: Fisher-metric natural gradient
+  mathematical_contribution: Information-geometric steepest descent
+  theoretical_assumptions: Statistical regularity; exact theorem extraction pending
+  experiments: Perceptrons; matrix/source models; full details not extracted
+  overhead: Exact Fisher p by p impractical at scale
+  limitations: Fisher is not empirical gradient covariance or Hessian generally
+  relevance: Clarify geometry identity
+  overlap: Established geometry-aware optimization
+  extraction_level: Publisher metadata and abstract; full text paywalled
+- id: kfac2015
+  title: Optimizing Neural Networks with Kronecker-factored Approximate Curvature
+  authors: James Martens; Roger Grosse
+  year: 2015
+  venue: ICML, PMLR 37, 2408-2417
+  url: https://proceedings.mlr.press/v37/martens15.html
+  central_method: Kronecker factors of layer Fisher blocks
+  mathematical_contribution: Efficiently invertible non-diagonal Fisher approximation
+  theoretical_assumptions: Layer-factor approximation; full assumptions not extracted
+  overhead: Layer activation/error square matrices and their solves
+  limitations: Approximation bias and damping; not just activation covariance
+  relevance: Strong existing supervised-network geometry baseline
+  overlap: High layer-wise geometry overlap
+  extraction_level: Official proceedings metadata and abstract
+- id: ekfac2018
+  title: Fast Approximate Natural Gradient Descent in a Kronecker-factored Eigenbasis
+  authors: Thomas George; César Laurent; Xavier Bouthillier; Nicolas Ballas; Pascal Vincent
+  year: 2018
+  venue: arXiv record verified; proceedings status not independently checked
+  url: https://arxiv.org/abs/1806.03884
+  central_method: Corrected variances in Kronecker eigenbasis
+  mathematical_contribution: Improved Fisher approximation with cheap partial updates
+  theoretical_assumptions: Exact approximation proposition assumptions not extracted
+  experiments: Several deep-network architectures; exact names not extracted
+  overhead: Factor eigendecomposition plus diagonal variance tracking
+  limitations: Dense factors and approximate Fisher
+  relevance: Separate eigenbasis from eigenvalue updates
+  overlap: High adaptive scaling in geometry basis
+  extraction_level: Primary metadata and abstract
+- id: shampoo2018
+  title: 'Shampoo: Preconditioned Stochastic Tensor Optimization'
+  authors: Vineet Gupta; Tomer Koren; Yoram Singer
+  year: 2018
+  venue: ICML, PMLR 80, 1842-1850
+  url: https://proceedings.mlr.press/v80/gupta18a.html
+  full_text: https://proceedings.mlr.press/v80/gupta18a/gupta18a.pdf
+  central_method: Per-axis gradient Gram factors
+  mathematical_contribution: Matrix/tensor online regret; Algorithm 1 quarter powers
+  theoretical_assumptions: Convex online losses; bounded comparator distance and gradient rank in matrix theorem
+  overhead: a^2+b^2 storage; a^3+b^3 spectral work for matrix a by b
+  limitations: Root cost and staleness; simple reference is not modern grafted Shampoo
+  relevance: Implemented feasible structured baseline
+  overlap: High; off-diagonal second moments established
+  extraction_level: Official metadata; selected algorithm/theorem full text
+- id: sophia2023
+  title: 'Sophia: A Scalable Stochastic Second-order Optimizer for Language Model Pre-training'
+  authors: Hong Liu; Zhiyuan Li; David Hall; Percy Liang; Tengyu Ma
+  year: 2023
+  venue: arXiv record verified; publication venue not checked
+  url: https://arxiv.org/abs/2305.14342
+  central_method: Sparse diagonal-Hessian estimates with clipping
+  mathematical_contribution: Heterogeneous-curvature analysis in simplified setting
+  theoretical_assumptions: Simplified setting; exact assumptions not extracted
+  experiments: GPT language models; outside primary empirical scope
+  overhead: O(p) state plus periodic curvature estimation
+  limitations: LLM evidence not transferable to our CNN/MLP claims
+  relevance: Curvature clipping and scheduling overlap
+  overlap: Partial; low-cost curvature refresh established
+  extraction_level: Primary metadata and abstract
+- id: soap2024
+  title: 'SOAP: Improving and Stabilizing Shampoo using Adam'
+  authors: Nikhil Vyas; Depen Morwani; Rosie Zhao; Mujin Kwun; Itai Shapira; David Brandfonbrener; Lucas Janson; Sham Kakade
+  year: 2024
+  venue: arXiv first posting; ICLR record access challenged, venue confirmation pending
+  url: https://arxiv.org/abs/2409.11321
+  full_text: https://arxiv.org/html/2409.11321v2
+  central_method: Adam in structured preconditioner eigenbasis
+  mathematical_contribution: Modified Shampoo/Adafactor eigenbasis equivalence
+  theoretical_assumptions: Uses specified power/scaling and dataset-average modifications
+  experiments: 360M/660M language-model pretraining; outside primary scope
+  overhead: Dense layer factors; infrequent eigendecomposition
+  limitations: Basis refresh and state transformation cost
+  relevance: Direct overlap with Adam plus geometry
+  overlap: High; not a unique starting idea
+  extraction_level: Primary metadata/abstract; selected full-text mechanism
+- id: seng2020
+  title: Sketchy Empirical Natural Gradient Methods for Deep Learning
+  authors: Minghan Yang; Dong Xu; Zaiwen Wen; Mengyun Chen; Pengxiang Xu
+  year: 2020
+  venue: arXiv record; final venue not checked
+  url: https://arxiv.org/abs/2006.05924
+  central_method: Random sketches of empirical Fisher/low-rank layer information
+  mathematical_contribution: Stationarity and NTK-case analysis
+  theoretical_assumptions: Exact global/NTK assumptions require full-text audit
+  experiments: CNNs; ResNet50/ImageNet-1k
+  overhead: Sketch construction and regularized least-squares solves
+  limitations: Empirical Fisher not exact Hessian
+  relevance: Low-rank geometry has supervised prior art
+  overlap: High randomized low-rank overlap
+  extraction_level: Primary metadata and abstract
+- id: sketchy2023
+  title: 'Sketchy: Memory-efficient Adaptive Regularization with Frequent Directions'
+  authors: Vladimir Feinberg; Xinyi Chen; Y. Jennifer Sun; Rohan Anil; Elad Hazan
+  year: 2023
+  venue: NeurIPS 2023 (arXiv comments)
+  url: https://arxiv.org/abs/2302.03764
+  central_method: Frequent Directions matrix-preconditioner sketches
+  mathematical_contribution: Rank/tail-dependent online regret trade-off
+  theoretical_assumptions: Online convex setting; exact conditions not extracted
+  overhead: O(pk) sketch storage; refresh details not extracted
+  limitations: Tail spectrum and changing dominant subspaces
+  relevance: Direct low-rank adaptive prior art
+  overlap: High; our rolling SVD does not reproduce FD
+  extraction_level: Primary metadata and abstract
+- id: oja1982
+  title: Simplified neuron model as a principal component analyzer
+  authors: Erkki Oja
+  year: 1982
+  venue: Journal of Mathematical Biology 15, 267-273
+  url: https://link.springer.com/article/10.1007/BF00275687
+  central_method: Online principal direction learning
+  mathematical_contribution: Normalized neuron/PCA dynamics
+  theoretical_assumptions: Full-text assumptions not extracted
+  overhead: Rank-one O(p) representation
+  limitations: Stationary PCA assumptions do not imply curvature tracking
+  relevance: Existing streaming geometry estimator
+  overlap: Already established online PCA
+  extraction_level: Publisher metadata and abstract
+- id: streaming2015
+  title: Rivalry of Two Families of Algorithms for Memory-Restricted Streaming PCA
+  authors: Chun-Liang Li; Hsuan-Tien Lin; Chi-Jen Lu
+  year: 2015
+  venue: arXiv record; final venue not checked
+  url: https://arxiv.org/abs/1506.01490
+  central_method: Oja-type versus block power streaming subspaces
+  mathematical_contribution: General k-dimensional rates and adaptive block sizes
+  theoretical_assumptions: Streaming stationary PCA; exact rate assumptions not extracted
+  experiments: Real-data PCA; no optimizer superiority inferred
+  overhead: O(pk) memory
+  limitations: Learning rate/block choices and drift
+  relevance: Streaming alternatives and their tuning cost
+  overlap: Established subspace tracking
+  extraction_level: Primary metadata and abstract
+- id: caspr2024
+  title: 'CASPR: Combining Axes Preconditioners through Kronecker Approximation for Deep Learning'
+  authors: Sai Surya Duvvuri; Fnu Devvrit; Rohan Anil; Cho-Jui Hsieh; Inderjit S. Dhillon
+  year: 2024
+  venue: ICLR 2024 (official PDF)
+  url: https://openreview.net/pdf?id=8j9hz8DVi8
+  central_method: Kronecker-sum combination of axis preconditioners
+  mathematical_contribution: Loewner ordering relative to full AdaGrad and Shampoo
+  theoretical_assumptions: Exact ordering/regret conditions not extracted
+  overhead: Structured matrix storage; measured cost not extracted
+  limitations: Strong structure approximation is prior art
+  relevance: Alternative to low-rank correction
+  overlap: Partial structured-metric overlap
+  extraction_level: Official PDF title/authors/abstract surfaced; retrieval may be challenged
+- id: ldadam2025
+  title: 'LDAdam: Adaptive Optimization from Low-Dimensional Gradient Statistics'
+  authors: Thomas Robert; Mher Safaryan; Ionut-Vlad Modoranu; Dan Alistarh
+  year: 2025
+  first_arxiv_year: 2024
+  venue: ICLR 2025 (arXiv comments)
+  url: https://arxiv.org/abs/2410.16103
+  central_method: Projection-aware Adam state with generalized error feedback
+  mathematical_contribution: Adaptive statistics while changing gradient subspaces
+  theoretical_assumptions: Exact convergence assumptions not extracted
+  experiments: Language model fine-tuning/pretraining; outside primary scope
+  overhead: Low-dimensional state plus projection; exact scaling not extracted
+  limitations: State transport matters; no direct CNN benefit established here
+  relevance: Critical overlap audit before sketch-based Adam
+  overlap: High projected-moment overlap
+  extraction_level: Primary metadata and abstract
+- id: purifying2025
+  title: 'Purifying Shampoo: Investigating Shampoo''s Heuristics by Decomposing its Preconditioner'
+  authors: Runa Eschenhagen; Aaron Defazio; Tsung-Hsien Lee; Richard E. Turner; Hao-Jun Michael Shi
+  year: 2025
+  venue: NeurIPS 2025 (arXiv comments)
+  url: https://arxiv.org/abs/2506.03595
+  full_text: https://arxiv.org/html/2506.03595v2
+  central_method: Eigenvalue correction; approximation-error-based eigenbasis refresh
+  mathematical_contribution: Decompose staleness/scaling heuristics and adaptive QR criterion
+  theoretical_assumptions: Factor approximation error threshold; full proof audit pending
+  experiments: Imagewoof ViT; AlgoPerf FastMRI/OGBG/ImageNet ViT (selected text)
+  overhead: Criterion plus selective factor eigensolves
+  limitations: Results vary by workload; full CNN relevance requires audit
+  relevance: Direct prior art for adaptive geometry computation
+  overlap: High; adaptive refresh is already explored
+  extraction_level: Primary metadata and selected full-text scheduling section
+- id: asgo2025
+  title: 'ASGO: Adaptive Structured Gradient Optimization'
+  authors: Kang An; Yuxing Liu; Rui Pan; Yi Ren; Shiqian Ma; Donald Goldfarb; Tong Zhang
+  year: 2025
+  venue: arXiv preprint; final venue not checked
+  url: https://arxiv.org/abs/2503.20762
+  central_method: Adaptive structured-gradient preconditioner
+  mathematical_contribution: Analyze low-rank gradients/block-diagonal Hessians
+  theoretical_assumptions: Exact rate conditions not extracted
+  experiments: Language-model tasks
+  overhead: Not extracted
+  limitations: Structured gradients do not justify arbitrary geometry equivalence
+  relevance: Modern structured competitor
+  overlap: High structured-gradient motivation
+  extraction_level: Primary metadata and abstract
+- id: structured2025
+  title: 'Structured Preconditioners in Adaptive Optimization: A Unified Analysis'
+  authors: Shuo Xie; Tianhao Wang; Sashank Reddi; Sanjiv Kumar; Zhiyuan Li
+  year: 2025
+  venue: arXiv preprint; final venue not checked
+  url: https://arxiv.org/abs/2503.10537
+  central_method: Unified analysis of structured adaptive metrics
+  mathematical_contribution: One-sided Shampoo rate; structure need not monotonically lose performance
+  theoretical_assumptions: Online regret/offline convex settings
+  overhead: Depends on chosen structure; no new implementation here
+  limitations: Convex analysis does not certify neural training
+  relevance: Counterargument to more geometry always being better
+  overlap: High theoretical overlap
+  extraction_level: Primary metadata and abstract
+- id: edge2022
+  title: Adaptive Gradient Methods at the Edge of Stability
+  authors: Jeremy M. Cohen; Behrooz Ghorbani; Shankar Krishnan; Naman Agarwal; Sourabh Medapati; Michal Badura; Daniel Suo; David Cardoze; Zachary Nado; George E. Dahl; Justin Gilmer
+  year: 2022
+  venue: arXiv first posting; revised 2024, final venue not checked
+  url: https://arxiv.org/abs/2207.14484
+  central_method: Adaptive optimizer stability dynamics
+  mathematical_contribution: Preconditioned stability-boundary analysis
+  theoretical_assumptions: Full-text conditions not extracted
+  overhead: Analysis/measurement study; not a new implemented optimizer
+  limitations: Oscillation is not alone evidence of failure
+  relevance: Curvature/step stability labels
+  overlap: Established instability analysis
+  extraction_level: Primary metadata; full-text review pending
+- id: foam2026
+  title: 'FOAM: Frequency and Operator Error-Based Adaptive Damping Method for Reducing Staleness-Oriented Error for Shampoo'
+  authors: Kyunghun Nam; Sumyeong Ahn
+  year: 2026
+  venue: arXiv preprint; peer-reviewed status not established
+  url: https://arxiv.org/abs/2606.02365
+  full_text: https://arxiv.org/html/2606.02365v1
+  central_method: Staleness-error-driven damping and eigendecomposition frequency
+  mathematical_contribution: Staleness convergence/stability analysis
+  theoretical_assumptions: Full theorem audit pending
+  experiments: Large-scale benchmarks claimed in abstract; exact table not extracted
+  overhead: Selective eigensolves plus error proxy
+  limitations: Claims not independently replicated; HTML title includes supplementary label
+  relevance: Direct 2026 scheduling/safeguard prior art
+  overlap: High; error-driven refresh/damping is not a fresh idea
+  extraction_level: Primary metadata and full-text abstract; algorithm audit pending
+- id: rod2026
+  title: A Rod Flow Model for Adam at the Edge of Stability
+  authors: Eric Regis; Sinho Chewi
+  year: 2026
+  venue: arXiv preprint; peer-reviewed status not established
+  url: https://arxiv.org/abs/2605.06821
+  central_method: Continuous model of joint parameter/momentum oscillations
+  mathematical_contribution: Rod-flow approximation for eight momentum/adaptive methods
+  theoretical_assumptions: Full approximation conditions not extracted
+  experiments: Ancillary MLP/CNN CIFAR-10 scripts; other exact experiments pending
+  overhead: Analysis/modeling study; not optimizer step overhead
+  limitations: Not a correction algorithm
+  relevance: Interpret gradient reversals without labeling all as harmful
+  overlap: Partial dynamics explanation
+  extraction_level: Primary metadata/abstract and ancillary file listing
+- id: active2026
+  title: 'Adam at the Edge of Stability: Adaptive Feedback, Provable Oscillation, and Gradient Reversal'
+  authors: Yiman Fong; Heng Yang
+  year: 2026
+  venue: arXiv preprint; peer-reviewed status not established
+  url: https://arxiv.org/abs/2608.20638v2
+  central_method: Active-curvature feedback and gradient reversal
+  mathematical_contribution: Rank-one/momentum, diagonal-quadratic and general-objective characterizations
+  theoretical_assumptions: Full-batch Adam; exact theorem assumptions not extracted
+  experiments: Fully connected networks; ResNets and other architectures in abstract
+  overhead: Analysis study; not implemented optimizer cost
+  limitations: v1 title differs; v2 checked 2026-10-01
+  relevance: Negative alignment may reflect stable oscillatory dynamics
+  overlap: High diagnostic interpretation overlap
+  extraction_level: Primary latest-version metadata and abstract
+- id: heavy2026
+  title: 'Open Problem: Is AdamW Effective Under Heavy-Tailed Noise?'
+  authors: Dingzhi Yu; Hongyi Tao; Yuanyu Wan; Luo Luo; Lijun Zhang
+  year: 2026
+  venue: arXiv preprint/open problem; final venue not checked
+  url: https://arxiv.org/abs/2606.23676
+  central_method: Heavy-tail denominator-memory question
+  mathematical_contribution: Weighted-metric benchmark and corridor lower-bound mechanism
+  theoretical_assumptions: Heavy-tailed noise; exact moment assumptions not extracted
+  overhead: Theory paper; no implemented cost benchmark
+  limitations: Open question, not a full AdamW convergence guarantee
+  relevance: Separate finite-variance claims from heavy-tail regimes
+  overlap: Partial moment-staleness interpretation
+  extraction_level: Primary metadata and abstract
+- id: pca2026
+  title: 'Streaming PCA: averaging from a geometric perspective'
+  authors: Tuan Pham; Alessandro Rinaldo; Purnamrita Sarkar
+  year: 2026
+  venue: arXiv preprint; peer-reviewed status not established
+  url: https://arxiv.org/abs/2609.23332
+  central_method: Averaged Oja subspaces without known eigengap
+  mathematical_contribution: Exterior-space view of k-PCA and averaging theory
+  theoretical_assumptions: Exact distribution/rate assumptions not extracted
+  experiments: Simulations and real-data PCA; not optimizer evidence
+  overhead: O(pk) stored subspace
+  limitations: Does not certify nonstationary gradient-Hessian tracking
+  relevance: Recent streaming estimator option
+  overlap: Established/extended streaming PCA; no optimizer novelty inferred
+  extraction_level: Primary metadata and abstract

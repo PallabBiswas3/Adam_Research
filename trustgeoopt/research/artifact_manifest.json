@@ -1,0 +1,901 @@
+{
+  "date": "2026-10-12",
+  "artifacts": [
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "configs/cifar10/resnet18.yaml",
+    "configs/cifar100/resnet18.yaml",
+    "configs/fashion_mnist/cnn.yaml",
+    "configs/mnist/mlp.yaml",
+    "configs/optimizers/baselines.yaml",
+    "configs/synthetic/diagnostic_ablations.yaml",
+    "configs/synthetic/mlp_smoke.yaml",
+    "configs/synthetic/mlp_tuning.yaml",
+    "configs/synthetic/pilot_suite.yaml",
+    "configs/synthetic/primary_suite.yaml",
+    "configs/synthetic/reliability.yaml",
+    "configs/synthetic/reliability_suite.yaml",
+    "configs/synthetic/smoke.yaml",
+    "experiments/README.md",
+    "experiments/phase1_failure_analysis/README.md",
+    "experiments/phase2_reliability/README.md",
+    "experiments/phase3_geometry/README.md",
+    "experiments/phase4_optimizer/README.md",
+    "experiments/phase5_benchmarks/README.md",
+    "experiments/phase6_ablations/README.md",
+    "paper/figures/.gitkeep",
+    "paper/main.tex",
+    "paper/references.bib",
+    "pyproject.toml",
+    "requirements.txt",
+    "research/experimental_protocol.md",
+    "research/failure_study.md",
+    "research/foundation_report.md",
+    "research/geometry_study.md",
+    "research/hypotheses.md",
+    "research/literature_review.md",
+    "research/mathematical_formulation.md",
+    "research/novelty_assessment.md",
+    "research/paper_database.csv",
+    "research/papers.yaml",
+    "research/proposal.md",
+    "research/related_work_matrix.md",
+    "research/reliability_study.md",
+    "research/research_log.md",
+    "research/search_log.json",
+    "research/search_protocol.md",
+    "research/theoretical_analysis.md",
+    "scripts/_bootstrap.py",
+    "scripts/benchmark_geometry.py",
+    "scripts/evaluate_reliability.py",
+    "scripts/export_literature.py",
+    "scripts/generate_figures.py",
+    "scripts/inventory.py",
+    "scripts/run_ablations.py",
+    "scripts/run_benchmarks.py",
+    "scripts/run_synthetic.py",
+    "scripts/train.py",
+    "src/trustgeoopt/__init__.py",
+    "src/trustgeoopt/datasets/__init__.py",
+    "src/trustgeoopt/datasets/synthetic.py",
+    "src/trustgeoopt/datasets/transforms.py",
+    "src/trustgeoopt/datasets/vision.py",
+    "src/trustgeoopt/diagnostics/__init__.py",
+    "src/trustgeoopt/diagnostics/curvature.py",
+    "src/trustgeoopt/diagnostics/gradient_statistics.py",
+    "src/trustgeoopt/diagnostics/reliability.py",
+    "src/trustgeoopt/diagnostics/subspace_alignment.py",
+    "src/trustgeoopt/geometry/__init__.py",
+    "src/trustgeoopt/geometry/covariance.py",
+    "src/trustgeoopt/geometry/low_rank.py",
+    "src/trustgeoopt/geometry/spectral.py",
+    "src/trustgeoopt/geometry/woodbury.py",
+    "src/trustgeoopt/models/__init__.py",
+    "src/trustgeoopt/models/cnn.py",
+    "src/trustgeoopt/models/mlp.py",
+    "src/trustgeoopt/models/resnet.py",
+    "src/trustgeoopt/optimizers/__init__.py",
+    "src/trustgeoopt/optimizers/adabelief.py",
+    "src/trustgeoopt/optimizers/adamw.py",
+    "src/trustgeoopt/optimizers/optimizer_factory.py",
+    "src/trustgeoopt/optimizers/preconditioners.py",
+    "src/trustgeoopt/optimizers/trustgeo.py",
+    "src/trustgeoopt/training/__init__.py",
+    "src/trustgeoopt/training/checkpoint.py",
+    "src/trustgeoopt/training/evaluation.py",
+    "src/trustgeoopt/training/metrics.py",
+    "src/trustgeoopt/training/synthetic_runner.py",
+    "src/trustgeoopt/training/trainer.py",
+    "src/trustgeoopt/utils/__init__.py",
+    "src/trustgeoopt/utils/hardware.py",
+    "src/trustgeoopt/utils/logging.py",
+    "src/trustgeoopt/utils/seeds.py",
+    "tests/conftest.py",
+    "tests/test_adamw.py",
+    "tests/test_checkpointing.py",
+    "tests/test_cuda.py",
+    "tests/test_geometry.py",
+    "tests/test_optimizer.py",
+    "tests/test_reliability.py",
+    "tests/test_reproducibility.py"
+  ],
+  "source_artifact_count": 98,
+  "runs": [
+    {
+      "path": "results/final_smoke/raw/mlp-smoke-ec4ef97f80-e1329fad",
+      "id": "mlp-smoke-ec4ef97f80-e1329fad",
+      "status": "success",
+      "seed": 0,
+      "rows": 4,
+      "source_sha256": "6b8e3b876d06ce11194ab4006d39a9f2520a7dcc6c6c8f7614b803d46581196c"
+    },
+    {
+      "path": "results/geometry/raw/geometry-cost-4a713f69ab-8a7576f5",
+      "id": "geometry-cost-4a713f69ab-8a7576f5",
+      "status": "success",
+      "seed": 0,
+      "rows": 40,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-0373bf09dd-e63467e0",
+      "id": "failure-pilot-0373bf09dd-e63467e0",
+      "status": "success",
+      "seed": 2,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-06b1f5c451-72bf8cb8",
+      "id": "failure-pilot-06b1f5c451-72bf8cb8",
+      "status": "success",
+      "seed": 1,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-07872c00fc-0b2b35d7",
+      "id": "failure-pilot-07872c00fc-0b2b35d7",
+      "status": "success",
+      "seed": 2,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-0eba5999f0-a12d41d2",
+      "id": "failure-pilot-0eba5999f0-a12d41d2",
+      "status": "success",
+      "seed": 1,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-0fa9d2436c-19442942",
+      "id": "failure-pilot-0fa9d2436c-19442942",
+      "status": "success",
+      "seed": 0,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-0fcfae9e8b-3c085c35",
+      "id": "failure-pilot-0fcfae9e8b-3c085c35",
+      "status": "success",
+      "seed": 4,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-1303a3e1e3-c16d270b",
+      "id": "failure-pilot-1303a3e1e3-c16d270b",
+      "status": "success",
+      "seed": 2,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-14565a5ca9-e8261b68",
+      "id": "failure-pilot-14565a5ca9-e8261b68",
+      "status": "success",
+      "seed": 3,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-16b236beea-29d78339",
+      "id": "failure-pilot-16b236beea-29d78339",
+      "status": "success",
+      "seed": 3,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-1740dfdaf1-a5ff7190",
+      "id": "failure-pilot-1740dfdaf1-a5ff7190",
+      "status": "success",
+      "seed": 3,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-17c7654ecb-e5f8ff13",
+      "id": "failure-pilot-17c7654ecb-e5f8ff13",
+      "status": "success",
+      "seed": 1,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-1b03b441e2-97ea8b7c",
+      "id": "failure-pilot-1b03b441e2-97ea8b7c",
+      "status": "success",
+      "seed": 0,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-1c11b5df92-ad9f86dd",
+      "id": "failure-pilot-1c11b5df92-ad9f86dd",
+      "status": "success",
+      "seed": 2,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-1d81b78ace-9900dcd6",
+      "id": "failure-pilot-1d81b78ace-9900dcd6",
+      "status": "success",
+      "seed": 1,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-1d9c0c4fb8-45a44284",
+      "id": "failure-pilot-1d9c0c4fb8-45a44284",
+      "status": "success",
+      "seed": 1,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-1e9008f75e-67dfa5dd",
+      "id": "failure-pilot-1e9008f75e-67dfa5dd",
+      "status": "success",
+      "seed": 3,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-1ff91e4969-9065d9c3",
+      "id": "failure-pilot-1ff91e4969-9065d9c3",
+      "status": "success",
+      "seed": 2,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-2100bc8993-eb9dcfae",
+      "id": "failure-pilot-2100bc8993-eb9dcfae",
+      "status": "success",
+      "seed": 1,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-282f3eadf5-98dacc29",
+      "id": "failure-pilot-282f3eadf5-98dacc29",
+      "status": "success",
+      "seed": 1,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-290841ae4f-979df96f",
+      "id": "failure-pilot-290841ae4f-979df96f",
+      "status": "success",
+      "seed": 4,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-32a007f551-5905ad7d",
+      "id": "failure-pilot-32a007f551-5905ad7d",
+      "status": "success",
+      "seed": 1,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-3647e36b19-981be513",
+      "id": "failure-pilot-3647e36b19-981be513",
+      "status": "success",
+      "seed": 3,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-3be6732e80-d528dc86",
+      "id": "failure-pilot-3be6732e80-d528dc86",
+      "status": "success",
+      "seed": 1,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-3e54920894-f5936420",
+      "id": "failure-pilot-3e54920894-f5936420",
+      "status": "success",
+      "seed": 4,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-40d28ff55d-eff9604e",
+      "id": "failure-pilot-40d28ff55d-eff9604e",
+      "status": "success",
+      "seed": 4,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-4200e2621d-4b9561f8",
+      "id": "failure-pilot-4200e2621d-4b9561f8",
+      "status": "success",
+      "seed": 1,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-42343707d1-725ee6e2",
+      "id": "failure-pilot-42343707d1-725ee6e2",
+      "status": "success",
+      "seed": 4,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-442776d810-ba098f99",
+      "id": "failure-pilot-442776d810-ba098f99",
+      "status": "success",
+      "seed": 4,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-4bf3852245-869385ea",
+      "id": "failure-pilot-4bf3852245-869385ea",
+      "status": "success",
+      "seed": 3,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-592aba7934-13c6852a",
+      "id": "failure-pilot-592aba7934-13c6852a",
+      "status": "success",
+      "seed": 3,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-5ba2a99ee5-7875e2dd",
+      "id": "failure-pilot-5ba2a99ee5-7875e2dd",
+      "status": "success",
+      "seed": 0,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-6436d54713-d7a86006",
+      "id": "failure-pilot-6436d54713-d7a86006",
+      "status": "success",
+      "seed": 3,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-667549be09-498d23db",
+      "id": "failure-pilot-667549be09-498d23db",
+      "status": "success",
+      "seed": 1,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-6834ffc4a1-847bf9b6",
+      "id": "failure-pilot-6834ffc4a1-847bf9b6",
+      "status": "success",
+      "seed": 0,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-6a75038800-6bb3ddc2",
+      "id": "failure-pilot-6a75038800-6bb3ddc2",
+      "status": "success",
+      "seed": 1,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-6c752ab726-2b578acf",
+      "id": "failure-pilot-6c752ab726-2b578acf",
+      "status": "success",
+      "seed": 3,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-6d27284ba9-3020a49c",
+      "id": "failure-pilot-6d27284ba9-3020a49c",
+      "status": "success",
+      "seed": 4,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-913da82b11-b02bda2e",
+      "id": "failure-pilot-913da82b11-b02bda2e",
+      "status": "success",
+      "seed": 0,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-a1d3187fdc-13c8c004",
+      "id": "failure-pilot-a1d3187fdc-13c8c004",
+      "status": "success",
+      "seed": 2,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-a7a357d895-1a684e87",
+      "id": "failure-pilot-a7a357d895-1a684e87",
+      "status": "success",
+      "seed": 0,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-a7e0dd7f59-2a977871",
+      "id": "failure-pilot-a7e0dd7f59-2a977871",
+      "status": "success",
+      "seed": 2,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-a87cad1e71-55984a15",
+      "id": "failure-pilot-a87cad1e71-55984a15",
+      "status": "success",
+      "seed": 2,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-a8baf047bc-a2d23e08",
+      "id": "failure-pilot-a8baf047bc-a2d23e08",
+      "status": "success",
+      "seed": 0,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-ae194fa76d-5c9da98e",
+      "id": "failure-pilot-ae194fa76d-5c9da98e",
+      "status": "success",
+      "seed": 4,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-b0465ad333-0d828970",
+      "id": "failure-pilot-b0465ad333-0d828970",
+      "status": "success",
+      "seed": 4,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-b1f2fb6bab-397db589",
+      "id": "failure-pilot-b1f2fb6bab-397db589",
+      "status": "success",
+      "seed": 3,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-b308a25bce-3e675b47",
+      "id": "failure-pilot-b308a25bce-3e675b47",
+      "status": "success",
+      "seed": 0,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-b9148727b3-daeb15ef",
+      "id": "failure-pilot-b9148727b3-daeb15ef",
+      "status": "success",
+      "seed": 1,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-bc7661b2e4-bc99e064",
+      "id": "failure-pilot-bc7661b2e4-bc99e064",
+      "status": "success",
+      "seed": 4,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-bccd552422-dd39ced3",
+      "id": "failure-pilot-bccd552422-dd39ced3",
+      "status": "success",
+      "seed": 2,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-be5aa52f25-61c75f41",
+      "id": "failure-pilot-be5aa52f25-61c75f41",
+      "status": "success",
+      "seed": 0,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-bfc7d0cb2c-8d013c21",
+      "id": "failure-pilot-bfc7d0cb2c-8d013c21",
+      "status": "success",
+      "seed": 0,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-c13be7cadc-3ae6e8c9",
+      "id": "failure-pilot-c13be7cadc-3ae6e8c9",
+      "status": "success",
+      "seed": 2,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-c2c10034cc-5eb2ac25",
+      "id": "failure-pilot-c2c10034cc-5eb2ac25",
+      "status": "success",
+      "seed": 3,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-c3e6ae6168-f85ad1d5",
+      "id": "failure-pilot-c3e6ae6168-f85ad1d5",
+      "status": "success",
+      "seed": 0,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-c482cd0d0a-15187985",
+      "id": "failure-pilot-c482cd0d0a-15187985",
+      "status": "success",
+      "seed": 1,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-c66e80a3c5-8f5c5be9",
+      "id": "failure-pilot-c66e80a3c5-8f5c5be9",
+      "status": "success",
+      "seed": 0,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-c8cc46b55a-cf4c26ef",
+      "id": "failure-pilot-c8cc46b55a-cf4c26ef",
+      "status": "success",
+      "seed": 0,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-c9b989c8a3-1591be3f",
+      "id": "failure-pilot-c9b989c8a3-1591be3f",
+      "status": "success",
+      "seed": 4,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-cb699e2b30-8a68de97",
+      "id": "failure-pilot-cb699e2b30-8a68de97",
+      "status": "success",
+      "seed": 3,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-ce81341fbd-9fc250cd",
+      "id": "failure-pilot-ce81341fbd-9fc250cd",
+      "status": "success",
+      "seed": 2,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-cfbd66e88d-cea54dc0",
+      "id": "failure-pilot-cfbd66e88d-cea54dc0",
+      "status": "success",
+      "seed": 1,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-d32f51084f-76a40162",
+      "id": "failure-pilot-d32f51084f-76a40162",
+      "status": "success",
+      "seed": 0,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-d44a8a4ea0-71950a9c",
+      "id": "failure-pilot-d44a8a4ea0-71950a9c",
+      "status": "success",
+      "seed": 4,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-de639c86b0-abee89cb",
+      "id": "failure-pilot-de639c86b0-abee89cb",
+      "status": "success",
+      "seed": 2,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-df36f2a681-6bc7180a",
+      "id": "failure-pilot-df36f2a681-6bc7180a",
+      "status": "success",
+      "seed": 0,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-e029eeada4-9c1b4af4",
+      "id": "failure-pilot-e029eeada4-9c1b4af4",
+      "status": "success",
+      "seed": 3,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-e09d3b208d-77963c78",
+      "id": "failure-pilot-e09d3b208d-77963c78",
+      "status": "success",
+      "seed": 3,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-e203ec2a7f-e08a4cdb",
+      "id": "failure-pilot-e203ec2a7f-e08a4cdb",
+      "status": "success",
+      "seed": 2,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-e2a23c5261-f30b3a76",
+      "id": "failure-pilot-e2a23c5261-f30b3a76",
+      "status": "success",
+      "seed": 4,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-ea65d0b014-cb0f6d2d",
+      "id": "failure-pilot-ea65d0b014-cb0f6d2d",
+      "status": "success",
+      "seed": 2,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-f047de8342-49460434",
+      "id": "failure-pilot-f047de8342-49460434",
+      "status": "success",
+      "seed": 2,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-f0eb4ad94f-81ea68ed",
+      "id": "failure-pilot-f0eb4ad94f-81ea68ed",
+      "status": "success",
+      "seed": 4,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-f227cbb759-f8430d49",
+      "id": "failure-pilot-f227cbb759-f8430d49",
+      "status": "success",
+      "seed": 2,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-f305a99e7e-fad537bc",
+      "id": "failure-pilot-f305a99e7e-fad537bc",
+      "status": "success",
+      "seed": 4,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-f655085210-52ddd659",
+      "id": "failure-pilot-f655085210-52ddd659",
+      "status": "success",
+      "seed": 3,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-f859f03a7a-a7271c3c",
+      "id": "failure-pilot-f859f03a7a-a7271c3c",
+      "status": "success",
+      "seed": 1,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-f9ed3133e0-47f7d441",
+      "id": "failure-pilot-f9ed3133e0-47f7d441",
+      "status": "success",
+      "seed": 4,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-feb221dbbd-8c384123",
+      "id": "failure-pilot-feb221dbbd-8c384123",
+      "status": "success",
+      "seed": 0,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/pilot/raw/failure-pilot-ffd164100f-b0fd7aac",
+      "id": "failure-pilot-ffd164100f-b0fd7aac",
+      "status": "success",
+      "seed": 3,
+      "rows": 100,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/raw/mlp-smoke-ec4ef97f80-5bde6663",
+      "id": "mlp-smoke-ec4ef97f80-5bde6663",
+      "status": "success",
+      "seed": 0,
+      "rows": 4,
+      "source_sha256": "4c19315fb8b78003e53aff1b8c84e7aa4dbc496f47b99adfbe9c1092217f85a4"
+    },
+    {
+      "path": "results/raw/quadratic-smoke-92045df496-78967c6a",
+      "id": "quadratic-smoke-92045df496-78967c6a",
+      "status": "success",
+      "seed": 0,
+      "rows": 100,
+      "source_sha256": "4c19315fb8b78003e53aff1b8c84e7aa4dbc496f47b99adfbe9c1092217f85a4"
+    },
+    {
+      "path": "results/reliability/raw/reliability-pilot-06780c8792-5d54898d",
+      "id": "reliability-pilot-06780c8792-5d54898d",
+      "status": "success",
+      "seed": 0,
+      "rows": 150,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/reliability/raw/reliability-pilot-38cbbccbdd-8c006064",
+      "id": "reliability-pilot-38cbbccbdd-8c006064",
+      "status": "success",
+      "seed": 2,
+      "rows": 150,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/reliability/raw/reliability-pilot-3ced2b6f4e-43be1818",
+      "id": "reliability-pilot-3ced2b6f4e-43be1818",
+      "status": "success",
+      "seed": 1,
+      "rows": 150,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/reliability/raw/reliability-pilot-424a22ff75-6f753daf",
+      "id": "reliability-pilot-424a22ff75-6f753daf",
+      "status": "success",
+      "seed": 2,
+      "rows": 150,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/reliability/raw/reliability-pilot-4df8fdd297-8542def2",
+      "id": "reliability-pilot-4df8fdd297-8542def2",
+      "status": "success",
+      "seed": 3,
+      "rows": 150,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/reliability/raw/reliability-pilot-56942ef3f2-64d15d9a",
+      "id": "reliability-pilot-56942ef3f2-64d15d9a",
+      "status": "success",
+      "seed": 4,
+      "rows": 150,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/reliability/raw/reliability-pilot-783b3c7a0c-6e61c6ce",
+      "id": "reliability-pilot-783b3c7a0c-6e61c6ce",
+      "status": "success",
+      "seed": 1,
+      "rows": 150,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/reliability/raw/reliability-pilot-7d75a996df-f9c5ea88",
+      "id": "reliability-pilot-7d75a996df-f9c5ea88",
+      "status": "success",
+      "seed": 1,
+      "rows": 150,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/reliability/raw/reliability-pilot-8d630378bf-1d52783c",
+      "id": "reliability-pilot-8d630378bf-1d52783c",
+      "status": "success",
+      "seed": 3,
+      "rows": 150,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/reliability/raw/reliability-pilot-958d013f7c-19450398",
+      "id": "reliability-pilot-958d013f7c-19450398",
+      "status": "success",
+      "seed": 4,
+      "rows": 150,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/reliability/raw/reliability-pilot-af5ce04db0-b18edfbc",
+      "id": "reliability-pilot-af5ce04db0-b18edfbc",
+      "status": "success",
+      "seed": 4,
+      "rows": 150,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/reliability/raw/reliability-pilot-b095f24075-caca21c5",
+      "id": "reliability-pilot-b095f24075-caca21c5",
+      "status": "success",
+      "seed": 0,
+      "rows": 150,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/reliability/raw/reliability-pilot-bff713aa39-0c00e06b",
+      "id": "reliability-pilot-bff713aa39-0c00e06b",
+      "status": "success",
+      "seed": 2,
+      "rows": 150,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/reliability/raw/reliability-pilot-f0f95c44e2-452e035b",
+      "id": "reliability-pilot-f0f95c44e2-452e035b",
+      "status": "success",
+      "seed": 0,
+      "rows": 150,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    },
+    {
+      "path": "results/reliability/raw/reliability-pilot-fdeeff264c-afaf1aa3",
+      "id": "reliability-pilot-fdeeff264c-afaf1aa3",
+      "status": "success",
+      "seed": 3,
+      "rows": 150,
+      "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+    }
+  ],
+  "raw_run_count": 99,
+  "failures": 0,
+  "note": "Raw runs are engineering/pilot evidence; not all are independent efficacy trials."
+}

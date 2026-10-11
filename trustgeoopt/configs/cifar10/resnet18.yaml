@@ -1,0 +1,21 @@
+name: cifar10-resnet-planned
+seed: 0
+device: cpu
+threads: 1
+epochs: 20
+batch_size: 128
+dataset:
+  name: cifar10
+  root: data
+  download: false
+  validation_size: 5000
+  split_seed: 1234
+  classes: 10
+model:
+  name: resnet18
+  channels: 3
+  cifar_stem: true
+optimizer:
+  name: adamw
+  lr: 0.001
+  weight_decay: 0.0

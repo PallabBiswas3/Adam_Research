@@ -1,0 +1,17 @@
+name: quadratic-smoke
+seed: 0
+device: cpu
+dtype: float64
+threads: 1
+steps: 100
+parameter_shape: [4, 4]
+target_relative_error: 0.01
+checkpoint_interval: 100
+objective:
+  kind: rotated
+  dimension: 16
+  condition: 100
+optimizer:
+  name: adamw
+  lr: 0.03
+  weight_decay: 0.0

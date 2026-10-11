@@ -1,0 +1,10 @@
+name: planned-mlp-tuning
+base: configs/synthetic/mlp_smoke.yaml
+seeds: [0, 1]
+max_runs: 50
+grid:
+  optimizer.name: [momentum, adam, adamw, rmsprop, amsgrad, adabelief, shampoo]
+  optimizer.lr: [0.0001, 0.001, 0.01, 0.1]
+  optimizer.weight_decay: [0.0, 0.0001, 0.01]
+# Twelve trials per baseline per development seed. Held-out test data is never evaluated.
+# Requires explicit --max-runs 168 after choosing a training budget.

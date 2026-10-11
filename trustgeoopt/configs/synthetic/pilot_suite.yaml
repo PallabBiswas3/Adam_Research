@@ -1,0 +1,8 @@
+name: failure-pilot
+base: configs/synthetic/smoke.yaml
+seeds: [0, 1, 2, 3, 4]
+max_runs: 100
+grid:
+  objective.kind: [quadratic, rotated]
+  optimizer.name: [sgd, momentum, adam, adamw, rmsprop, amsgrad, adabelief, shampoo]
+  optimizer.lr: [0.001]

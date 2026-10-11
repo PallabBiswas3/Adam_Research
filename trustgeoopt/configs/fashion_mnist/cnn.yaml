@@ -1,0 +1,21 @@
+name: fashion-cnn-planned
+seed: 0
+device: cpu
+threads: 1
+epochs: 10
+batch_size: 128
+dataset:
+  name: fashion_mnist
+  root: data
+  download: false
+  validation_size: 5000
+  split_seed: 1234
+  classes: 10
+model:
+  name: cnn
+  channels: 1
+  width: 16
+optimizer:
+  name: adamw
+  lr: 0.001
+  weight_decay: 0.0

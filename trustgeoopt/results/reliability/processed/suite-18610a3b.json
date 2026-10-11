@@ -1,0 +1,171 @@
+{
+  "suite": {
+    "name": "reliability-pilot",
+    "base": "configs/synthetic/reliability.yaml",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "max_runs": 20,
+    "cases": [
+      {
+        "objective.kind": "rotated",
+        "objective.noise_std": 0.0,
+        "objective.noise_std_after": 0.0
+      },
+      {
+        "objective.kind": "noisy"
+      },
+      {
+        "objective.kind": "nonstationary",
+        "objective.noise_std": 0.0,
+        "objective.noise_std_after": 0.0
+      }
+    ]
+  },
+  "outcomes": [
+    {
+      "seed": 0,
+      "settings": {
+        "objective.kind": "rotated",
+        "objective.noise_std": 0.0,
+        "objective.noise_std_after": 0.0
+      },
+      "status": "success",
+      "path": "results\\reliability\\raw\\reliability-pilot-f0f95c44e2-452e035b"
+    },
+    {
+      "seed": 0,
+      "settings": {
+        "objective.kind": "noisy"
+      },
+      "status": "success",
+      "path": "results\\reliability\\raw\\reliability-pilot-b095f24075-caca21c5"
+    },
+    {
+      "seed": 0,
+      "settings": {
+        "objective.kind": "nonstationary",
+        "objective.noise_std": 0.0,
+        "objective.noise_std_after": 0.0
+      },
+      "status": "success",
+      "path": "results\\reliability\\raw\\reliability-pilot-06780c8792-5d54898d"
+    },
+    {
+      "seed": 1,
+      "settings": {
+        "objective.kind": "rotated",
+        "objective.noise_std": 0.0,
+        "objective.noise_std_after": 0.0
+      },
+      "status": "success",
+      "path": "results\\reliability\\raw\\reliability-pilot-3ced2b6f4e-43be1818"
+    },
+    {
+      "seed": 1,
+      "settings": {
+        "objective.kind": "noisy"
+      },
+      "status": "success",
+      "path": "results\\reliability\\raw\\reliability-pilot-7d75a996df-f9c5ea88"
+    },
+    {
+      "seed": 1,
+      "settings": {
+        "objective.kind": "nonstationary",
+        "objective.noise_std": 0.0,
+        "objective.noise_std_after": 0.0
+      },
+      "status": "success",
+      "path": "results\\reliability\\raw\\reliability-pilot-783b3c7a0c-6e61c6ce"
+    },
+    {
+      "seed": 2,
+      "settings": {
+        "objective.kind": "rotated",
+        "objective.noise_std": 0.0,
+        "objective.noise_std_after": 0.0
+      },
+      "status": "success",
+      "path": "results\\reliability\\raw\\reliability-pilot-38cbbccbdd-8c006064"
+    },
+    {
+      "seed": 2,
+      "settings": {
+        "objective.kind": "noisy"
+      },
+      "status": "success",
+      "path": "results\\reliability\\raw\\reliability-pilot-bff713aa39-0c00e06b"
+    },
+    {
+      "seed": 2,
+      "settings": {
+        "objective.kind": "nonstationary",
+        "objective.noise_std": 0.0,
+        "objective.noise_std_after": 0.0
+      },
+      "status": "success",
+      "path": "results\\reliability\\raw\\reliability-pilot-424a22ff75-6f753daf"
+    },
+    {
+      "seed": 3,
+      "settings": {
+        "objective.kind": "rotated",
+        "objective.noise_std": 0.0,
+        "objective.noise_std_after": 0.0
+      },
+      "status": "success",
+      "path": "results\\reliability\\raw\\reliability-pilot-fdeeff264c-afaf1aa3"
+    },
+    {
+      "seed": 3,
+      "settings": {
+        "objective.kind": "noisy"
+      },
+      "status": "success",
+      "path": "results\\reliability\\raw\\reliability-pilot-4df8fdd297-8542def2"
+    },
+    {
+      "seed": 3,
+      "settings": {
+        "objective.kind": "nonstationary",
+        "objective.noise_std": 0.0,
+        "objective.noise_std_after": 0.0
+      },
+      "status": "success",
+      "path": "results\\reliability\\raw\\reliability-pilot-8d630378bf-1d52783c"
+    },
+    {
+      "seed": 4,
+      "settings": {
+        "objective.kind": "rotated",
+        "objective.noise_std": 0.0,
+        "objective.noise_std_after": 0.0
+      },
+      "status": "success",
+      "path": "results\\reliability\\raw\\reliability-pilot-958d013f7c-19450398"
+    },
+    {
+      "seed": 4,
+      "settings": {
+        "objective.kind": "noisy"
+      },
+      "status": "success",
+      "path": "results\\reliability\\raw\\reliability-pilot-af5ce04db0-b18edfbc"
+    },
+    {
+      "seed": 4,
+      "settings": {
+        "objective.kind": "nonstationary",
+        "objective.noise_std": 0.0,
+        "objective.noise_std_after": 0.0
+      },
+      "status": "success",
+      "path": "results\\reliability\\raw\\reliability-pilot-56942ef3f2-64d15d9a"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+device: cpu
+diagnostics:
+  alignment_threshold: 0.0
+  mismatch_threshold: 2.0
+dtype: float64
+name: reliability-pilot
+objective:
+  change_step: 75
+  condition: 100
+  condition_after: 1000
+  dimension: 16
+  kind: rotated
+  noise_change_step: 75
+  noise_condition: 10
+  noise_std: 0.0
+  noise_std_after: 0.0
+  optimum_shift: 1.0
+optimizer:
+  betas:
+  - 0.9
+  - 0.999
+  lr: 0.1
+  name: adamw
+  weight_decay: 0.0
+parameter_shape:
+- 4
+- 4
+seed: 1
+steps: 150
+threads: 1

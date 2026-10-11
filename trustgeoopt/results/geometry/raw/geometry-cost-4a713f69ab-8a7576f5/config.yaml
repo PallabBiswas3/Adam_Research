@@ -1,0 +1,14 @@
+dataset:
+  dimensions:
+  - 128
+  - 1024
+  name: random-gradient-history
+  ranks:
+  - 2
+  - 4
+  repetitions: 10
+device: cpu
+name: geometry-cost
+optimizer:
+  name: standalone-woodbury-no-optimizer
+seed: 0

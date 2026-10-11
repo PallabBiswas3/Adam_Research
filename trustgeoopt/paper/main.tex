@@ -1,0 +1,63 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\newcommand{\todo}[1]{\par\noindent\textbf{TODO:} #1\par}
+\title{Reliability Diagnostics and Selective Geometry in Adaptive Optimization\\Research Foundation Draft}
+\author{Authorship to be determined}
+\date{12 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+This document outlines an investigation of adaptive optimizer reliability in
+conventional supervised networks. It is a research architecture, not a completed
+research contribution. Synthetic and CPU smoke evidence validates infrastructure;
+novelty, useful diagnostics, and computational improvements remain unestablished.
+\end{abstract}
+\section{Introduction}
+Can causal optimization statistics select useful geometric computation at lower
+total cost? \todo{Establish a reproducible weakness after fair tuning.}
+\section{Related Work}
+Adam and decoupled decay are reference mechanisms \cite{adam2015,adamw2019}.
+Residual scaling already appears in AdaBelief \cite{adabelief2020}.
+Structured and sketched information is established \cite{kfac2015,shampoo2018,sketchy2023}.
+Adaptive geometry scheduling has direct prior art \cite{purifying2025,foam2026}.
+\todo{Complete full-text overlap audit; distinguish unreviewed preprints.}
+\section{Problem Formulation}
+For empirical risk $L(\theta)=N^{-1}\sum_i\ell(f_\theta(x_i),y_i)$, use minibatch
+gradient $g_t$. The diagonal-plus-low-rank candidate metric is
+$P_t=\operatorname{diag}(D_t+\lambda)+F_tF_t^\top$. Its units and relationship
+to curvature must be justified; raw gradient covariance is not a Hessian.
+\section{Failure Analysis}
+\todo{Insert tuned fixed-objective, tracking and noise controls, with seed uncertainty.}
+\section{Proposed Method}
+TrustGeoOpt is a provisional label. No full optimizer is enabled in the initial
+codebase because diagnostic and correction gates have not passed.
+\todo{Specify an update only after preceding evidence supports it.}
+\section{Theoretical Analysis}
+For frozen SPD $H,P$, preconditioned quadratic convergence is governed by
+$P^{-1/2}HP^{-1/2}$. PSD low-rank addition can improve or worsen conditioning.
+\todo{Transfer only justified assumptions to any future momentum/gated update.}
+\section{Experimental Setup}
+Paired seeds, fixed validation selection, equal tuning budgets, identical schedules,
+and full compute accounting are required. Tests never guide hyperparameter selection.
+\section{Results}
+\todo{Import results from saved runs after analysis; no performance claim is made here.}
+\section{Ablations}
+\todo{Rank, refresh, gate, random-direction, damping, diagnostics and safeguards.}
+\section{Limitations}
+Initial review is incomplete; CPU pilot rates are untuned; the Shampoo reference
+is small and ungrafted. No neural GPU efficacy or novel convergence theorem exists.
+\section{Conclusion}
+The current artifact is reproducible infrastructure for testing a question.
+\todo{Write evidence-supported conclusions after decision gates.}
+\bibliographystyle{plain}
+\bibliography{references}
+\appendix
+\section{Reproducibility}
+\todo{List final configurations, source/environment hashes and commands.}
+\section{Proofs and Counterexamples}
+\todo{Include limited proven lemmas and distinguish unproved conjectures.}
+\end{document}

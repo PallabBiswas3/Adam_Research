@@ -1,0 +1,12 @@
+name: reliability-pilot
+base: configs/synthetic/reliability.yaml
+seeds: [0, 1, 2, 3, 4]
+max_runs: 20
+cases:
+  - objective.kind: rotated
+    objective.noise_std: 0.0
+    objective.noise_std_after: 0.0
+  - objective.kind: noisy
+  - objective.kind: nonstationary
+    objective.noise_std: 0.0
+    objective.noise_std_after: 0.0

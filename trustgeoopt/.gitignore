@@ -1,0 +1,11 @@
+__pycache__/
+.pytest_cache/
+*.egg-info/
+.venv/
+data/
+results/raw/*/*.pt
+*.aux
+*.log
+*.out
+*.bbl
+*.blg

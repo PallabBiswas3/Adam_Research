@@ -1,0 +1,10 @@
+name: planned-tuning
+base: configs/synthetic/smoke.yaml
+seeds: [0, 1, 2, 3, 4]
+max_runs: 50
+grid:
+  objective.kind: [quadratic, rotated]
+  objective.condition: [10, 100, 1000, 10000]
+  optimizer.name: [sgd, momentum, adam, adamw, rmsprop, amsgrad, adabelief, shampoo]
+  optimizer.lr: [0.0001, 0.001, 0.01]
+# Planned grid exceeds default run guard. Explicit --max-runs required after budget review.

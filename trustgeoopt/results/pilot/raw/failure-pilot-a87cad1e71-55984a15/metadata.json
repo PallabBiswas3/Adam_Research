@@ -1,0 +1,85 @@
+{
+  "experiment_id": "failure-pilot-a87cad1e71-55984a15",
+  "config": {
+    "name": "failure-pilot",
+    "seed": 2,
+    "device": "cpu",
+    "dtype": "float64",
+    "threads": 1,
+    "steps": 100,
+    "parameter_shape": [
+      4,
+      4
+    ],
+    "target_relative_error": 0.01,
+    "checkpoint_interval": 100,
+    "objective": {
+      "kind": "quadratic",
+      "dimension": 16,
+      "condition": 100
+    },
+    "optimizer": {
+      "name": "amsgrad",
+      "lr": 0.001,
+      "weight_decay": 0.0
+    }
+  },
+  "created_utc": "2026-10-11T19:09:18.142156+00:00",
+  "environment": {
+    "python": "3.11.4",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel",
+    "device": "cpu",
+    "threads": 1,
+    "cuda_available": false,
+    "cuda_version": null,
+    "gpu": null,
+    "packages": {
+      "torch": "2.1.2+cpu",
+      "torchvision": "0.16.2+cpu",
+      "numpy": "1.26.4",
+      "scipy": "1.17.1",
+      "pandas": "2.3.3",
+      "matplotlib": "3.8.4",
+      "pytest": "8.4.1",
+      "PyYAML": "6.0.1"
+    },
+    "git_commit": null,
+    "git_dirty": null,
+    "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+  },
+  "seed": 2,
+  "dataset": {
+    "kind": "quadratic",
+    "dimension": 16,
+    "condition": 100
+  },
+  "optimizer": {
+    "name": "amsgrad",
+    "lr": 0.001,
+    "weight_decay": 0.0
+  },
+  "status": "success",
+  "errors": [],
+  "warnings": [
+    "CPU RSS is process-lifetime high-water; traced memory excludes tensor storage."
+  ],
+  "resume_from": null,
+  "runtime_seconds": 0.21606070000007094,
+  "rows": 100,
+  "cpu_process_peak_rss_bytes": 230313984,
+  "python_peak_traced_bytes": 195309,
+  "cuda_peak_allocated_bytes": null,
+  "summary": {
+    "initial_loss": 166.80229681814305,
+    "final_loss": 138.08919116514937,
+    "target_step": null,
+    "target_seconds": null,
+    "target_censored": true,
+    "tracking": false,
+    "harmful_updates": 0,
+    "loss_spikes": 0,
+    "optimizer_seconds": 0.025986699998611584,
+    "diagnostic_seconds": 0.04783380000026227
+  }
+}

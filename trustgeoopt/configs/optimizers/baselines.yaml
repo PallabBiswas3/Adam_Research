@@ -1,0 +1,13 @@
+# Registry documentation, not an automatically executed experiment.
+baselines:
+  sgd: {lr: 0.001, weight_decay: 0.0}
+  momentum: {lr: 0.001, momentum: 0.9, weight_decay: 0.0}
+  adam: {lr: 0.001, weight_decay: 0.0}
+  adamw: {lr: 0.001, weight_decay: 0.0}
+  adamw_monitor: {lr: 0.001, weight_decay: 0.0}
+  amsgrad: {lr: 0.001, weight_decay: 0.0}
+  rmsprop: {lr: 0.001, weight_decay: 0.0}
+  adagrad: {lr: 0.001, weight_decay: 0.0}
+  radam: {lr: 0.001, weight_decay: 0.0}
+  adabelief: {lr: 0.001, eps: 1.0e-8, weight_decay: 0.0}
+  shampoo: {lr: 0.001, eps: 1.0e-6, refresh_interval: 1, max_factor_dim: 128, weight_decay: 0.0}

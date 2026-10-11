@@ -1,0 +1,26 @@
+batch_size: 64
+dataset:
+  classes: 2
+  condition: 100
+  data_seed: 500
+  dimension: 20
+  name: synthetic
+  task: classification
+  test_size: 128
+  train_size: 512
+  validation_size: 128
+device: cpu
+epochs: 4
+model:
+  activation: relu
+  hidden:
+  - 32
+  - 32
+  name: mlp
+name: mlp-smoke
+optimizer:
+  lr: 0.01
+  name: adamw
+  weight_decay: 0.0
+seed: 0
+threads: 1

@@ -1,0 +1,22 @@
+name: mnist-mlp-planned
+seed: 0
+device: cpu
+threads: 1
+epochs: 10
+batch_size: 128
+dataset:
+  name: mnist
+  root: data
+  download: false
+  validation_size: 5000
+  split_seed: 1234
+  classes: 10
+model:
+  name: mlp
+  input_dim: 784
+  hidden: [128, 128]
+  activation: relu
+optimizer:
+  name: adamw
+  lr: 0.001
+  weight_decay: 0.0

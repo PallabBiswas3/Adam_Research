@@ -1,0 +1,76 @@
+{
+  "experiment_id": "geometry-cost-4a713f69ab-8a7576f5",
+  "config": {
+    "name": "geometry-cost",
+    "seed": 0,
+    "device": "cpu",
+    "dataset": {
+      "name": "random-gradient-history",
+      "dimensions": [
+        128,
+        1024
+      ],
+      "ranks": [
+        2,
+        4
+      ],
+      "repetitions": 10
+    },
+    "optimizer": {
+      "name": "standalone-woodbury-no-optimizer"
+    }
+  },
+  "created_utc": "2026-10-11T19:12:53.273284+00:00",
+  "environment": {
+    "python": "3.11.4",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel",
+    "device": "cpu",
+    "threads": 1,
+    "cuda_available": false,
+    "cuda_version": null,
+    "gpu": null,
+    "packages": {
+      "torch": "2.1.2+cpu",
+      "torchvision": "0.16.2+cpu",
+      "numpy": "1.26.4",
+      "scipy": "1.17.1",
+      "pandas": "2.3.3",
+      "matplotlib": "3.8.4",
+      "pytest": "8.4.1",
+      "PyYAML": "6.0.1"
+    },
+    "git_commit": null,
+    "git_dirty": null,
+    "source_sha256": "1f5b3f6dc0cf946a96a266e09709828e5c8a4cabcc5480861c75861b0c34a242"
+  },
+  "seed": 0,
+  "dataset": {
+    "name": "random-gradient-history",
+    "dimensions": [
+      128,
+      1024
+    ],
+    "ranks": [
+      2,
+      4
+    ],
+    "repetitions": 10
+  },
+  "optimizer": {
+    "name": "standalone-woodbury-no-optimizer"
+  },
+  "status": "success",
+  "errors": [],
+  "warnings": [
+    "CPU RSS is process-lifetime high-water; traced memory excludes tensor storage."
+  ],
+  "runtime_seconds": 0.06528590000016266,
+  "rows": 40,
+  "cpu_process_peak_rss_bytes": 204398592,
+  "python_peak_traced_bytes": 156266,
+  "cuda_peak_allocated_bytes": null,
+  "summary": {
+    "note": "Random history cost only; no end-to-end optimizer comparison"
+  }
+}
