@@ -1,0 +1,14 @@
+{
+  "id": "pallabbiswas3/robust-learning-gpu-pilot",
+  "title": "Robust Learning GPU Pilot",
+  "code_file": "robust_learning_gpu_pilot.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": false,
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

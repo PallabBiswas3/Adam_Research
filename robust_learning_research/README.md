@@ -1,5 +1,10 @@
 # Robust Learning Research — Path B discovery
 
+Kaggle GPU timing-pilot preparation is documented in
+[research/kaggle_gpu_pilot.md](research/kaggle_gpu_pilot.md). It contains the
+paper/code decisions, bounded CUDA profiling plan, private notebook metadata,
+and manual upload steps. No GPU run or quality benchmark has been executed.
+
 Status: **strong-baseline audit and bounded CIFAR-10 feasibility pilot completed;
 stop before full training**. Current branch is
 `research/robust-learning-baseline-validation`, based on the discovery branch.

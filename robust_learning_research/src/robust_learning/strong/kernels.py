@@ -16,6 +16,9 @@ class DSSState:
         self.score = torch.zeros(examples, classes)
 
     def observe(self, indices, probability):
+        # Histories stay on the host; only the current minibatch occupies VRAM.
+        probability = probability.detach().cpu()
+        indices = torch.as_tensor(indices, dtype=torch.long, device="cpu")
         self.marginal = self.decay*self.marginal+(1-self.decay)*probability.mean(0)
         self.current[indices] = adjusted_probability(probability, self.marginal, self.prior).detach()
 
@@ -35,7 +38,7 @@ class DSSState:
 
 
 def _mix(images, targets, mix, generator):
-    permutation = torch.randperm(len(images), generator=generator)
+    permutation = torch.randperm(len(images), generator=generator).to(images.device)
     return mix*images+(1-mix)*images[permutation], mix*targets+(1-mix)*targets[permutation]
 
 
@@ -51,9 +54,9 @@ def dss_update(model, optimizer, state, indices, weak, observed, keep, exclude,
     logits = model(weak)
     probability = logits.softmax(1).detach()
     state.observe(indices, probability)
-    supervised = ccs_loss(logits, observed, exclude, keep)
+    supervised = ccs_loss(logits, observed, exclude.to(logits.device), keep.to(logits.device))
     total = supervised
-    consistency = torch.zeros(())
+    consistency = logits.new_zeros(())
     if strong is not None:
         # DSS+ supplement Eq.6 uses p^(1/T); official code uses p^T and
         # adjusted targets. This kernel follows the published raw-probability equation.
@@ -71,10 +74,11 @@ def dividemix_update(model, peer, optimizer, view, labeled_indices, unlabeled_in
                      peer_probability, weak_transform, config, rng, generator,
                      ramp_fraction=1.):
     model.train(); peer.eval()
-    x1, x2 = [batch_images(view, labeled_indices, weak_transform) for _ in range(2)]
-    u1, u2 = [batch_images(view, unlabeled_indices, weak_transform) for _ in range(2)]
-    observed = torch.tensor(view.observed_y[labeled_indices], dtype=torch.long)
-    weight = torch.tensor(peer_probability[labeled_indices], dtype=torch.float32)
+    device = next(model.parameters()).device
+    x1, x2 = [batch_images(view, labeled_indices, weak_transform).to(device) for _ in range(2)]
+    u1, u2 = [batch_images(view, unlabeled_indices, weak_transform).to(device) for _ in range(2)]
+    observed = torch.as_tensor(view.observed_y[labeled_indices], dtype=torch.long, device=device)
+    weight = torch.as_tensor(peer_probability[labeled_indices], dtype=torch.float32, device=device)
     with torch.no_grad():
         px = (model(x1).softmax(1)+model(x2).softmax(1))/2
         tx = refine_targets(observed, px, weight, config["temperature"])
