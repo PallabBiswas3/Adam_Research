@@ -1,0 +1,16 @@
+# Day-zero status (2026-10-12)
+
+- Working branch: research/robust-learning-discovery (based on Sprint 4). TrustGeoOpt is unchanged.
+- Initial verified primary-source map: eight papers; this is NOT the required full systematic literature audit.
+- Controlled toy generator: three Gaussian-mixture classes, long-tail counts (600,160,60), sampled corruption, known Bayes ambiguity available in sealed evaluation oracle only.
+- Implemented sanity controls: CE, global small-loss, and classwise small-loss. These are intentionally simple demonstrations, **not** Co-teaching/DivideMix/DSS reproductions.
+- Local CPU check: synthetic unit tests 2 passed. One seed of toy smoke was run; numbers below are illustrative, cannot support a claim.
+
+Toy seed 0, 18 epochs, 70% keep fraction, observed-label training:
+- CE: clean-hard retained 103/103; clean-tail 52/52; noisy retained 80/80 (no filtering).
+- Global small loss: clean-hard retained 8/103; clean-tail 0/52; noisy retained 6/80.
+- Classwise small loss: clean-hard retained 48/103; clean-tail 47/52; noisy retained 19/80.
+
+The classwise control improves minority retention but also retains more corrupted examples. This tradeoff is a well-established research topic and no novelty conclusion follows.
+
+**Still to do via Codex:** read full related algorithms, faithful baselines, multiple seeds, held-out tasks, class-conditional/instance-dependent noise controls, fair tuning and runtime audit. Do NOT claim the 7-day sprint is complete.
