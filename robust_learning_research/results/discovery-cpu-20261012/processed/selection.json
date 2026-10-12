@@ -1,0 +1,7 @@
+{
+  "ce": 0.01,
+  "global_small_loss": 0.01,
+  "classwise_small_loss": 0.003,
+  "coteaching_toy": 0.01,
+  "confidence_tracking_toy": 0.003
+}

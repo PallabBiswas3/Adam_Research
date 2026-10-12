@@ -1,0 +1,5 @@
+method,reference,metric,n,mean,lower,upper
+global_small_loss,ce,eight_regime_mean_macro_f1,5,-0.03365165419307452,-0.03973843437064754,-0.027258496153014917
+classwise_small_loss,ce,eight_regime_mean_macro_f1,5,0.05131275667345757,0.04394822298816213,0.05867729035875302
+coteaching_toy,ce,eight_regime_mean_macro_f1,5,-0.03170064255259785,-0.03877697379173621,-0.02493852546948888
+confidence_tracking_toy,ce,eight_regime_mean_macro_f1,5,-0.0503989593817427,-0.06276754377793244,-0.041425847865453655

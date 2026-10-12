@@ -1,0 +1,174 @@
+{
+  "protocol": {
+    "name": "discovery-cpu-20261012",
+    "max_seconds": 300,
+    "max_trials": 260,
+    "threads": 1,
+    "epochs": 20,
+    "batch_size": 64,
+    "hidden": 32,
+    "warmup": 3,
+    "keep_fraction": 0.7,
+    "nominal_noise_rate": 0.3,
+    "hard_threshold": 0.5,
+    "confidence_z_threshold": 1.6448536269514722,
+    "rates": [
+      0.003,
+      0.01
+    ],
+    "development_seeds": [
+      201,
+      202
+    ],
+    "evaluation_seeds": [
+      301,
+      302,
+      303,
+      304,
+      305
+    ],
+    "methods": [
+      "ce",
+      "global_small_loss",
+      "classwise_small_loss",
+      "coteaching_toy",
+      "confidence_tracking_toy"
+    ],
+    "fractions": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ],
+    "matched_rejected_noise_precision": [
+      0.5,
+      0.7,
+      0.9
+    ],
+    "bootstrap_replicates": 4000,
+    "bootstrap_seed": 20261015,
+    "development_regimes": [
+      "balanced_symmetric",
+      "longtail_instance"
+    ],
+    "regimes": [
+      {
+        "name": "balanced_symmetric",
+        "counts": [
+          274,
+          273,
+          273
+        ],
+        "noise_kind": "symmetric",
+        "std": 1.15,
+        "task_seed": 300,
+        "split": "evaluation"
+      },
+      {
+        "name": "balanced_class_conditional",
+        "counts": [
+          274,
+          273,
+          273
+        ],
+        "noise_kind": "class_conditional",
+        "std": 1.15,
+        "task_seed": 300,
+        "split": "evaluation"
+      },
+      {
+        "name": "balanced_instance",
+        "counts": [
+          274,
+          273,
+          273
+        ],
+        "noise_kind": "instance",
+        "std": 1.15,
+        "task_seed": 300,
+        "split": "evaluation"
+      },
+      {
+        "name": "longtail_symmetric",
+        "counts": [
+          600,
+          160,
+          60
+        ],
+        "noise_kind": "symmetric",
+        "std": 1.15,
+        "task_seed": 300,
+        "split": "evaluation"
+      },
+      {
+        "name": "longtail_class_conditional",
+        "counts": [
+          600,
+          160,
+          60
+        ],
+        "noise_kind": "class_conditional",
+        "std": 1.15,
+        "task_seed": 300,
+        "split": "evaluation"
+      },
+      {
+        "name": "longtail_instance",
+        "counts": [
+          600,
+          160,
+          60
+        ],
+        "noise_kind": "instance",
+        "std": 1.15,
+        "task_seed": 300,
+        "split": "evaluation"
+      },
+      {
+        "name": "heldout_balanced_instance",
+        "counts": [
+          274,
+          273,
+          273
+        ],
+        "noise_kind": "instance",
+        "std": 1.45,
+        "task_seed": 301,
+        "split": "held_out"
+      },
+      {
+        "name": "heldout_longtail_instance",
+        "counts": [
+          600,
+          160,
+          60
+        ],
+        "noise_kind": "instance",
+        "std": 1.45,
+        "task_seed": 301,
+        "split": "held_out"
+      }
+    ]
+  },
+  "experiment_seconds": 92.30236549999972,
+  "attempts": 245,
+  "stages": [
+    "pilot",
+    "development",
+    "evaluation"
+  ],
+  "source_sha256": "aa2f7022fc44cace369791e4f045812749224afb42ff8b79f834b173130ace91",
+  "snapshot_sha256": "1e592751f9ad21e59e4aab32c6fc68883089454fdcdda70bb89d73c4860a06e7",
+  "environment": {
+    "python": "3.11.4",
+    "torch": "2.1.2+cpu",
+    "numpy": "1.26.4",
+    "device": "cpu"
+  }
+}

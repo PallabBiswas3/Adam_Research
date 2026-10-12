@@ -1,0 +1,9 @@
+{
+  "status_counts": {
+    "success": 245
+  },
+  "evaluation_successes": 200,
+  "experiment_seconds": 92.30236549999972,
+  "analysis_source_sha256": "56458a3543e2d23cbceedaa0fc6abbec866699216e72afece04e100fb6647e85",
+  "inference": "4000 seed-block percentile bootstrap; descriptive, five seeds; not independent steps or simultaneous intervals"
+}

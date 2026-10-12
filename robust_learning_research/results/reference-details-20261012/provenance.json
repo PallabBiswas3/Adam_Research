@@ -1,0 +1,56 @@
+[
+  {
+    "filename": "ct_selector.py",
+    "url": "https://raw.githubusercontent.com/Aliinton/ConfidenceTracking/85fa27da92d3171ebb3d919c51166f4396714ce2/model/SampleSelector.py",
+    "date": "2026-10-12",
+    "reuse": "inspection only",
+    "status": "retrieved",
+    "bytes": 13331,
+    "sha256": "bf75708b4d18b54fdb7bcfb0f0df9410785e62af93aa02d1a6dbdf4a31a06f84"
+  },
+  {
+    "filename": "ct_requirements.txt",
+    "url": "https://raw.githubusercontent.com/Aliinton/ConfidenceTracking/85fa27da92d3171ebb3d919c51166f4396714ce2/requirements.txt",
+    "date": "2026-10-12",
+    "reuse": "inspection only",
+    "status": "retrieved",
+    "bytes": 109,
+    "sha256": "6cc8ec61b03287fd2443317ee5e86f05ab412b8887fd7f1eb98b79980276e10f"
+  },
+  {
+    "filename": "dss_selector.py",
+    "url": "https://raw.githubusercontent.com/Aliinton/DSS/ebbe5dd705584814d1214fe6cc1f1fb40658cf58/model/SampleSelector.py",
+    "date": "2026-10-12",
+    "reuse": "inspection only",
+    "status": "retrieved",
+    "bytes": 12080,
+    "sha256": "a35336b14c4f3c5c2fdb947bc018a3bd6a315e9be7e6964d2d6ee49f50d7cb2d"
+  },
+  {
+    "filename": "dss_requirements.txt",
+    "url": "https://raw.githubusercontent.com/Aliinton/DSS/ebbe5dd705584814d1214fe6cc1f1fb40658cf58/requirements.txt",
+    "date": "2026-10-12",
+    "reuse": "inspection only",
+    "status": "retrieved",
+    "bytes": 109,
+    "sha256": "92e825f2bd099040f70c3f1b266adb1e56efc69db2b9ba1403635277f10e5fea"
+  },
+  {
+    "filename": "dss.pdf",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Pan_Debiased_Sample_Selection_for_Learning_with_Noisy_Labels_CVPR_2026_paper.pdf",
+    "date": "2026-10-12",
+    "reuse": "inspection only",
+    "status": "retrieved",
+    "bytes": 752030,
+    "sha256": "b1c1799312db513f2695fa93957d16e50f314c80636864ef4303d0c92d659611"
+  },
+  {
+    "filename": "dss_supplement.pdf",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/supplemental/Pan_Debiased_Sample_Selection_CVPR_2026_supplemental.pdf",
+    "date": "2026-10-12",
+    "reuse": "inspection only",
+    "status": "retrieved",
+    "bytes": 644194,
+    "sha256": "d13269fe305c0f72894405152e0cd14be2abd878252d0d7a41cca7b3b1da0390"
+  }
+]

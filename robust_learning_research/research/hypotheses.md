@@ -11,3 +11,13 @@ H3 (conditional): a lightweight incremental statistic provides **out-of-sample**
 H4 (downstream): preserving hard-clean data increases held-out balanced accuracy / macro-F1, not merely apparent selection recall. Evaluate with matched noisy-label precision and fair compute.
 
 Must report negative evidence, intervals and seeds. No theoretical innovation is claimed.
+
+## Evidence update, 2026-10-12
+
+H1: descriptively reproduced across the bounded toy controls, with precision/
+retention tradeoffs. H4: a known classwise control improves suite-average F1,
+but no matched-precision training intervention establishes causality. H0 is not
+accepted or rejected; H2/H3 remain untested because two faithful strong
+comparator reproductions are unavailable. Direct 2024-2026 prior art invalidates
+claims that the basic problem or standard mechanisms are novel. No new statistic
+was proposed or evaluated. See decision.md for the stop and conditional next step.

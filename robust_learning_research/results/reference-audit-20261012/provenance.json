@@ -1,0 +1,51 @@
+[
+  {
+    "name": "coteaching",
+    "repository": "bhanML/Co-teaching",
+    "retrieved_on": "2026-10-12",
+    "status": "retrieval_failed",
+    "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+  },
+  {
+    "name": "confidence_tracking",
+    "repository": "Aliinton/ConfidenceTracking",
+    "retrieved_on": "2026-10-12",
+    "status": "retrieval_failed",
+    "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+  },
+  {
+    "name": "dss",
+    "repository": "Aliinton/DSS",
+    "retrieved_on": "2026-10-12",
+    "status": "retrieval_failed",
+    "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+  },
+  {
+    "name": "rolt",
+    "repository": "weitongseu/RoLT",
+    "retrieved_on": "2026-10-12",
+    "status": "retrieval_failed",
+    "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+  },
+  {
+    "name": "slrlnl",
+    "repository": "yangbo1973/SLRLNL",
+    "retrieved_on": "2026-10-12",
+    "status": "retrieval_failed",
+    "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+  },
+  {
+    "name": "dividemix",
+    "repository": "LiJunnan1992/DivideMix",
+    "retrieved_on": "2026-10-12",
+    "status": "retrieval_failed",
+    "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+  },
+  {
+    "name": "pass",
+    "repository": "arpit2412/PASS-NoisyLabel",
+    "retrieved_on": "2026-10-12",
+    "status": "retrieval_failed",
+    "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+  }
+]

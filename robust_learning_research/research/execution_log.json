@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-12",
+  "scope": "robust_learning_research only; no TrustGeoOpt imports or mutations",
+  "baseline_verification": {
+    "original_tests_passed": 2,
+    "original_smoke_replay": "Matched existing seed-zero hard/tail/noisy acceptance counts exactly; no new result pooled with campaign",
+    "new_tests_before_implementation": "Expected collection failure while new data/baseline/metric modules were absent",
+    "controlled_data_baseline_tests_passed": 12,
+    "final_tests_passed": 19,
+    "final_test_command": "python -m pytest -q tests -p no:cacheprovider"
+  },
+  "experiment": {
+    "campaign": "results/discovery-cpu-20261012",
+    "planned_attempts": 245,
+    "successful_attempts": 245,
+    "failed_attempts": 0,
+    "censored_attempts": 0,
+    "budget_not_started_attempts": 0,
+    "experiment_seconds": 92.30236549999972,
+    "timer_authority": "campaign.json; exact timer should be read there",
+    "budget_seconds": 300,
+    "budget_attempts": 260,
+    "gpu_used": false,
+    "dataset_downloads": false,
+    "dependency_upgrades": false
+  },
+  "source_retrieval_events": [
+    {
+      "path": "results/reference-audit-20261012",
+      "outcome": "Sandbox network requests failed; provenance retained"
+    },
+    {
+      "path": "results/reference-audit-20261012-verified",
+      "outcome": "Permitted retry ended in http.client.IncompleteRead; partial raw files retained"
+    },
+    {
+      "path": "results/reference-audit-20261012-complete",
+      "outcome": "Checkpointed retry inspected six repositories; SLRLNL timeout retained"
+    },
+    {
+      "path": "results/reference-details-20261012",
+      "outcome": "Six pinned assets fetched including direct CVF main/supplement PDF after browser access error"
+    },
+    {
+      "outcome": "DSS local PDF text extraction succeeded; subsequent console display encountered UnicodeEncodeError; downloaded bytes unchanged"
+    },
+    {
+      "outcome": "Confident Learning PDF viewer did not expose full text; extraction marked partial"
+    }
+  ],
+  "stop": "Faithful image-benchmark reproduction gate infeasible in the bounded CPU pass; no new method or novelty claim; reviewed next-sprint plan only",
+  "raw_policy": "Local raw files and source archives preserved, ignored by Git; hashes, complete runs and processed evidence published"
+}

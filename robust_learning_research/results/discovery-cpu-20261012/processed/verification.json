@@ -1,0 +1,86 @@
+{
+  "all_checks_passed": true,
+  "attempts": 245,
+  "evaluation_successes": 200,
+  "frozen_source_sha256": "aa2f7022fc44cace369791e4f045812749224afb42ff8b79f834b173130ace91",
+  "trustgeoopt_files_checked": 11242,
+  "trustgeoopt_all_files_unchanged": true,
+  "trustgeoopt_inventory_sha256": "faea118fa9a24fe6dbfa5661a2d6784a9dd8f092e3af3ee1bb69b5bfc25f3bbd",
+  "raw_files_hashed": 1425,
+  "deterministic_evaluation_replay": "7f1cfa9ab372c47c6e204668e966a8cf4b2a4b6c151425ac451c766390370525",
+  "verification_seconds": 6.542876599999545,
+  "current_source_files": [
+    {
+      "path": "src/robust_learning/__init__.py",
+      "sha256": "d5f4d9f05fe1b471b6fbf17ee94269a7409b1958a99c4d6de6b18dfe0f41d90c"
+    },
+    {
+      "path": "src/robust_learning/analysis.py",
+      "sha256": "d6ba5e9d06503239a34f7d6653058d1dd2120c04687d0d57e9c9b81a849147c1"
+    },
+    {
+      "path": "src/robust_learning/baselines.py",
+      "sha256": "bd908a1ead8ce706700229feb43af19fca81ae8d32c817d16c55890c21b043a7"
+    },
+    {
+      "path": "src/robust_learning/data.py",
+      "sha256": "d89bdd2ee8587d7c77c606b61d9ddbd2b62aedaee8d4be323bce6f8239ca8160"
+    },
+    {
+      "path": "src/robust_learning/metrics.py",
+      "sha256": "ec92b9760ccedbead77721f3ad76dc59b6b9f044d74bbcd4d1bcd88a4b731ed4"
+    },
+    {
+      "path": "src/robust_learning/synthetic.py",
+      "sha256": "9bbb9a100f7fabf3a27c1223e5701a385f70f26826d854ed6f7a5c8b1b49c8fd"
+    },
+    {
+      "path": "src/robust_learning/training.py",
+      "sha256": "2d412b8d17d3a29fe7536c40e26377f29991cb0a969519782ed7c8c82aa5859b"
+    },
+    {
+      "path": "scripts/analyze_discovery.py",
+      "sha256": "56458a3543e2d23cbceedaa0fc6abbec866699216e72afece04e100fb6647e85"
+    },
+    {
+      "path": "scripts/build_discovery_report.py",
+      "sha256": "9c27f31f40812da47fa0f7caae96e9dc6bac8d90e2bcaa1803b4c0cbeee7a382"
+    },
+    {
+      "path": "scripts/fetch_reference_audit.py",
+      "sha256": "e8bd1cf3649d8b9fb3c177c584eb2f4fc9e39202613dc8c802362d75783ddc55"
+    },
+    {
+      "path": "scripts/fetch_reference_details.py",
+      "sha256": "067f381e5e824345ff35786fa187b91d1fb3d8574ec8ac9df4bf65c4e74c22c6"
+    },
+    {
+      "path": "scripts/run_discovery.py",
+      "sha256": "36e3c25ad2b2912d20d05487085bb8bec22d44490fec9d7c1d8e306d97615fe4"
+    },
+    {
+      "path": "scripts/toy_smoke.py",
+      "sha256": "278ef3a09bb07925e9c863cc53bd700ca79cd9c98c08667136993ac5cbaeed32"
+    },
+    {
+      "path": "scripts/verify_discovery.py",
+      "sha256": "c4bd0afe6c086af45ef5f7e6606790eb5702a7612fad5f8f862591923b5801ca"
+    },
+    {
+      "path": "tests/conftest.py",
+      "sha256": "7a53035ca4de6b2b74d4e2af6be557da2016abd76d6d1b9f30df025776701eb9"
+    },
+    {
+      "path": "tests/test_discovery.py",
+      "sha256": "6632e1976c32064fdc3a0d365c9dcf3d2da54f9e44b71e774a349d9eb2419017"
+    },
+    {
+      "path": "tests/test_synthetic.py",
+      "sha256": "ee1003b9255cc27df5cb722c20a51c01637541d33f47c77a970215c4c16efb18"
+    },
+    {
+      "path": "configs/discovery_cpu.json",
+      "sha256": "63280d9b3e45f5be7d2d72bf3b5aa3872a908e64e4ac8cabea2f853d67c0d7b9"
+    }
+  ]
+}

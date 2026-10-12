@@ -1,6 +1,7 @@
 # Robust Learning Research — Path B discovery
 
-Status: **research-discovery foundation, not a novel method or a completed 7-day sprint**.
+Status: **bounded discovery pass completed; stop at the faithful-comparator gate**.
+No novel method or completed seven-calendar-day sprint is claimed.
 
 This is a separate workspace on the research/robust-learning-discovery branch of Adam_Research. The trustgeoopt directory and its four completed research sprints remain untouched.
 
@@ -22,7 +23,67 @@ On Windows PowerShell, set the source path via:
 
     $env:PYTHONPATH = "src"; python -m pytest -q tests
 
-See CODEX_DISCOVERY_TASK.md for the gated seven-day discovery workflow, research/protocol.md for data leakage and evaluation controls, and research/literature_matrix.csv for the initial verified source list.
+See CODEX_DISCOVERY_TASK.md for the gated seven-day discovery workflow,
+research/protocol.md for data leakage and evaluation controls, and
+research/literature_matrix.csv for the expanded source audit.
+
+## Completed discovery pass (2026-10-12)
+
+The targeted literature audit covers 24 primary papers, with incomplete
+extractions, version conflicts and software licenses marked explicitly. All
+245 planned CPU trials succeeded in 92.30 seconds of experiment execution:
+5 pilots, 40 development runs and 200 evaluations (five fresh seeds, eight noise/
+prior regimes, five controls/adaptations). The cap was 300 seconds/260 attempts.
+No GPU, dataset download or dependency upgrade was used.
+
+Classwise small-loss filtering improved suite-average clean test macro-F1 over
+CE by .0513; global filtering and both paper-equation toy adaptations had lower
+suite averages. This is a known-control finding on a tiny synthetic problem,
+with descriptive five-seed uncertainty. Co-teaching toy and confidence-tracking
+toy are **not faithful published benchmark reproductions**. The two-strong-
+comparator gate remains incomplete, so the decision is **no-go for method
+invention or a novelty claim**. See all regimes and negative results in the reports.
+
+- [Prior-art audit](research/prior_art_audit.md) and [24-paper matrix](research/literature_matrix.csv).
+- [Method fidelity](research/method_fidelity.md), [failure study](research/failure_study.md), [decision and next sprint](research/decision.md).
+- [Frozen protocol](research/cpu_campaign_protocol.md), [configuration](configs/discovery_cpu.json), [run records](results/discovery-cpu-20261012/runs.jsonl).
+- [Tables](results/discovery-cpu-20261012/processed/analysis/), [plots](results/discovery-cpu-20261012/plots/), [verification](results/discovery-cpu-20261012/processed/verification.json).
+
+19 tests passed, covering corruption, split independence, oracle isolation,
+seeded training, peer selection/normalization, confidence-gap equations, metrics
+and run-level inference. Frozen raw/config/source checks and one deterministic
+evaluation replay passed. All 11,242 TrustGeoOpt files, including ignored raw
+files and caches, were verified unchanged by SHA256 and file set.
+
+Raw arrays/trajectories, inspected third-party source and the source snapshot zip
+are preserved locally but Git-ignored. Committed hashes, complete run records,
+operating curves, tables, plots and configuration provide reviewable provenance.
+Third-party code is not vendored. Original smoke code and results remain intact.
+
+## Reproduce the bounded pass
+
+Run from this directory using the existing compatible Python environment; the
+matplotlib requirement is for analysis/plots. Do not run these commands against
+an existing output directory. Each stage is immutable; a failed/interrupted
+campaign must be preserved and restarted in a separately named directory.
+
+```powershell
+python -m pytest -q tests -p no:cacheprovider
+python scripts/run_discovery.py --stage init --output results/discovery-cpu-replay
+python scripts/run_discovery.py --stage pilot --output results/discovery-cpu-replay
+python scripts/run_discovery.py --stage development --output results/discovery-cpu-replay
+python scripts/run_discovery.py --stage evaluation --output results/discovery-cpu-replay
+python scripts/analyze_discovery.py --output results/discovery-cpu-replay
+```
+
+Do not change source/configuration between stages. Experiment timing is capped;
+slower machines may have censored trials, which are retained. Numeric metrics
+were deterministically replayed in the recorded environment; runtime, archive
+timestamps and environment-specific binary hashes need not match elsewhere.
+`build_discovery_report.py` renders the current study tables; run it only when
+intentionally updating this report. `verify_discovery.py` checks the recorded
+245-run campaign and requires the local before-inventory of TrustGeoOpt; it is
+not a generic verification of an arbitrary replay or censored campaign.
 
 ## Research gates
 
