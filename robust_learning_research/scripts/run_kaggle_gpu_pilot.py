@@ -249,7 +249,9 @@ def run(args):
     report_path = output / "gpu_pilot_report.json"
     def save():
         report["elapsed_seconds"] = time.perf_counter() - start
-        report_path.write_text(json.dumps(report, indent=2, allow_nan=False))
+        temporary = output / "gpu_pilot_report.json.tmp"
+        temporary.write_text(json.dumps(report, indent=2, allow_nan=False))
+        temporary.replace(report_path)
     save()
     for method in ("dss_plus_estimated_prior", "dividemix"):
         record = {"status": "started", "stages": [], "progress": {}}

@@ -55,6 +55,8 @@ for item in manifest:
 print('Embedded source hashes verified:', len(manifest))
 """))
     cells.append(code("""from pathlib import Path
+import json
+import subprocess
 import sys
 
 # Edit this if more than one attached dataset contains the official CIFAR-10 batches.
@@ -62,15 +64,30 @@ candidates = sorted(p.parent for p in Path('/kaggle/input').rglob('cifar-10-batc
 if len(candidates) != 1:
     raise RuntimeError(f'Expected exactly one attached extracted CIFAR-10 dataset; found {candidates}')
 cifar_root = candidates[0]
-sys.path.insert(0, '/kaggle/working/robust_learning_research/scripts')
-from run_kaggle_gpu_pilot import run
-from argparse import Namespace
-
-report = run(Namespace(cifar_root=cifar_root,
-                       output=Path('/kaggle/working/robust-learning-gpu-pilot'),
-                       batch_size=128, time_limit_seconds=1800))
-print('Report:', '/kaggle/working/robust-learning-gpu-pilot/gpu_pilot_report.json')
-print({name: entry['status'] for name, entry in report['methods'].items()})
+output = Path('/kaggle/working/robust-learning-gpu-pilot')
+command = [sys.executable, str(project / 'scripts/run_kaggle_gpu_pilot.py'),
+           '--cifar-root', str(cifar_root), '--output', str(output),
+           '--batch-size', '128', '--time-limit-seconds', '1770']
+try:
+    finished = subprocess.run(command, timeout=1800, check=False)
+    if finished.returncode:
+        print('Pilot process exited with code', finished.returncode)
+except subprocess.TimeoutExpired:
+    print('Hard 30-minute process timeout reached; GPU pilot stopped.')
+    report_path = output / 'gpu_pilot_report.json'
+    if report_path.exists():
+        partial = json.loads(report_path.read_text())
+        partial['external_timeout'] = True
+        for entry in partial.get('methods', {}).values():
+            if entry.get('status') == 'started':
+                entry['status'] = 'censored'
+                entry['reason'] = 'hard notebook process timeout during ' + entry.get('active_stage', 'setup')
+        report_path.write_text(json.dumps(partial, indent=2))
+report_path = output / 'gpu_pilot_report.json'
+print('Report:', report_path if report_path.exists() else 'not created; check the error above')
+if report_path.exists():
+    report = json.loads(report_path.read_text())
+    print({name: entry['status'] for name, entry in report['methods'].items()})
 """))
     for index, cell in enumerate(cells):
         cell["id"] = f"cell-{index:03d}"

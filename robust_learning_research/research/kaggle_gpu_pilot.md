@@ -47,10 +47,12 @@ co-guessing, MixUp, labeled CE, unlabeled MSE and prior regularization. Its
 unlabeled weight is deliberately fully ramped to profile mature-path cost;
 this is **not** the training trajectory after a one-epoch warmup.
 
-The shared wall budget is 1,800 seconds from the start of the runner. It checks
-at minibatch boundaries and records a censored result if the budget, an empty
-GMM partition, or CUDA OOM prevents completion. One currently running minibatch
-can pass the deadline. CUDA synchronization brackets stage timings. Stage records
+The notebook gives the runner a 1,770-second internal limit and enforces a
+1,800-second process timeout, including startup and data loading. The runner
+checks at minibatch boundaries and records a censored result if the budget, an
+empty GMM partition, or CUDA OOM prevents completion. If a minibatch crosses
+the internal deadline, the notebook stops the process at 30 minutes and marks
+the active method censored in the saved report. CUDA synchronization brackets stage timings. Stage records
 include elapsed seconds and peak allocated/reserved VRAM; the report includes
 GPU name, total VRAM, DSS host-history bytes, data counts, hashes and completion status. A stage is
 **not** a full-data measurement unless its completion field is true. DSS+ has

@@ -33,6 +33,9 @@ def test_notebook_syntax_hashes_and_private_metadata():
     for cell in notebook["cells"]:
         if cell["cell_type"] == "code":
             ast.parse("".join(cell["source"]))
+    launch = "".join(notebook["cells"][-1]["source"])
+    assert "subprocess.run(command, timeout=1800" in launch
+    assert "'--time-limit-seconds', '1770'" in launch
     assert len(EMBEDDED) == 9
     metadata = json.loads((ROOT / "kaggle" / "kernel-metadata.json").read_text())
     assert metadata["id"] == "pallabbiswas3/robust-learning-gpu-pilot"
