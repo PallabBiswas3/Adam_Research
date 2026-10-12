@@ -1,0 +1,133 @@
+{
+  "config": {
+    "name": "strong-baseline-20261012",
+    "device": "cpu",
+    "threads": 2,
+    "pilot_seed": 601,
+    "split_seed": 1601,
+    "noise_seed": 2601,
+    "validation_per_class": 500,
+    "imbalance_factor": 10,
+    "noise_kind": "symmetric_including_original",
+    "noise_rate": 0.5,
+    "pilot_batch_size": 16,
+    "pilot_samples": 128,
+    "warmup_microepochs": 4,
+    "timed_updates_per_method": 3,
+    "max_training_seconds": 180,
+    "max_process_rss_mib": 1800,
+    "minimum_available_memory_mib": 700,
+    "methods": [
+      "ce",
+      "classwise_small_loss",
+      "dss_uniform",
+      "dss_estimated_prior",
+      "dss_plus_estimated_prior",
+      "dividemix"
+    ],
+    "dss": {
+      "epochs": 150,
+      "warmup": 30,
+      "momentum": 0.9,
+      "weight_decay": 0.001,
+      "lr": 0.02,
+      "lr_drop_epoch": 80,
+      "marginal_decay": 0.99,
+      "alpha": 0.1
+    },
+    "dss_plus": {
+      "epochs": 300,
+      "warmup": 20,
+      "momentum": 0.9,
+      "weight_decay": 0.0005,
+      "lr": 0.02,
+      "minimum_lr": 0.0004,
+      "marginal_decay": 0.99,
+      "alpha": 0.1,
+      "temperature": 2.0,
+      "mixup_beta": 4.0,
+      "consistency_weight": 2.0
+    },
+    "dividemix": {
+      "epochs": 300,
+      "warmup": 10,
+      "momentum": 0.9,
+      "weight_decay": 0.0005,
+      "lr": 0.02,
+      "lr_drop_epoch": 150,
+      "temperature": 0.5,
+      "mixup_alpha": 4.0,
+      "clean_threshold": 0.5,
+      "lambda_u": 25.0,
+      "lambda_u_ramp_epochs": 16,
+      "regularizer_weight": 1.0
+    },
+    "future_development_seeds": [
+      701,
+      702
+    ],
+    "future_evaluation_seeds": [
+      801,
+      802,
+      803,
+      804,
+      805
+    ],
+    "future_equal_candidates_per_method": 2,
+    "future_regimes": [
+      "balanced_sym50",
+      "longtail10_sym50",
+      "longtail10_asym40"
+    ],
+    "automatic_full_campaign": false,
+    "approved_full_campaign_hours": 0
+  },
+  "config_sha256": "5c65a795646824b2253e1652d61dccba428f103713c9f1060c5b0bf919f56b9b",
+  "source_files": [
+    {
+      "path": "src/robust_learning/strong/__init__.py",
+      "sha256": "b22acce4a213d6a39956caeeeb7c8667fc32d1c04b813eb13b5882819581f2ef"
+    },
+    {
+      "path": "src/robust_learning/strong/cifar.py",
+      "sha256": "dc5c845b3d8e666fb18fe1d14aa3600a5de4eef9a8dabb31ea9461955e1baad9"
+    },
+    {
+      "path": "src/robust_learning/strong/equations.py",
+      "sha256": "53beaff626ae113502940003a6135942718a8ec0b409553b2d6a82e69ba47a68"
+    },
+    {
+      "path": "src/robust_learning/strong/kernels.py",
+      "sha256": "b833df0fbd5c79b349b9849f83c3ebc0aebaaf4d548dc2cd2d5be0cc8449215f"
+    },
+    {
+      "path": "src/robust_learning/strong/vendor_dividemix/.gitattributes",
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "path": "src/robust_learning/strong/vendor_dividemix/LICENSE",
+      "sha256": "cc0ac28150c58ebbc876c304713435a92666ab8c3bf70f9dc38f8c625314a23e"
+    },
+    {
+      "path": "src/robust_learning/strong/vendor_dividemix/PreResNet.py",
+      "sha256": "7d9906f22f821d0d26be0850ab7ebfda22dfabe29d78e02a4b7077494c0ec26b"
+    },
+    {
+      "path": "scripts/run_strong_pilot.py",
+      "sha256": "3da19b37119c66d2f07977ca3a0481dd6ce44b2a52e8462cd5266dcf29c08776"
+    }
+  ],
+  "environment": {
+    "python": "3.11.4",
+    "torch": "2.1.2+cpu",
+    "numpy": "1.26.4",
+    "device": "cpu",
+    "logical_cores": 12,
+    "ram_mib": 16052.328125,
+    "available_memory_before_mib": 3029.42578125
+  },
+  "quality_evaluation_executed": false,
+  "paid_gpu_used": false,
+  "full_campaign_executed": false,
+  "oracle_opened_by_pilot": false
+}

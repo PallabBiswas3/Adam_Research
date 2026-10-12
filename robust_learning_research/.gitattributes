@@ -1,1 +1,5 @@
 results/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+# Preserve byte hashes of the newly frozen feasibility source/configuration.
+configs/strong_baseline_pilot.json -text
+scripts/run_strong_pilot.py -text
+src/robust_learning/strong/** -text

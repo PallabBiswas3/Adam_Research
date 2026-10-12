@@ -1,0 +1,54 @@
+{
+  "dataset": "CIFAR-10",
+  "source_url": "https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz",
+  "torchvision_archive_md5": "c58f30108f718f92721af3b95e74349a",
+  "archive_md5": "c58f30108f718f92721af3b95e74349a",
+  "archive_sha256": "6d958be074577803d12ecdefd02955f39262c83c16fe9348329d7fe0b5c001ce",
+  "train_count": 18388,
+  "validation_count": 2000,
+  "prior_count": 403,
+  "test_count": 10000,
+  "prior_from_clean_calibration": [
+    0.24813895781637718,
+    0.19106699751861042,
+    0.14640198511166252,
+    0.1141439205955335,
+    0.08684863523573201,
+    0.06699751861042183,
+    0.052109181141439205,
+    0.03970223325062035,
+    0.02977667493796526,
+    0.02481389578163772
+  ],
+  "config_sha256": "5c65a795646824b2253e1652d61dccba428f103713c9f1060c5b0bf919f56b9b",
+  "artifacts": [
+    {
+      "path": "results/strong-baseline-20261012/raw/cifar10/clean_test.npz",
+      "bytes": 28265574,
+      "sha256": "3e14418eef65097580a066dfa9cd7baeeb46d84983eb12bfe9a8e4a4485efef4"
+    },
+    {
+      "path": "results/strong-baseline-20261012/raw/cifar10/clean_validation.npz",
+      "bytes": 5637025,
+      "sha256": "289ef94843746b99b5cbb089bf51793edf5f8c864857c6caa4b6ccd53812d8ae"
+    },
+    {
+      "path": "results/strong-baseline-20261012/raw/cifar10/evaluation_oracle.npz",
+      "bytes": 6965,
+      "sha256": "8095044a3e369149c690b8969991c89d2b3cab16b7ae8b1040733187fd34c778"
+    },
+    {
+      "path": "results/strong-baseline-20261012/raw/cifar10/observed_training.npz",
+      "bytes": 51043997,
+      "sha256": "03d1ad014a9850c548ee64ba3ba0f9b169edd21d1faa678966b1828515a59f53"
+    },
+    {
+      "path": "results/strong-baseline-20261012/raw/cifar10/prior_calibration.npz",
+      "bytes": 1640,
+      "sha256": "d59de5f759ea2a648807b614a10b0c6949d59fbea123670b56cf6dcc695fe986"
+    }
+  ],
+  "preparation_seconds": 6.033429799999794,
+  "training_oracle_sealed": true,
+  "note": "Construction reads clean labels; training interface/files contain no clean training labels or flags"
+}

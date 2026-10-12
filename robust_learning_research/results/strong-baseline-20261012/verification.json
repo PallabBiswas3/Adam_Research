@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "trustgeoopt_files_unchanged": 11242,
+  "prior_result_files_unchanged": 1500,
+  "pilot_frozen_files_checked": 8,
+  "dataset_files_checked": 5,
+  "vendored_files_match_MIT_source": true,
+  "all_attempts_retained": true,
+  "quality_evaluation_executed": false,
+  "preservation_inventory_sha256": "d180a91af2c8f144c82fe8340b9965568f108831dc5faaab5e3779d4555ce2eb"
+}

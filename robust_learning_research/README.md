@@ -1,9 +1,48 @@
 # Robust Learning Research — Path B discovery
 
-Status: **bounded discovery pass completed; stop at the faithful-comparator gate**.
+Status: **strong-baseline audit and bounded CIFAR-10 feasibility pilot completed;
+stop before full training**. Current branch is
+`research/robust-learning-baseline-validation`, based on the discovery branch.
 No novel method or completed seven-calendar-day sprint is claimed.
 
-This is a separate workspace on the research/robust-learning-discovery branch of Adam_Research. The trustgeoopt directory and its four completed research sprints remain untouched.
+This is a separate research workspace in Adam_Research. The trustgeoopt directory and its four completed research sprints remain untouched.
+
+## Strong-baseline validation sprint (2026-10-12)
+
+All six real-image operation pilots completed in178.81s, at about1.07GiB peak
+process memory: CE, classwise small loss, uniform/prior-aware DSS, prior-aware
+DSS+, and DivideMix. These use full PreActResNet-18 backbones with compressed
+warmup and three timed main rounds; **no converged accuracy/retention comparison
+or novelty claim follows**. Full faithful CPU training exceeds this sprint's
+compute scope, so the hard stopping rule applies. No paid GPU campaign was run.
+
+- [Protocol](research/strong_baseline_protocol.md), [DSS fidelity](research/dss_fidelity.md), [DivideMix fidelity](research/dividemix_fidelity.md).
+- [Feasibility and resource requirements](research/benchmark_feasibility.md), [actual executed results](research/strong_baseline_results.md), [next decision and novelty overlap](research/next_research_decision.md).
+- [Frozen pilot](results/strong-baseline-20261012/pilot/), [summary CSV](results/strong-baseline-20261012/pilot_summary.csv), [preservation checks](results/strong-baseline-20261012/verification.json).
+
+Only the MIT DivideMix backbone and original license are vendored. Unlicensed
+DSS source is inspected locally and never copied into the package. CIFAR images,
+sealed training oracles, raw source inspections and preserved partial download
+stay local/Git-ignored. Hashes, config, equations, tests and all operation records
+are committed; download permissions and dataset terms remain separate from
+software licensing. Existing result files are never overwritten.
+
+Use the installed compatible CPU environment (see
+[recorded versions](requirements_strong_pilot.txt)). To replay in a **fresh**
+directory, from this project directory:
+
+```powershell
+python -m pytest -q tests -p no:cacheprovider
+python scripts/prepare_cifar10.py --output results/strong-baseline-replay
+python scripts/replay_strong_pilot.py --output results/strong-baseline-replay
+```
+
+Preparation needs the checked original CIFAR archive or network access; the
+pilot has the same180s boundary guard and may censor on slower machines. This
+has no full-campaign mode. Current report regeneration is
+`python scripts/analyze_strong_pilot.py`; the current preservation verifier
+needs the ignored local before-inventory and prepared arrays. Do not run the
+old discovery report/verifier scripts to update earlier results during this sprint.
 
 **Question to investigate:** When class imbalance, data difficulty, and label corruption interact, which known sample selectors incorrectly reject clean hard/tail examples, and does an inexpensive *additional* signal still help after recent strong baselines?
 

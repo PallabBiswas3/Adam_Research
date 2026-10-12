@@ -1,0 +1,18 @@
+[
+  {
+    "path": "model/PreResNet.py",
+    "url": "https://raw.githubusercontent.com/Aliinton/DSS/ebbe5dd705584814d1214fe6cc1f1fb40658cf58/model/PreResNet.py",
+    "revision": "ebbe5dd705584814d1214fe6cc1f1fb40658cf58",
+    "sha256": "1900d038cc27306a0c1e6987e46c7bd9760febb1c6377f21f415ef78c4e2171d",
+    "bytes": 8291,
+    "reuse": "inspection only"
+  },
+  {
+    "path": "algorithm/dynamic_sample_selection.py",
+    "url": "https://raw.githubusercontent.com/Aliinton/DSS/ebbe5dd705584814d1214fe6cc1f1fb40658cf58/algorithm/dynamic_sample_selection.py",
+    "revision": "ebbe5dd705584814d1214fe6cc1f1fb40658cf58",
+    "sha256": "7fd73536258bd057319ebe1e3a062a7a4260ee2e9d66f80439f2bd544d8340d7",
+    "bytes": 8724,
+    "reuse": "inspection only"
+  }
+]

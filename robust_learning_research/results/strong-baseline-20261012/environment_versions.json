@@ -1,0 +1,10 @@
+{
+  "torch": "2.1.2+cpu",
+  "torchvision": "0.16.2+cpu",
+  "numpy": "1.26.4",
+  "scikit-learn": "1.5.0",
+  "psutil": "5.9.8",
+  "threadpoolctl": "3.5.0",
+  "Pillow": "10.3.0",
+  "pytest": "8.4.1"
+}

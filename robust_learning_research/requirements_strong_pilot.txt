@@ -1,0 +1,11 @@
+# Recorded compatible CPU environment, not an instruction to upgrade dependencies.
+# torch 2.1.2+cpu and torchvision 0.16.2+cpu were installed, CUDA unavailable.
+torch==2.1.2
+torchvision==0.16.2
+numpy==1.26.4
+# Exact versions are also recorded in results/strong-baseline-20261012/environment_versions.json.
+scikit-learn==1.5.0
+psutil==5.9.8
+threadpoolctl==3.5.0
+Pillow==10.3.0
+pytest==8.4.1

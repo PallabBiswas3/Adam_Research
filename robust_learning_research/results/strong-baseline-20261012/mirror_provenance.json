@@ -1,0 +1,18 @@
+{
+  "original_url": "https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz",
+  "mirror_repository": "MIT-OL-AI-D/cifar-10-python",
+  "mirror_revision": "a48007227f9e2cd0af96175f4afb5ac4965e261b",
+  "mirror_url": "https://huggingface.co/datasets/MIT-OL-AI-D/cifar-10-python/resolve/a48007227f9e2cd0af96175f4afb5ac4965e261b/cifar-10-python.tar.gz",
+  "md5": "c58f30108f718f92721af3b95e74349a",
+  "sha256": "6d958be074577803d12ecdefd02955f39262c83c16fe9348329d7fe0b5c001ce",
+  "bytes": 170498071,
+  "setup_note": "Original-host download was slow; S3 candidate returned404; verified identical archive replaces partial file",
+  "stopped_download_processes": [
+    22096
+  ],
+  "preserved_original_partial": {
+    "bytes": 114229248,
+    "sha256": "4289ddbfabfadb6a930f6302123fd0dba5cd0b0ed48b64324e72d4300025e6b8",
+    "path": "data/strong_cifar10/cifar-10-python.original-partial.tar.gz"
+  }
+}
