@@ -1,0 +1,16 @@
+[
+  {
+    "attempt": 1,
+    "status": "failed",
+    "error": "TypeError: Object of type int64 is not JSON serializable",
+    "preserved_outputs": "raw/analysis-attempt-1.zip",
+    "preserved_source": "raw/analysis_driver_attempt1.py"
+  },
+  {
+    "attempt": 2,
+    "status": "success",
+    "runtime_seconds": 52.5118774,
+    "source": "analysis_driver.py",
+    "note": "Numpy scalar JSON normalization; no raw experiment reruns"
+  }
+]

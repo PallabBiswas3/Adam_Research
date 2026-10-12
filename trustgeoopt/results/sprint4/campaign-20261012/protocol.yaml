@@ -1,0 +1,227 @@
+bootstrap_replicates: 4000
+bootstrap_seed: 20261014
+candidates:
+  adamw:
+  - betas:
+    - 0.9
+    - 0.9
+    eps: 1.0e-08
+    lr: 0.003
+    schedule: cosine
+  - betas:
+    - 0.9
+    - 0.999
+    eps: 1.0e-08
+    lr: 0.03
+    schedule: constant
+  - betas:
+    - 0.9
+    - 0.999
+    eps: 1.0e-08
+    lr: 0.03
+    schedule: cosine
+  - betas:
+    - 0.9
+    - 0.999
+    eps: 1.0e-08
+    lr: 0.03
+    schedule: conservative
+  - betas:
+    - 0.9
+    - 0.9
+    eps: 1.0e-08
+    lr: 0.03
+    schedule: conservative
+  - betas:
+    - 0.9
+    - 0.9
+    eps: 0.1
+    lr: 0.03
+    schedule: conservative
+  - betas:
+    - 0.9
+    - 0.99
+    eps: 0.001
+    lr: 0.1
+    schedule: cosine
+  - betas:
+    - 0.9
+    - 0.99
+    eps: 0.1
+    lr: 0.3
+    schedule: conservative
+  amsgrad:
+  - betas:
+    - 0.9
+    - 0.9
+    eps: 1.0e-08
+    lr: 0.003
+    schedule: cosine
+  - betas:
+    - 0.9
+    - 0.999
+    eps: 1.0e-08
+    lr: 0.03
+    schedule: constant
+  - betas:
+    - 0.9
+    - 0.999
+    eps: 1.0e-08
+    lr: 0.03
+    schedule: cosine
+  - betas:
+    - 0.9
+    - 0.999
+    eps: 1.0e-08
+    lr: 0.03
+    schedule: conservative
+  - betas:
+    - 0.9
+    - 0.9
+    eps: 1.0e-08
+    lr: 0.03
+    schedule: conservative
+  - betas:
+    - 0.9
+    - 0.9
+    eps: 0.1
+    lr: 0.03
+    schedule: conservative
+  - betas:
+    - 0.9
+    - 0.99
+    eps: 0.001
+    lr: 0.1
+    schedule: cosine
+  - betas:
+    - 0.9
+    - 0.99
+    eps: 0.1
+    lr: 0.3
+    schedule: conservative
+  momentum:
+  - lr: 0.0001
+    momentum: 0.9
+    schedule: constant
+  - lr: 0.0003
+    momentum: 0.9
+    schedule: constant
+  - lr: 0.001
+    momentum: 0.9
+    schedule: constant
+  - lr: 0.003
+    momentum: 0.9
+    schedule: constant
+  - lr: 0.0003
+    momentum: 0.9
+    schedule: cosine
+  - lr: 0.001
+    momentum: 0.9
+    schedule: cosine
+  - lr: 0.001
+    momentum: 0.9
+    schedule: conservative
+  - lr: 0.003
+    momentum: 0.9
+    schedule: conservative
+  soap:
+  - lr: 0.003
+    schedule: constant
+  - lr: 0.03
+    schedule: constant
+  - lr: 0.1
+    schedule: constant
+  - lr: 0.3
+    schedule: constant
+  - lr: 0.03
+    schedule: cosine
+  - lr: 0.1
+    schedule: cosine
+  - lr: 0.1
+    schedule: conservative
+  - lr: 0.3
+    schedule: conservative
+condition: 1000
+development_seeds:
+- 50
+- 51
+- 52
+- 53
+- 54
+- 55
+- 56
+- 57
+- 58
+- 59
+device: cpu
+dimension: 16
+estimators:
+  delta: 0.01
+  history_window: 64
+  noise_modes:
+  - aligned
+  - antialigned
+  - partial
+  - misaligned
+  - switching
+  - isotropic_h
+  oversample: 4
+  paired_samples: 64
+  phases:
+  - 80
+  - 600
+  - 1200
+  power_steps: 1
+  rank: 4
+  refresh_frequency: 100
+  steps: 1200
+evaluation_seeds:
+- 60
+- 61
+- 62
+- 63
+- 64
+- 65
+- 66
+- 67
+- 68
+- 69
+max_experiment_seconds: 1800
+max_trials: 1000
+name: sprint4-noise-curvature
+neural:
+  batch_size: 32
+  dataset:
+    classes: 2
+    condition: 100
+    dimension: 12
+    test_size: 64
+    train_size: 512
+    validation_size: 256
+  epochs: 20
+  gradient_samples: 64
+  hidden:
+  - 16
+  optimizer:
+    lr: 0.003
+    name: adamw
+    schedule: cosine
+  paired_samples: 64
+  phases:
+  - 0
+  - 5
+  - 20
+  probe_batch_size: 128
+  rank: 4
+  task_seeds:
+  - 800
+  - 801
+noise_high: 10.0
+noise_low: 0.1
+selection_floor: 1.0e-12
+selection_sd_penalty: 0.5
+steps: 2400
+tail_fraction: 0.2
+target_loss: 0.1
+target_window: 100
+threads: 1

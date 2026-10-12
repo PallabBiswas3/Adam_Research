@@ -1,0 +1,26 @@
+{
+  "estimators": {
+    "attempts": 60,
+    "sum_trial_seconds": 101.64476879999984
+  },
+  "evaluation": {
+    "attempts": 240,
+    "sum_trial_seconds": 166.67520769999987
+  },
+  "neural": {
+    "attempts": 20,
+    "sum_trial_seconds": 32.61340340000038
+  },
+  "pilot": {
+    "attempts": 4,
+    "sum_trial_seconds": 0.6624057999997603
+  },
+  "probe_pilot": {
+    "attempts": 2,
+    "sum_trial_seconds": 2.987745000000018
+  },
+  "tuning": {
+    "attempts": 640,
+    "sum_trial_seconds": 282.181440700022
+  }
+}

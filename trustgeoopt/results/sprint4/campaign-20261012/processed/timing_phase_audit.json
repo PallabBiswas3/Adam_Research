@@ -1,0 +1,307 @@
+{
+  "groups": [
+    {
+      "regime": "constant",
+      "rotation": "diagonal",
+      "method": "adamw",
+      "noise_levels": [
+        10.0
+      ],
+      "n_after_transition": 6,
+      "n_runs": 10,
+      "min_steps": 28,
+      "max_steps": 1826
+    },
+    {
+      "regime": "constant",
+      "rotation": "diagonal",
+      "method": "amsgrad",
+      "noise_levels": [
+        10.0
+      ],
+      "n_after_transition": 6,
+      "n_runs": 10,
+      "min_steps": 233,
+      "max_steps": 1589
+    },
+    {
+      "regime": "constant",
+      "rotation": "diagonal",
+      "method": "momentum",
+      "noise_levels": [
+        10.0
+      ],
+      "n_after_transition": 8,
+      "n_runs": 10,
+      "min_steps": 289,
+      "max_steps": 2204
+    },
+    {
+      "regime": "constant",
+      "rotation": "diagonal",
+      "method": "soap",
+      "noise_levels": [
+        10.0
+      ],
+      "n_after_transition": 0,
+      "n_runs": 10,
+      "min_steps": 98,
+      "max_steps": 717
+    },
+    {
+      "regime": "constant",
+      "rotation": "rotated",
+      "method": "adamw",
+      "noise_levels": [
+        10.0
+      ],
+      "n_after_transition": 5,
+      "n_runs": 10,
+      "min_steps": 213,
+      "max_steps": 1777
+    },
+    {
+      "regime": "constant",
+      "rotation": "rotated",
+      "method": "amsgrad",
+      "noise_levels": [
+        10.0
+      ],
+      "n_after_transition": 8,
+      "n_runs": 10,
+      "min_steps": 217,
+      "max_steps": 1723
+    },
+    {
+      "regime": "constant",
+      "rotation": "rotated",
+      "method": "momentum",
+      "noise_levels": [
+        10.0
+      ],
+      "n_after_transition": 9,
+      "n_runs": 10,
+      "min_steps": 209,
+      "max_steps": 2400
+    },
+    {
+      "regime": "constant",
+      "rotation": "rotated",
+      "method": "soap",
+      "noise_levels": [
+        10.0
+      ],
+      "n_after_transition": 0,
+      "n_runs": 10,
+      "min_steps": 60,
+      "max_steps": 674
+    },
+    {
+      "regime": "falling",
+      "rotation": "diagonal",
+      "method": "adamw",
+      "noise_levels": [
+        0.1,
+        10.0
+      ],
+      "n_after_transition": 4,
+      "n_runs": 10,
+      "min_steps": 44,
+      "max_steps": 1602
+    },
+    {
+      "regime": "falling",
+      "rotation": "diagonal",
+      "method": "amsgrad",
+      "noise_levels": [
+        0.1,
+        10.0
+      ],
+      "n_after_transition": 4,
+      "n_runs": 10,
+      "min_steps": 243,
+      "max_steps": 1516
+    },
+    {
+      "regime": "falling",
+      "rotation": "diagonal",
+      "method": "momentum",
+      "noise_levels": [
+        0.1,
+        10.0
+      ],
+      "n_after_transition": 8,
+      "n_runs": 10,
+      "min_steps": 382,
+      "max_steps": 2400
+    },
+    {
+      "regime": "falling",
+      "rotation": "diagonal",
+      "method": "soap",
+      "noise_levels": [
+        10.0
+      ],
+      "n_after_transition": 0,
+      "n_runs": 10,
+      "min_steps": 94,
+      "max_steps": 660
+    },
+    {
+      "regime": "falling",
+      "rotation": "rotated",
+      "method": "adamw",
+      "noise_levels": [
+        0.1,
+        10.0
+      ],
+      "n_after_transition": 5,
+      "n_runs": 10,
+      "min_steps": 84,
+      "max_steps": 1558
+    },
+    {
+      "regime": "falling",
+      "rotation": "rotated",
+      "method": "amsgrad",
+      "noise_levels": [
+        0.1,
+        10.0
+      ],
+      "n_after_transition": 3,
+      "n_runs": 10,
+      "min_steps": 173,
+      "max_steps": 1493
+    },
+    {
+      "regime": "falling",
+      "rotation": "rotated",
+      "method": "momentum",
+      "noise_levels": [
+        0.1,
+        10.0
+      ],
+      "n_after_transition": 8,
+      "n_runs": 10,
+      "min_steps": 167,
+      "max_steps": 2348
+    },
+    {
+      "regime": "falling",
+      "rotation": "rotated",
+      "method": "soap",
+      "noise_levels": [
+        10.0
+      ],
+      "n_after_transition": 0,
+      "n_runs": 10,
+      "min_steps": 186,
+      "max_steps": 644
+    },
+    {
+      "regime": "rising",
+      "rotation": "diagonal",
+      "method": "adamw",
+      "noise_levels": [
+        0.1,
+        10.0
+      ],
+      "n_after_transition": 7,
+      "n_runs": 10,
+      "min_steps": 354,
+      "max_steps": 1638
+    },
+    {
+      "regime": "rising",
+      "rotation": "diagonal",
+      "method": "amsgrad",
+      "noise_levels": [
+        0.1,
+        10.0
+      ],
+      "n_after_transition": 5,
+      "n_runs": 10,
+      "min_steps": 82,
+      "max_steps": 1584
+    },
+    {
+      "regime": "rising",
+      "rotation": "diagonal",
+      "method": "momentum",
+      "noise_levels": [
+        0.1,
+        10.0
+      ],
+      "n_after_transition": 9,
+      "n_runs": 10,
+      "min_steps": 277,
+      "max_steps": 2397
+    },
+    {
+      "regime": "rising",
+      "rotation": "diagonal",
+      "method": "soap",
+      "noise_levels": [
+        0.1
+      ],
+      "n_after_transition": 0,
+      "n_runs": 10,
+      "min_steps": 132,
+      "max_steps": 672
+    },
+    {
+      "regime": "rising",
+      "rotation": "rotated",
+      "method": "adamw",
+      "noise_levels": [
+        0.1,
+        10.0
+      ],
+      "n_after_transition": 6,
+      "n_runs": 10,
+      "min_steps": 633,
+      "max_steps": 1523
+    },
+    {
+      "regime": "rising",
+      "rotation": "rotated",
+      "method": "amsgrad",
+      "noise_levels": [
+        0.1,
+        10.0
+      ],
+      "n_after_transition": 6,
+      "n_runs": 10,
+      "min_steps": 470,
+      "max_steps": 1651
+    },
+    {
+      "regime": "rising",
+      "rotation": "rotated",
+      "method": "momentum",
+      "noise_levels": [
+        0.1,
+        10.0
+      ],
+      "n_after_transition": 9,
+      "n_runs": 10,
+      "min_steps": 990,
+      "max_steps": 2400
+    },
+    {
+      "regime": "rising",
+      "rotation": "rotated",
+      "method": "soap",
+      "noise_levels": [
+        0.1
+      ],
+      "n_after_transition": 0,
+      "n_runs": 10,
+      "min_steps": 46,
+      "max_steps": 695
+    }
+  ],
+  "warning": "At equal wall time, step-indexed noise changes occur at different elapsed times. Rising/falling comparisons mix noise phases and are descriptive only. Constant noise avoids this specific confound.",
+  "timing_limit": "Shared process, short CPU runs, operating-system scheduling/cache/serialization; no independent repeated timing campaign.",
+  "script_sha256": "f8997843e722e9f4b369847c69484de219a488f78ff91befa751e07e674b64d6"
+}

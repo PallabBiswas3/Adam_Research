@@ -1,0 +1,61 @@
+{
+  "adamw": {
+    "method": "adamw",
+    "candidate_id": 5,
+    "optimizer": {
+      "name": "adamw",
+      "lr": 0.03,
+      "betas": [
+        0.9,
+        0.9
+      ],
+      "eps": 0.1,
+      "schedule": "conservative"
+    },
+    "score": -1.4523484049443032,
+    "valid": true,
+    "n_success": 20
+  },
+  "amsgrad": {
+    "method": "amsgrad",
+    "candidate_id": 6,
+    "optimizer": {
+      "name": "amsgrad",
+      "lr": 0.1,
+      "betas": [
+        0.9,
+        0.99
+      ],
+      "eps": 0.001,
+      "schedule": "cosine"
+    },
+    "score": -0.98781477155479,
+    "valid": true,
+    "n_success": 20
+  },
+  "momentum": {
+    "method": "momentum",
+    "candidate_id": 4,
+    "optimizer": {
+      "name": "momentum",
+      "lr": 0.0003,
+      "momentum": 0.9,
+      "schedule": "cosine"
+    },
+    "score": -1.1230439323739705,
+    "valid": true,
+    "n_success": 20
+  },
+  "soap": {
+    "method": "soap",
+    "candidate_id": 4,
+    "optimizer": {
+      "name": "soap",
+      "lr": 0.03,
+      "schedule": "cosine"
+    },
+    "score": -1.5156056734163625,
+    "valid": true,
+    "n_success": 20
+  }
+}

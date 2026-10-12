@@ -1,0 +1,38 @@
+[
+  {
+    "method": "adamw",
+    "chosen_id": 5,
+    "bootstrap_candidate_counts": {
+      "5": 2730,
+      "0": 1270
+    },
+    "replicates": 4000
+  },
+  {
+    "method": "amsgrad",
+    "chosen_id": 6,
+    "bootstrap_candidate_counts": {
+      "6": 3989,
+      "2": 11
+    },
+    "replicates": 4000
+  },
+  {
+    "method": "momentum",
+    "chosen_id": 4,
+    "bootstrap_candidate_counts": {
+      "4": 2059,
+      "5": 1941
+    },
+    "replicates": 4000
+  },
+  {
+    "method": "soap",
+    "chosen_id": 4,
+    "bootstrap_candidate_counts": {
+      "4": 3998,
+      "0": 2
+    },
+    "replicates": 4000
+  }
+]

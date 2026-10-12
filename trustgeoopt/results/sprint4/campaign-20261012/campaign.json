@@ -1,0 +1,361 @@
+{
+  "protocol": {
+    "name": "sprint4-noise-curvature",
+    "device": "cpu",
+    "threads": 1,
+    "max_experiment_seconds": 1800,
+    "max_trials": 1000,
+    "development_seeds": [
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59
+    ],
+    "evaluation_seeds": [
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69
+    ],
+    "bootstrap_replicates": 4000,
+    "bootstrap_seed": 20261014,
+    "steps": 2400,
+    "tail_fraction": 0.2,
+    "dimension": 16,
+    "condition": 1000,
+    "noise_high": 10.0,
+    "noise_low": 0.1,
+    "target_loss": 0.1,
+    "target_window": 100,
+    "selection_floor": 1e-12,
+    "selection_sd_penalty": 0.5,
+    "candidates": {
+      "adamw": [
+        {
+          "lr": 0.003,
+          "betas": [
+            0.9,
+            0.9
+          ],
+          "eps": 1e-08,
+          "schedule": "cosine"
+        },
+        {
+          "lr": 0.03,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "schedule": "constant"
+        },
+        {
+          "lr": 0.03,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "schedule": "cosine"
+        },
+        {
+          "lr": 0.03,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "schedule": "conservative"
+        },
+        {
+          "lr": 0.03,
+          "betas": [
+            0.9,
+            0.9
+          ],
+          "eps": 1e-08,
+          "schedule": "conservative"
+        },
+        {
+          "lr": 0.03,
+          "betas": [
+            0.9,
+            0.9
+          ],
+          "eps": 0.1,
+          "schedule": "conservative"
+        },
+        {
+          "lr": 0.1,
+          "betas": [
+            0.9,
+            0.99
+          ],
+          "eps": 0.001,
+          "schedule": "cosine"
+        },
+        {
+          "lr": 0.3,
+          "betas": [
+            0.9,
+            0.99
+          ],
+          "eps": 0.1,
+          "schedule": "conservative"
+        }
+      ],
+      "amsgrad": [
+        {
+          "lr": 0.003,
+          "betas": [
+            0.9,
+            0.9
+          ],
+          "eps": 1e-08,
+          "schedule": "cosine"
+        },
+        {
+          "lr": 0.03,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "schedule": "constant"
+        },
+        {
+          "lr": 0.03,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "schedule": "cosine"
+        },
+        {
+          "lr": 0.03,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "schedule": "conservative"
+        },
+        {
+          "lr": 0.03,
+          "betas": [
+            0.9,
+            0.9
+          ],
+          "eps": 1e-08,
+          "schedule": "conservative"
+        },
+        {
+          "lr": 0.03,
+          "betas": [
+            0.9,
+            0.9
+          ],
+          "eps": 0.1,
+          "schedule": "conservative"
+        },
+        {
+          "lr": 0.1,
+          "betas": [
+            0.9,
+            0.99
+          ],
+          "eps": 0.001,
+          "schedule": "cosine"
+        },
+        {
+          "lr": 0.3,
+          "betas": [
+            0.9,
+            0.99
+          ],
+          "eps": 0.1,
+          "schedule": "conservative"
+        }
+      ],
+      "momentum": [
+        {
+          "lr": 0.0001,
+          "momentum": 0.9,
+          "schedule": "constant"
+        },
+        {
+          "lr": 0.0003,
+          "momentum": 0.9,
+          "schedule": "constant"
+        },
+        {
+          "lr": 0.001,
+          "momentum": 0.9,
+          "schedule": "constant"
+        },
+        {
+          "lr": 0.003,
+          "momentum": 0.9,
+          "schedule": "constant"
+        },
+        {
+          "lr": 0.0003,
+          "momentum": 0.9,
+          "schedule": "cosine"
+        },
+        {
+          "lr": 0.001,
+          "momentum": 0.9,
+          "schedule": "cosine"
+        },
+        {
+          "lr": 0.001,
+          "momentum": 0.9,
+          "schedule": "conservative"
+        },
+        {
+          "lr": 0.003,
+          "momentum": 0.9,
+          "schedule": "conservative"
+        }
+      ],
+      "soap": [
+        {
+          "lr": 0.003,
+          "schedule": "constant"
+        },
+        {
+          "lr": 0.03,
+          "schedule": "constant"
+        },
+        {
+          "lr": 0.1,
+          "schedule": "constant"
+        },
+        {
+          "lr": 0.3,
+          "schedule": "constant"
+        },
+        {
+          "lr": 0.03,
+          "schedule": "cosine"
+        },
+        {
+          "lr": 0.1,
+          "schedule": "cosine"
+        },
+        {
+          "lr": 0.1,
+          "schedule": "conservative"
+        },
+        {
+          "lr": 0.3,
+          "schedule": "conservative"
+        }
+      ]
+    },
+    "estimators": {
+      "steps": 1200,
+      "phases": [
+        80,
+        600,
+        1200
+      ],
+      "rank": 4,
+      "oversample": 4,
+      "power_steps": 1,
+      "history_window": 64,
+      "paired_samples": 64,
+      "delta": 0.01,
+      "refresh_frequency": 100,
+      "noise_modes": [
+        "aligned",
+        "antialigned",
+        "partial",
+        "misaligned",
+        "switching",
+        "isotropic_h"
+      ]
+    },
+    "neural": {
+      "task_seeds": [
+        800,
+        801
+      ],
+      "epochs": 20,
+      "phases": [
+        0,
+        5,
+        20
+      ],
+      "batch_size": 32,
+      "probe_batch_size": 128,
+      "gradient_samples": 64,
+      "paired_samples": 64,
+      "rank": 4,
+      "hidden": [
+        16
+      ],
+      "dataset": {
+        "dimension": 12,
+        "classes": 2,
+        "condition": 100,
+        "train_size": 512,
+        "validation_size": 256,
+        "test_size": 64
+      },
+      "optimizer": {
+        "name": "adamw",
+        "lr": 0.003,
+        "schedule": "cosine"
+      }
+    }
+  },
+  "experiment_seconds": 595.7065350999986,
+  "stages": [
+    "pilot",
+    "tuning",
+    "probe_pilot",
+    "evaluation",
+    "estimators",
+    "neural"
+  ],
+  "trials": 966,
+  "environment": {
+    "python": "3.11.4",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel",
+    "device": "cpu",
+    "threads": 1,
+    "cuda_available": false,
+    "cuda_version": null,
+    "gpu": null,
+    "packages": {
+      "torch": "2.1.2+cpu",
+      "torchvision": "0.16.2+cpu",
+      "numpy": "1.26.4",
+      "scipy": "1.17.1",
+      "pandas": "2.3.3",
+      "matplotlib": "3.8.4",
+      "pytest": "8.4.1",
+      "PyYAML": "6.0.1"
+    },
+    "git_commit": "0dd4bcafa989a2b7abd15829489a51a44d6064b7",
+    "git_dirty": true,
+    "source_sha256": "31e2bdc6b0bbc6d9c8df6a71e9b1d5354487b32a6ddc6a4964d195b11caeed50"
+  },
+  "snapshot_sha256": "ce97d9d8be73535c9d1c277fd5500a8afa7e953adfb21cdff34aaa33d6c38769"
+}

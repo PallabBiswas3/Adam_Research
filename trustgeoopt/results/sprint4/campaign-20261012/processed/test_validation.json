@@ -1,0 +1,11 @@
+{
+  "command": "python -m pytest -q",
+  "passed": 80,
+  "skipped": 2,
+  "warnings": [
+    "existing PyTorch TypedStorage deprecation"
+  ],
+  "runtime_seconds": 14.49,
+  "skip_reason": "CUDA unavailable",
+  "source_snapshot_sha256": "5514e918edfe821385e821ddb68a28ab80a651d7dc3747dd2f90f51c8313c208"
+}

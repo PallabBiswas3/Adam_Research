@@ -1,0 +1,20 @@
+{
+  "attempts": 966,
+  "status_counts": {
+    "success": 966
+  },
+  "stage_counts": {
+    "pilot": 4,
+    "probe_pilot": 2,
+    "tuning": 640,
+    "evaluation": 240,
+    "estimators": 60,
+    "neural": 20
+  },
+  "earlier_artifacts_verified": 7258,
+  "source_snapshot_verified": true,
+  "config_hashes_verified": true,
+  "selection_recomputed_without_evaluation": true,
+  "successful_horizons_verified": true,
+  "experiment_seconds": 595.7065350999986
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "method": "adamw",
+    "selected_rate": 0.03,
+    "lower": 0.003,
+    "upper": 0.3,
+    "at_rate_boundary": false,
+    "note": "joint candidate design; beta/epsilon boundaries remain, not global optimization"
+  },
+  {
+    "method": "amsgrad",
+    "selected_rate": 0.1,
+    "lower": 0.003,
+    "upper": 0.3,
+    "at_rate_boundary": false,
+    "note": "joint candidate design; beta/epsilon boundaries remain, not global optimization"
+  },
+  {
+    "method": "momentum",
+    "selected_rate": 0.0003,
+    "lower": 0.0001,
+    "upper": 0.003,
+    "at_rate_boundary": false,
+    "note": "joint candidate design; beta/epsilon boundaries remain, not global optimization"
+  },
+  {
+    "method": "soap",
+    "selected_rate": 0.03,
+    "lower": 0.003,
+    "upper": 0.3,
+    "at_rate_boundary": false,
+    "note": "joint candidate design; beta/epsilon boundaries remain, not global optimization"
+  }
+]

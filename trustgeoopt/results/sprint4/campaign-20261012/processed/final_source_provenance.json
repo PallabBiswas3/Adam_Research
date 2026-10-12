@@ -1,0 +1,35 @@
+{
+  "environment": {
+    "python": "3.11.4",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel",
+    "device": "cpu",
+    "threads": 10,
+    "cuda_available": false,
+    "cuda_version": null,
+    "gpu": null,
+    "packages": {
+      "torch": "2.1.2+cpu",
+      "torchvision": "0.16.2+cpu",
+      "numpy": "1.26.4",
+      "scipy": "1.17.1",
+      "pandas": "2.3.3",
+      "matplotlib": "3.8.4",
+      "pytest": "8.4.1",
+      "PyYAML": "6.0.1"
+    },
+    "git_commit": "0dd4bcafa989a2b7abd15829489a51a44d6064b7",
+    "git_dirty": true,
+    "source_sha256": "b13ebfb8d60e69baf7835bf1df3f89630b15104c6739fa5a091c756f188751d2"
+  },
+  "snapshot": "source_snapshot_final.zip",
+  "snapshot_sha256": "5514e918edfe821385e821ddb68a28ab80a651d7dc3747dd2f90f51c8313c208",
+  "original_experiment_source_sha256": "31e2bdc6b0bbc6d9c8df6a71e9b1d5354487b32a6ddc6a4964d195b11caeed50",
+  "changes_since_experiments": [
+    "added analysis/audit/export/summarization scripts",
+    "hardened monotone observe calls and optional CUDA synchronization",
+    "validated fixed dimension and positive compute limit at initialization",
+    "added source-change guard and explicit campaign argument to canonical pilot driver"
+  ],
+  "note": "Raw attempts retain captured original code. Direct CPU refresh mathematics and selected optimizers unchanged."
+}

@@ -1,5 +1,42 @@
 # Novelty assessment and decision gates
 
+## Current decision after Sprint 4
+
+**Pivot to controlled measurement research; defer a new optimizer.** Established
+HVP/common-random-number secants recover quadratic curvature when gradient
+history follows antialigned noise. Same-point paired gradients estimate noise;
+estimated covariance subtraction fails important controls and cannot identify
+H without excitation assumptions. These are established mechanisms, not a new
+noise-aware estimator or theorem about full Adam.
+
+Two held-out small MLP tasks show final HVP capture gains of only .0107/.0094
+over centered history (one interval includes zero), with about 39% measured
+both-layer refresh overhead at one refresh per 100 steps. The predefined .05
+accuracy / .10 cost gate fails. Broader first-order tuning attenuates earlier
+rotation gaps; SOAP's equal-call improvements do not establish a universal
+equal-time benefit. Step-indexed noise transitions and short CPU timing are
+explicit confounds, so existing remedies are not declared exhausted.
+
+See [Sprint 4 report](sprint4_report.md),
+[primary mechanism audit](sprint4_literature_audit.md), and
+[Sprint 5 decision](sprint5_decision.md). HVP/GGN/Fisher, K-FAC/EKFAC, stochastic
+quasi-Newton/PSGD, randomized spectra, noise-scale measurements, covariance
+sketches, common-sample variance reduction, refresh/damping and 2026 bias
+corrections substantially overlap the proposed components. No priority or
+publication claim is justified by this scoping review.
+
+| Gate | Sprint 4 evidence | Decision |
+| --- | --- | --- |
+| Distinct mechanism | tested information already available from established probes | unpassed |
+| Noise/curvature identification | conditional identities; subtraction/excitation counterexamples | useful measurement result |
+| Held-out toy recovery | direct probes beat history in antialigned/partial/random cases | passed for known probes |
+| Neural incremental value | ~1 percentage point final capture gain, uncertain on one task | accuracy gate failed |
+| Affordable cost | ~39% amortized HVP refresh versus 10% gate | cost gate failed |
+| Residual practical need | no new equal-compute gain; tuning/timing limits remain | unestablished |
+| Algorithm development | neither distinctness nor neural utility/cost gate satisfied | defer; pivot |
+
+The earlier Sprint 3 assessment below is preserved as historical context.
+
 ## Current decision after Sprint 3
 
 **Continue mechanism validation; defer a new optimizer.** The original noisy

@@ -175,3 +175,45 @@ from tuning. Fresh selection uses development seeds 30/31 and evaluation seeds
 clearly; create a new campaign. Raw trajectories and source ZIPs remain locally
 ignored; committed manifests, summaries, selections, comparisons and plots are
 compact. The independent audit reads earlier results without rewriting them.
+
+## Research Sprint 4
+
+Read [`research/sprint4_report.md`](research/sprint4_report.md), the
+[`noise/curvature theory`](research/sprint4_noise_curvature_theory.md), and
+[`Sprint 5 decision`](research/sprint5_decision.md). The frozen CPU campaign
+executes 966 attempts, including six pilots, in 595.71 seconds. It compares
+fairly selected baseline policies, known noise/curvature estimators and small
+ReLU MLP layer geometry. The neural accuracy/cost gate fails; no new optimizer,
+deep/Fashion expansion, GPU campaign or dependency upgrade is launched.
+
+From `trustgeoopt/`, reproduce in a **new** directory. Keep the source unchanged
+between initialization and experiment stages:
+
+```powershell
+python scripts/run_sprint4.py --stage init --output results/sprint4/my-new-campaign
+python scripts/run_sprint4.py --stage pilot --output results/sprint4/my-new-campaign
+python scripts/pilot_sprint4_probes.py --campaign results/sprint4/my-new-campaign
+python scripts/run_sprint4.py --stage tuning --output results/sprint4/my-new-campaign
+python scripts/run_sprint4.py --stage evaluation --output results/sprint4/my-new-campaign
+python scripts/run_sprint4.py --stage estimators --output results/sprint4/my-new-campaign
+python scripts/run_sprint4.py --stage neural --output results/sprint4/my-new-campaign
+python scripts/analyze_sprint4.py --campaign results/sprint4/my-new-campaign
+python scripts/summarize_sprint4.py --campaign results/sprint4/my-new-campaign
+python scripts/audit_sprint4.py --campaign results/sprint4/my-new-campaign --create-manifest
+python -m pytest -q
+```
+
+Select only with development seeds 50–59; evaluation seeds 60–69 never enter
+selection. The campaign rejects existing destinations/started stages and records
+budget censoring/failures. Read the report's timing limitations: step-indexed
+noise changes confound retrospective rising/falling equal-time comparisons.
+`RandomizedCurvature` is an established matrix-free range/Ritz measurement
+routine with configurable rank/refresh, not TrustGeoOpt or a novel optimizer.
+
+The historical campaign retains its original source ZIP/hash plus recorded
+pilot/analysis drivers. Final source adds audit/analysis and small robustness
+checks, separately snapshotted. Exact historical reproduction uses the original
+snapshot; a new run captures current source. Compact run indexes, estimator
+rows, intervals, plots and manifests are committed. Raw sampled gradients,
+per-step trajectories, earlier-evidence inventory and source ZIPs remain local
+and ignored; archive them separately to share complete raw evidence.

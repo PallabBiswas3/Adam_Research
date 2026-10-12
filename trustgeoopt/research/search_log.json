@@ -110,5 +110,60 @@
     "total_primary_records_after_update": 40,
     "database_total_hits": null,
     "notes": "Full-text extraction limits in sprint3_literature_audit.md; current Meta package incompatible with installed Python/PyTorch; pinned preliminary SOAP fallback"
+  },
+  "sprint4": {
+    "date": "2026-10-12",
+    "review_type": "mechanism-focused scoping review",
+    "cutoff": "2026-10-12",
+    "database_total_hits": null,
+    "excluded": [
+      "arXiv:1409.2325 is unrelated algebraic geometry",
+      "cosmetic shampoo results",
+      "nonprimary summaries used only for discovery"
+    ],
+    "queries": [
+      "stochastic Hessian vector estimation",
+      "Deep learning Hessian free optimization Martens",
+      "K-FAC EKFAC eigenvalue corrected",
+      "gradient noise covariance two minibatches differences",
+      "Preconditioned Stochastic Gradient Descent Li",
+      "Stochastic Quasi-Newton Byrd Hansen Nocedal Singer",
+      "empirical Fisher Limitations",
+      "noise curvature preconditioning 2025 2026",
+      "Davis Kahan statisticians",
+      "gradient noise scale McCandlish",
+      "Oja streaming PCA",
+      "Stochastic Variance Reduced Gradient",
+      "SENG stochastic Newton",
+      "Purifying Shampoo optimizer",
+      "FOAM optimizer",
+      "FOAM Frequency and Operator Error Shampoo"
+    ],
+    "new_records": [
+      "pearlmutter1994",
+      "hessianfree2010",
+      "empiricalfisher2019",
+      "sqn2016",
+      "psgd2015",
+      "psgd2024",
+      "noisescale2018",
+      "svrg2013",
+      "rangfinder2011",
+      "daviskahan2015",
+      "streamingpca2016",
+      "multipass2026",
+      "crossfit2026",
+      "foldedfoam2025"
+    ],
+    "upgraded_records": [
+      "kfac2015",
+      "ekfac2018",
+      "seng2020",
+      "purifying2025",
+      "foam2026"
+    ],
+    "total_primary_records": 54,
+    "extraction_table": "sprint4_literature_audit.md",
+    "source_metadata": "sprint4_sources.json"
   }
 }

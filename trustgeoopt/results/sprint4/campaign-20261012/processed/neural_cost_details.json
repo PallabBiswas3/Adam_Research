@@ -1,0 +1,7 @@
+{
+  "mean_batch32_gradient_seconds": 0.0003002830468749418,
+  "mean_measured_step_seconds": 0.0014678473124999252,
+  "mean_paired_128_gradient_calls_refresh_seconds": 0.03843622999999255,
+  "paired_refresh_amortized_fraction_once_all_layers": 0.2743972062707279,
+  "note": "One paired collection supplies both layers; neural_gate.json sums conservative layer-attributed paired timing. HVP timing uses distinct products per layer. Step cost includes measured training/history capture and loader overhead."
+}

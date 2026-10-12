@@ -1,0 +1,474 @@
+[
+  {
+    "method": "adamw",
+    "candidate_id": 0,
+    "optimizer": {
+      "name": "adamw",
+      "lr": 0.003,
+      "betas": [
+        0.9,
+        0.9
+      ],
+      "eps": 1e-08,
+      "schedule": "cosine"
+    },
+    "score": -1.2548185337352749,
+    "valid": true,
+    "n_success": 20
+  },
+  {
+    "method": "amsgrad",
+    "candidate_id": 0,
+    "optimizer": {
+      "name": "amsgrad",
+      "lr": 0.003,
+      "betas": [
+        0.9,
+        0.9
+      ],
+      "eps": 1e-08,
+      "schedule": "cosine"
+    },
+    "score": 1.5692358331886682,
+    "valid": true,
+    "n_success": 20
+  },
+  {
+    "method": "momentum",
+    "candidate_id": 0,
+    "optimizer": {
+      "name": "momentum",
+      "lr": 0.0001,
+      "momentum": 0.9,
+      "schedule": "constant"
+    },
+    "score": -0.7530805327973379,
+    "valid": true,
+    "n_success": 20
+  },
+  {
+    "method": "soap",
+    "candidate_id": 0,
+    "optimizer": {
+      "name": "soap",
+      "lr": 0.003,
+      "schedule": "constant"
+    },
+    "score": -1.3154320347327535,
+    "valid": true,
+    "n_success": 20
+  },
+  {
+    "method": "adamw",
+    "candidate_id": 1,
+    "optimizer": {
+      "name": "adamw",
+      "lr": 0.03,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "schedule": "constant"
+    },
+    "score": -0.6553083092483698,
+    "valid": true,
+    "n_success": 20
+  },
+  {
+    "method": "amsgrad",
+    "candidate_id": 1,
+    "optimizer": {
+      "name": "amsgrad",
+      "lr": 0.03,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "schedule": "constant"
+    },
+    "score": -0.5373657463461153,
+    "valid": true,
+    "n_success": 20
+  },
+  {
+    "method": "momentum",
+    "candidate_id": 1,
+    "optimizer": {
+      "name": "momentum",
+      "lr": 0.0003,
+      "momentum": 0.9,
+      "schedule": "constant"
+    },
+    "score": -0.7890257128889459,
+    "valid": true,
+    "n_success": 20
+  },
+  {
+    "method": "soap",
+    "candidate_id": 1,
+    "optimizer": {
+      "name": "soap",
+      "lr": 0.03,
+      "schedule": "constant"
+    },
+    "score": -0.49311500743144987,
+    "valid": true,
+    "n_success": 20
+  },
+  {
+    "method": "adamw",
+    "candidate_id": 2,
+    "optimizer": {
+      "name": "adamw",
+      "lr": 0.03,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "schedule": "cosine"
+    },
+    "score": -0.794556272605299,
+    "valid": true,
+    "n_success": 20
+  },
+  {
+    "method": "amsgrad",
+    "candidate_id": 2,
+    "optimizer": {
+      "name": "amsgrad",
+      "lr": 0.03,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "schedule": "cosine"
+    },
+    "score": -0.6623060481759047,
+    "valid": true,
+    "n_success": 20
+  },
+  {
+    "method": "momentum",
+    "candidate_id": 2,
+    "optimizer": {
+      "name": "momentum",
+      "lr": 0.001,
+      "momentum": 0.9,
+      "schedule": "constant"
+    },
+    "score": -0.3582338647604659,
+    "valid": true,
+    "n_success": 20
+  },
+  {
+    "method": "soap",
+    "candidate_id": 2,
+    "optimizer": {
+      "name": "soap",
+      "lr": 0.1,
+      "schedule": "constant"
+    },
+    "score": -0.0013126112844076276,
+    "valid": true,
+    "n_success": 20
+  },
+  {
+    "method": "adamw",
+    "candidate_id": 3,
+    "optimizer": {
+      "name": "adamw",
+      "lr": 0.03,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "schedule": "conservative"
+    },
+    "score": -0.4537767599167225,
+    "valid": true,
+    "n_success": 20
+  },
+  {
+    "method": "amsgrad",
+    "candidate_id": 3,
+    "optimizer": {
+      "name": "amsgrad",
+      "lr": 0.03,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "schedule": "conservative"
+    },
+    "score": -0.3423718869363825,
+    "valid": true,
+    "n_success": 20
+  },
+  {
+    "method": "momentum",
+    "candidate_id": 3,
+    "optimizer": {
+      "name": "momentum",
+      "lr": 0.003,
+      "momentum": 0.9,
+      "schedule": "constant"
+    },
+    "score": 0.22268650915145793,
+    "valid": true,
+    "n_success": 20
+  },
+  {
+    "method": "soap",
+    "candidate_id": 3,
+    "optimizer": {
+      "name": "soap",
+      "lr": 0.3,
+      "schedule": "constant"
+    },
+    "score": 0.4794153621058491,
+    "valid": true,
+    "n_success": 20
+  },
+  {
+    "method": "adamw",
+    "candidate_id": 4,
+    "optimizer": {
+      "name": "adamw",
+      "lr": 0.03,
+      "betas": [
+        0.9,
+        0.9
+      ],
+      "eps": 1e-08,
+      "schedule": "conservative"
+    },
+    "score": -1.3950683338341139,
+    "valid": true,
+    "n_success": 20
+  },
+  {
+    "method": "amsgrad",
+    "candidate_id": 4,
+    "optimizer": {
+      "name": "amsgrad",
+      "lr": 0.03,
+      "betas": [
+        0.9,
+        0.9
+      ],
+      "eps": 1e-08,
+      "schedule": "conservative"
+    },
+    "score": 0.10314543219490063,
+    "valid": true,
+    "n_success": 20
+  },
+  {
+    "method": "momentum",
+    "candidate_id": 4,
+    "optimizer": {
+      "name": "momentum",
+      "lr": 0.0003,
+      "momentum": 0.9,
+      "schedule": "cosine"
+    },
+    "score": -1.1230439323739705,
+    "valid": true,
+    "n_success": 20
+  },
+  {
+    "method": "soap",
+    "candidate_id": 4,
+    "optimizer": {
+      "name": "soap",
+      "lr": 0.03,
+      "schedule": "cosine"
+    },
+    "score": -1.5156056734163625,
+    "valid": true,
+    "n_success": 20
+  },
+  {
+    "method": "adamw",
+    "candidate_id": 5,
+    "optimizer": {
+      "name": "adamw",
+      "lr": 0.03,
+      "betas": [
+        0.9,
+        0.9
+      ],
+      "eps": 0.1,
+      "schedule": "conservative"
+    },
+    "score": -1.4523484049443032,
+    "valid": true,
+    "n_success": 20
+  },
+  {
+    "method": "amsgrad",
+    "candidate_id": 5,
+    "optimizer": {
+      "name": "amsgrad",
+      "lr": 0.03,
+      "betas": [
+        0.9,
+        0.9
+      ],
+      "eps": 0.1,
+      "schedule": "conservative"
+    },
+    "score": 0.10394263366531936,
+    "valid": true,
+    "n_success": 20
+  },
+  {
+    "method": "momentum",
+    "candidate_id": 5,
+    "optimizer": {
+      "name": "momentum",
+      "lr": 0.001,
+      "momentum": 0.9,
+      "schedule": "cosine"
+    },
+    "score": -1.121146253418861,
+    "valid": true,
+    "n_success": 20
+  },
+  {
+    "method": "soap",
+    "candidate_id": 5,
+    "optimizer": {
+      "name": "soap",
+      "lr": 0.1,
+      "schedule": "cosine"
+    },
+    "score": -1.0773864535273492,
+    "valid": true,
+    "n_success": 20
+  },
+  {
+    "method": "adamw",
+    "candidate_id": 6,
+    "optimizer": {
+      "name": "adamw",
+      "lr": 0.1,
+      "betas": [
+        0.9,
+        0.99
+      ],
+      "eps": 0.001,
+      "schedule": "cosine"
+    },
+    "score": -1.1343813243806087,
+    "valid": true,
+    "n_success": 20
+  },
+  {
+    "method": "amsgrad",
+    "candidate_id": 6,
+    "optimizer": {
+      "name": "amsgrad",
+      "lr": 0.1,
+      "betas": [
+        0.9,
+        0.99
+      ],
+      "eps": 0.001,
+      "schedule": "cosine"
+    },
+    "score": -0.98781477155479,
+    "valid": true,
+    "n_success": 20
+  },
+  {
+    "method": "momentum",
+    "candidate_id": 6,
+    "optimizer": {
+      "name": "momentum",
+      "lr": 0.001,
+      "momentum": 0.9,
+      "schedule": "conservative"
+    },
+    "score": -0.8527894848181128,
+    "valid": true,
+    "n_success": 20
+  },
+  {
+    "method": "soap",
+    "candidate_id": 6,
+    "optimizer": {
+      "name": "soap",
+      "lr": 0.1,
+      "schedule": "conservative"
+    },
+    "score": -0.876533460931623,
+    "valid": true,
+    "n_success": 20
+  },
+  {
+    "method": "adamw",
+    "candidate_id": 7,
+    "optimizer": {
+      "name": "adamw",
+      "lr": 0.3,
+      "betas": [
+        0.9,
+        0.99
+      ],
+      "eps": 0.1,
+      "schedule": "conservative"
+    },
+    "score": -0.4855653065399359,
+    "valid": true,
+    "n_success": 20
+  },
+  {
+    "method": "amsgrad",
+    "candidate_id": 7,
+    "optimizer": {
+      "name": "amsgrad",
+      "lr": 0.3,
+      "betas": [
+        0.9,
+        0.99
+      ],
+      "eps": 0.1,
+      "schedule": "conservative"
+    },
+    "score": -0.8155510791218685,
+    "valid": true,
+    "n_success": 20
+  },
+  {
+    "method": "momentum",
+    "candidate_id": 7,
+    "optimizer": {
+      "name": "momentum",
+      "lr": 0.003,
+      "momentum": 0.9,
+      "schedule": "conservative"
+    },
+    "score": -0.8163329117537794,
+    "valid": true,
+    "n_success": 20
+  },
+  {
+    "method": "soap",
+    "candidate_id": 7,
+    "optimizer": {
+      "name": "soap",
+      "lr": 0.3,
+      "schedule": "conservative"
+    },
+    "score": -0.45207130731414147,
+    "valid": true,
+    "n_success": 20
+  }
+]

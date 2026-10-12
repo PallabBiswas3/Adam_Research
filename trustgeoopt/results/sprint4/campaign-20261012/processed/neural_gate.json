@@ -1,0 +1,260 @@
+[
+  {
+    "method": "hvp_ritz",
+    "capture_contrasts": [
+      {
+        "task_seed": 800,
+        "method": "hvp_ritz",
+        "baseline": "centered_history",
+        "metric": "capture",
+        "scale": "difference",
+        "paired_seeds": [
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "complete_ten_seed_pairs": true,
+        "n_pairs": 10,
+        "mean_difference": 0.010686036614949667,
+        "ci95": [
+          0.0017558411792414307,
+          0.019719051844186423
+        ],
+        "paired_differences": [
+          0.0034064026327407237,
+          0.025168731762484686,
+          0.008581159142064698,
+          0.012133692846505562,
+          0.02412866206649711,
+          -4.145405009670089e-05,
+          -0.013956768295105393,
+          0.01624077372430388,
+          -0.0051116615151685085,
+          0.03631082783527062
+        ]
+      },
+      {
+        "task_seed": 801,
+        "method": "hvp_ritz",
+        "baseline": "centered_history",
+        "metric": "capture",
+        "scale": "difference",
+        "paired_seeds": [
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "complete_ten_seed_pairs": true,
+        "n_pairs": 10,
+        "mean_difference": 0.009424975987168693,
+        "ci95": [
+          -0.000812824745179213,
+          0.02113646916537042
+        ],
+        "paired_differences": [
+          0.0024937218846716735,
+          0.04339787845883669,
+          -0.006928714267233627,
+          4.001921070717618e-05,
+          0.011676813058259294,
+          0.0008862600424195399,
+          -0.005384427716067397,
+          -0.00475499428033288,
+          0.007982083709773269,
+          0.04484111977065319
+        ]
+      }
+    ],
+    "capture_gate": false,
+    "mean_two_layer_amortized_cost_fraction": 0.3926340583169974,
+    "cost_gate": false,
+    "residual_equal_cost_optimizer_need_established": false,
+    "expand_deep_fashion_or_optimizer": false
+  },
+  {
+    "method": "shared_fd_ritz",
+    "capture_contrasts": [
+      {
+        "task_seed": 800,
+        "method": "shared_fd_ritz",
+        "baseline": "centered_history",
+        "metric": "capture",
+        "scale": "difference",
+        "paired_seeds": [
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "complete_ten_seed_pairs": true,
+        "n_pairs": 10,
+        "mean_difference": -0.05493865022606057,
+        "ci95": [
+          -0.07574974162521786,
+          -0.0351539781949776
+        ],
+        "paired_differences": [
+          -0.058836574246585505,
+          -0.0389456835207993,
+          -0.018181341876554846,
+          -0.09845085186555708,
+          -0.12059838453157179,
+          -0.008784984354669123,
+          -0.0718961684158188,
+          -0.027218919495554217,
+          -0.06538896862257859,
+          -0.0410846253309165
+        ]
+      },
+      {
+        "task_seed": 801,
+        "method": "shared_fd_ritz",
+        "baseline": "centered_history",
+        "metric": "capture",
+        "scale": "difference",
+        "paired_seeds": [
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "complete_ten_seed_pairs": true,
+        "n_pairs": 10,
+        "mean_difference": -0.07185277562342322,
+        "ci95": [
+          -0.09457520474764487,
+          -0.046329150386169166
+        ],
+        "paired_differences": [
+          -0.037019318604722296,
+          -0.07157862884302824,
+          -0.10772205151792336,
+          -0.11722929959435602,
+          0.015312709718538042,
+          -0.07192044959222599,
+          -0.09435449729311773,
+          -0.11774447874653793,
+          -0.06879260124619657,
+          -0.04747914051466218
+        ]
+      }
+    ],
+    "capture_gate": false,
+    "mean_two_layer_amortized_cost_fraction": 0.3871248682543953,
+    "cost_gate": false,
+    "residual_equal_cost_optimizer_need_established": false,
+    "expand_deep_fashion_or_optimizer": false
+  },
+  {
+    "method": "noise_subtraction",
+    "capture_contrasts": [
+      {
+        "task_seed": 800,
+        "method": "noise_subtraction",
+        "baseline": "centered_history",
+        "metric": "capture",
+        "scale": "difference",
+        "paired_seeds": [
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "complete_ten_seed_pairs": true,
+        "n_pairs": 10,
+        "mean_difference": -0.22963604038970004,
+        "ci95": [
+          -0.27438250849784035,
+          -0.19123867727322785
+        ],
+        "paired_differences": [
+          -0.33425655341058813,
+          -0.15720811820921565,
+          -0.15202680717773281,
+          -0.2191545919937019,
+          -0.23555092239829778,
+          -0.22321727185916346,
+          -0.16133810432124118,
+          -0.24449386528421968,
+          -0.35518868863047864,
+          -0.21392548061236094
+        ]
+      },
+      {
+        "task_seed": 801,
+        "method": "noise_subtraction",
+        "baseline": "centered_history",
+        "metric": "capture",
+        "scale": "difference",
+        "paired_seeds": [
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "complete_ten_seed_pairs": true,
+        "n_pairs": 10,
+        "mean_difference": -0.262642395380435,
+        "ci95": [
+          -0.3049135696301726,
+          -0.21565947836570332
+        ],
+        "paired_differences": [
+          -0.22128807538167106,
+          -0.30308588197578845,
+          -0.3041193924760158,
+          -0.2242432500719287,
+          -0.35891108586242493,
+          -0.21990003080880322,
+          -0.10472880858255906,
+          -0.2945381220361684,
+          -0.24554141292447795,
+          -0.35006789368451174
+        ]
+      }
+    ],
+    "capture_gate": false,
+    "mean_two_layer_amortized_cost_fraction": 0.5794873057131963,
+    "cost_gate": false,
+    "residual_equal_cost_optimizer_need_established": false,
+    "expand_deep_fashion_or_optimizer": false
+  }
+]

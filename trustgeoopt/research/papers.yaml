@@ -1,5 +1,3 @@
-# Verified primary records on 2026-10-12. year=verified publication year when known,
-# else first arXiv year. Venue uncertainty and unextracted details are explicit.
 - id: polyak1964
   title: Some methods of speeding up the convergence of iteration methods
   authors: B. T. Polyak
@@ -23,7 +21,8 @@
   url: https://jmlr.org/papers/v12/duchi11a.html
   central_method: Accumulated gradient second moments; diagonal and full metrics
   mathematical_contribution: Geometry-dependent online regret analysis
-  theoretical_assumptions: Convex online optimization; exact theorem conditions pending extraction
+  theoretical_assumptions: Convex online optimization; exact theorem conditions pending
+    extraction
   overhead: Diagonal O(p); dense full-matrix O(p^2) storage
   limitations: Accumulation can retain old statistics
   relevance: Base adaptive geometry and memory trade-off
@@ -51,7 +50,8 @@
   url: https://arxiv.org/abs/1412.6980
   central_method: Bias-corrected first and second gradient moments
   mathematical_contribution: Adaptive stochastic update; original proof later challenged
-  theoretical_assumptions: Original online-convex analysis is not a valid general convergence certificate
+  theoretical_assumptions: Original online-convex analysis is not a valid general
+    convergence certificate
   overhead: O(p) state/update
   limitations: EMA/nonconvergence concerns; diagonal coordinates
   relevance: Core reference
@@ -81,15 +81,19 @@
   url: https://arxiv.org/abs/1904.09237
   central_method: Long-term second-moment memory; AMSGrad
   mathematical_contribution: Adam convex counterexample and corrected variants
-  theoretical_assumptions: Appendix A audited; projected linear losses on [-1,1], C>2, beta1=0, beta2=1/(1+C^2), alpha_t=alpha/sqrt(t), alpha<sqrt(1-beta2), x1=1; no bias correction or epsilon in this construction
+  theoretical_assumptions: Appendix A audited; projected linear losses on [-1,1],
+    C>2, beta1=0, beta2=1/(1+C^2), alpha_t=alpha/sqrt(t), alpha<sqrt(1-beta2), x1=1;
+    no bias correction or epsilon in this construction
   overhead: O(p), extra maximum buffer
   limitations: Long memory can impede adaptation; no off-diagonal correction
   relevance: Must compare known remedy before a new gate
   overlap: Already established reliability remedy
-  extraction_level: Primary metadata plus Algorithm 1, footnote 1 and Appendix A full-text extraction in Sprint 2
+  extraction_level: Primary metadata plus Algorithm 1, footnote 1 and Appendix A full-text
+    extraction in Sprint 2
 - id: adabelief2020
   title: 'AdaBelief Optimizer: Adapting Stepsizes by the Belief in Observed Gradients'
-  authors: Juntang Zhuang; Tommy Tang; Yifan Ding; Sekhar Tatikonda; Nicha Dvornek; Xenophon Papademetris; James S. Duncan
+  authors: Juntang Zhuang; Tommy Tang; Yifan Ding; Sekhar Tatikonda; Nicha Dvornek;
+    Xenophon Papademetris; James S. Duncan
   year: 2020
   venue: NeurIPS 2020 (arXiv journal reference)
   url: https://arxiv.org/abs/2010.07468
@@ -105,7 +109,8 @@
   extraction_level: Primary metadata and selected full-text algorithm
 - id: radam2020
   title: On the Variance of the Adaptive Learning Rate and Beyond
-  authors: Liyuan Liu; Haoming Jiang; Pengcheng He; Weizhu Chen; Xiaodong Liu; Jianfeng Gao; Jiawei Han
+  authors: Liyuan Liu; Haoming Jiang; Pengcheng He; Weizhu Chen; Xiaodong Liu; Jianfeng
+    Gao; Jiawei Han
   year: 2020
   first_arxiv_year: 2019
   venue: ICLR 2020 (arXiv comments)
@@ -139,7 +144,8 @@
   venue: ICLR 2019 (arXiv comments)
   url: https://arxiv.org/abs/1902.09843
   central_method: AdaBound/AMSBound bound effective adaptive rates
-  mathematical_contribution: Smooth transition toward SGD; claimed convergence with bounds
+  mathematical_contribution: Smooth transition toward SGD; claimed convergence with
+    bounds
   theoretical_assumptions: Full theorem conditions not extracted
   overhead: O(p)
   limitations: Bound schedule needs tuning; manuscript overlap notice exists
@@ -154,9 +160,11 @@
   url: https://link.springer.com/article/10.1007/BF01589116
   central_method: Limited-memory quasi-Newton secant pairs
   mathematical_contribution: Variable-metric scaling and limited storage
-  theoretical_assumptions: Secant curvature and line-search details require full-text review
+  theoretical_assumptions: Secant curvature and line-search details require full-text
+    review
   experiments: Classical nonlinear optimization; no neural scope evidence extracted
-  overhead: O(pk) secant storage; line searches require additional objective/gradient calls
+  overhead: O(pk) secant storage; line searches require additional objective/gradient
+    calls
   limitations: Stochastic gradients complicate curvature pairs
   relevance: Existing low-memory geometric remedy
   overlap: Established low-memory curvature; not implemented this iteration
@@ -184,27 +192,34 @@
   url: https://proceedings.mlr.press/v37/martens15.html
   central_method: Kronecker factors of layer Fisher blocks
   mathematical_contribution: Efficiently invertible non-diagonal Fisher approximation
-  theoretical_assumptions: Layer-factor approximation; full assumptions not extracted
+  theoretical_assumptions: Model Fisher; exponential-family logits Fisher=GGN; Kronecker
+    expectation-factor approximation; damping
   overhead: Layer activation/error square matrices and their solves
   limitations: Approximation bias and damping; not just activation covariance
   relevance: Strong existing supervised-network geometry baseline
   overlap: High layer-wise geometry overlap
-  extraction_level: Official proceedings metadata and abstract
+  extraction_level: Primary full text sections 2-3,5-6,8
+  full_text: https://arxiv.org/html/1503.05671
+  verified_on: '2026-10-12'
 - id: ekfac2018
   title: Fast Approximate Natural Gradient Descent in a Kronecker-factored Eigenbasis
-  authors: Thomas George; César Laurent; Xavier Bouthillier; Nicolas Ballas; Pascal Vincent
+  authors: Thomas George; César Laurent; Xavier Bouthillier; Nicolas Ballas; Pascal
+    Vincent
   year: 2018
   venue: arXiv record verified; proceedings status not independently checked
   url: https://arxiv.org/abs/1806.03884
   central_method: Corrected variances in Kronecker eigenbasis
   mathematical_contribution: Improved Fisher approximation with cheap partial updates
-  theoretical_assumptions: Exact approximation proposition assumptions not extracted
+  theoretical_assumptions: Kronecker basis approximation and empirical diagonal correction;
+    not exact global eigenspace
   experiments: Several deep-network architectures; exact names not extracted
   overhead: Factor eigendecomposition plus diagonal variance tracking
   limitations: Dense factors and approximate Fisher
   relevance: Separate eigenbasis from eigenvalue updates
   overlap: High adaptive scaling in geometry basis
-  extraction_level: Primary metadata and abstract
+  extraction_level: Primary full text section 3
+  full_text: https://arxiv.org/pdf/1806.03884
+  verified_on: '2026-10-12'
 - id: shampoo2018
   title: 'Shampoo: Preconditioned Stochastic Tensor Optimization'
   authors: Vineet Gupta; Tomer Koren; Yoram Singer
@@ -214,14 +229,16 @@
   full_text: https://proceedings.mlr.press/v80/gupta18a/gupta18a.pdf
   central_method: Per-axis gradient Gram factors
   mathematical_contribution: Matrix/tensor online regret; Algorithm 1 quarter powers
-  theoretical_assumptions: Convex online losses; bounded comparator distance and gradient rank in matrix theorem
+  theoretical_assumptions: Convex online losses; bounded comparator distance and gradient
+    rank in matrix theorem
   overhead: a^2+b^2 storage; a^3+b^3 spectral work for matrix a by b
   limitations: Root cost and staleness; simple reference is not modern grafted Shampoo
   relevance: Implemented feasible structured baseline
   overlap: High; off-diagonal second moments established
   extraction_level: Official metadata; selected algorithm/theorem full text
 - id: sophia2023
-  title: 'Sophia: A Scalable Stochastic Second-order Optimizer for Language Model Pre-training'
+  title: 'Sophia: A Scalable Stochastic Second-order Optimizer for Language Model
+    Pre-training'
   authors: Hong Liu; Zhiyuan Li; David Hall; Percy Liang; Tengyu Ma
   year: 2023
   venue: arXiv record verified; publication venue not checked
@@ -237,7 +254,8 @@
   extraction_level: Primary metadata and abstract
 - id: soap2024
   title: 'SOAP: Improving and Stabilizing Shampoo using Adam'
-  authors: Nikhil Vyas; Depen Morwani; Rosie Zhao; Mujin Kwun; Itai Shapira; David Brandfonbrener; Lucas Janson; Sham Kakade
+  authors: Nikhil Vyas; Depen Morwani; Rosie Zhao; Mujin Kwun; Itai Shapira; David
+    Brandfonbrener; Lucas Janson; Sham Kakade
   year: 2024
   venue: arXiv first posting; ICLR record access challenged, venue confirmation pending
   url: https://arxiv.org/abs/2409.11321
@@ -259,13 +277,16 @@
   url: https://arxiv.org/abs/2006.05924
   central_method: Random sketches of empirical Fisher/low-rank layer information
   mathematical_contribution: Stationarity and NTK-case analysis
-  theoretical_assumptions: Exact global/NTK assumptions require full-text audit
+  theoretical_assumptions: Regularized empirical-Fisher sketches; empirical/model
+    Fisher distinction remains
   experiments: CNNs; ResNet50/ImageNet-1k
   overhead: Sketch construction and regularized least-squares solves
   limitations: Empirical Fisher not exact Hessian
   relevance: Low-rank geometry has supervised prior art
   overlap: High randomized low-rank overlap
-  extraction_level: Primary metadata and abstract
+  extraction_level: Primary full text sections 2-3
+  full_text: https://arxiv.org/pdf/2006.05924
+  verified_on: '2026-10-12'
 - id: sketchy2023
   title: 'Sketchy: Memory-efficient Adaptive Regularization with Frequent Directions'
   authors: Vladimir Feinberg; Xinyi Chen; Y. Jennifer Sun; Rohan Anil; Elad Hazan
@@ -310,8 +331,10 @@
   overlap: Established subspace tracking
   extraction_level: Primary metadata and abstract
 - id: caspr2024
-  title: 'CASPR: Combining Axes Preconditioners through Kronecker Approximation for Deep Learning'
-  authors: Sai Surya Duvvuri; Fnu Devvrit; Rohan Anil; Cho-Jui Hsieh; Inderjit S. Dhillon
+  title: 'CASPR: Combining Axes Preconditioners through Kronecker Approximation for
+    Deep Learning'
+  authors: Sai Surya Duvvuri; Fnu Devvrit; Rohan Anil; Cho-Jui Hsieh; Inderjit S.
+    Dhillon
   year: 2024
   venue: ICLR 2024 (official PDF)
   url: https://openreview.net/pdf?id=8j9hz8DVi8
@@ -322,7 +345,8 @@
   limitations: Strong structure approximation is prior art
   relevance: Alternative to low-rank correction
   overlap: Partial structured-metric overlap
-  extraction_level: Official PDF title/authors/abstract surfaced; retrieval may be challenged
+  extraction_level: Official PDF title/authors/abstract surfaced; retrieval may be
+    challenged
 - id: ldadam2025
   title: 'LDAdam: Adaptive Optimization from Low-Dimensional Gradient Statistics'
   authors: Thomas Robert; Mher Safaryan; Ionut-Vlad Modoranu; Dan Alistarh
@@ -340,24 +364,30 @@
   overlap: High projected-moment overlap
   extraction_level: Primary metadata and abstract
 - id: purifying2025
-  title: 'Purifying Shampoo: Investigating Shampoo''s Heuristics by Decomposing its Preconditioner'
-  authors: Runa Eschenhagen; Aaron Defazio; Tsung-Hsien Lee; Richard E. Turner; Hao-Jun Michael Shi
+  title: 'Purifying Shampoo: Investigating Shampoo''s Heuristics by Decomposing its
+    Preconditioner'
+  authors: Runa Eschenhagen; Aaron Defazio; Tsung-Hsien Lee; Richard E. Turner; Hao-Jun
+    Michael Shi
   year: 2025
   venue: NeurIPS 2025 (arXiv comments)
   url: https://arxiv.org/abs/2506.03595
-  full_text: https://arxiv.org/html/2506.03595v2
+  full_text: https://arxiv.org/pdf/2506.03595
   central_method: Eigenvalue correction; approximation-error-based eigenbasis refresh
-  mathematical_contribution: Decompose staleness/scaling heuristics and adaptive QR criterion
-  theoretical_assumptions: Factor approximation error threshold; full proof audit pending
+  mathematical_contribution: Decompose staleness/scaling heuristics and adaptive QR
+    criterion
+  theoretical_assumptions: Factor eigenbasis/scale approximation; Frobenius error
+    refresh criterion; no full Adam guarantee imported
   experiments: Imagewoof ViT; AlgoPerf FastMRI/OGBG/ImageNet ViT (selected text)
   overhead: Criterion plus selective factor eigensolves
   limitations: Results vary by workload; full CNN relevance requires audit
   relevance: Direct prior art for adaptive geometry computation
   overlap: High; adaptive refresh is already explored
-  extraction_level: Primary metadata and selected full-text scheduling section
+  extraction_level: Primary full text sections 3-4 and Eq.11
+  verified_on: '2026-10-12'
 - id: asgo2025
   title: 'ASGO: Adaptive Structured Gradient Optimization'
-  authors: Kang An; Yuxing Liu; Rui Pan; Yi Ren; Shiqian Ma; Donald Goldfarb; Tong Zhang
+  authors: Kang An; Yuxing Liu; Rui Pan; Yi Ren; Shiqian Ma; Donald Goldfarb; Tong
+    Zhang
   year: 2025
   venue: arXiv preprint; final venue not checked
   url: https://arxiv.org/abs/2503.20762
@@ -377,7 +407,8 @@
   venue: arXiv preprint; final venue not checked
   url: https://arxiv.org/abs/2503.10537
   central_method: Unified analysis of structured adaptive metrics
-  mathematical_contribution: One-sided Shampoo rate; structure need not monotonically lose performance
+  mathematical_contribution: One-sided Shampoo rate; structure need not monotonically
+    lose performance
   theoretical_assumptions: Online regret/offline convex settings
   overhead: Depends on chosen structure; no new implementation here
   limitations: Convex analysis does not certify neural training
@@ -386,7 +417,9 @@
   extraction_level: Primary metadata and abstract
 - id: edge2022
   title: Adaptive Gradient Methods at the Edge of Stability
-  authors: Jeremy M. Cohen; Behrooz Ghorbani; Shankar Krishnan; Naman Agarwal; Sourabh Medapati; Michal Badura; Daniel Suo; David Cardoze; Zachary Nado; George E. Dahl; Justin Gilmer
+  authors: Jeremy M. Cohen; Behrooz Ghorbani; Shankar Krishnan; Naman Agarwal; Sourabh
+    Medapati; Michal Badura; Daniel Suo; David Cardoze; Zachary Nado; George E. Dahl;
+    Justin Gilmer
   year: 2022
   venue: arXiv first posting; revised 2024, final venue not checked
   url: https://arxiv.org/abs/2207.14484
@@ -399,7 +432,8 @@
   overlap: Established instability analysis
   extraction_level: Primary metadata; full-text review pending
 - id: foam2026
-  title: 'FOAM: Frequency and Operator Error-Based Adaptive Damping Method for Reducing Staleness-Oriented Error for Shampoo'
+  title: 'FOAM: Frequency and Operator Error-Based Adaptive Damping Method for Reducing
+    Staleness-Oriented Error for Shampoo'
   authors: Kyunghun Nam; Sumyeong Ahn
   year: 2026
   venue: arXiv preprint; peer-reviewed status not established
@@ -407,13 +441,16 @@
   full_text: https://arxiv.org/html/2606.02365v1
   central_method: Staleness-error-driven damping and eigendecomposition frequency
   mathematical_contribution: Staleness convergence/stability analysis
-  theoretical_assumptions: Full theorem audit pending
+  theoretical_assumptions: Conditionally bounded mean and sub-Gaussian noise; convex
+    losses, gradient rank bound and finite comparator radius for discounted regret
   experiments: Large-scale benchmarks claimed in abstract; exact table not extracted
   overhead: Selective eigensolves plus error proxy
-  limitations: Claims not independently replicated; HTML title includes supplementary label
+  limitations: Claims not independently replicated; HTML title includes supplementary
+    label
   relevance: Direct 2026 scheduling/safeguard prior art
   overlap: High; error-driven refresh/damping is not a fresh idea
-  extraction_level: Primary metadata and full-text abstract; algorithm audit pending
+  extraction_level: Primary full text Algorithm 3; Assumptions 5.1/5.3, Theorem 5.4
+  verified_on: '2026-10-12'
 - id: rod2026
   title: A Rod Flow Model for Adam at the Edge of Stability
   authors: Eric Regis; Sinho Chewi
@@ -430,13 +467,15 @@
   overlap: Partial dynamics explanation
   extraction_level: Primary metadata/abstract and ancillary file listing
 - id: active2026
-  title: 'Adam at the Edge of Stability: Adaptive Feedback, Provable Oscillation, and Gradient Reversal'
+  title: 'Adam at the Edge of Stability: Adaptive Feedback, Provable Oscillation,
+    and Gradient Reversal'
   authors: Yiman Fong; Heng Yang
   year: 2026
   venue: arXiv preprint; peer-reviewed status not established
   url: https://arxiv.org/abs/2608.20638v2
   central_method: Active-curvature feedback and gradient reversal
-  mathematical_contribution: Rank-one/momentum, diagonal-quadratic and general-objective characterizations
+  mathematical_contribution: Rank-one/momentum, diagonal-quadratic and general-objective
+    characterizations
   theoretical_assumptions: Full-batch Adam; exact theorem assumptions not extracted
   experiments: Fully connected networks; ResNets and other architectures in abstract
   overhead: Analysis study; not implemented optimizer cost
@@ -482,14 +521,16 @@
   full_text: https://arxiv.org/pdf/1204.3982
   central_method: Function-value and gradient-based momentum restarts
   mathematical_contribution: Oscillatory accelerated dynamics motivate adaptive restart
-  theoretical_assumptions: Accelerated convex schemes; does not certify an AdamW reset adaptation
+  theoretical_assumptions: Accelerated convex schemes; does not certify an AdamW reset
+    adaptation
   overhead: Gradient inner product; first-order state reset
   limitations: Sprint 2 AdamW adaptation is not the original accelerated algorithm
   relevance: Cheap directional-alignment correction prior art
   overlap: Restart mechanism established; no novelty claimed
   extraction_level: Primary metadata and selected full-text observable/restart conditions
 - id: clipping2019
-  title: 'Why gradient clipping accelerates training: A theoretical justification for adaptivity'
+  title: 'Why gradient clipping accelerates training: A theoretical justification
+    for adaptivity'
   authors: Jingzhao Zhang; Tianxing He; Suvrit Sra; Ali Jadbabaie
   year: 2019
   venue: arXiv first-posting year; proceedings metadata not audited
@@ -516,7 +557,6 @@
   relevance: Noise-floor and clipping-bias alternative explanation
   overlap: Existing cheap correction limitations
   extraction_level: Primary metadata and abstract
-
 - id: mandt2017
   title: Stochastic Gradient Descent as Approximate Bayesian Inference
   authors: Stephan Mandt; Matthew D. Hoffman; David M. Blei
@@ -587,3 +627,273 @@
     not imply recovery
   overlap: Known coordinate-bias mechanism; no novelty inferred
   extraction_level: Primary full text section 4 and Remark 4.7
+- id: pearlmutter1994
+  title: Fast Exact Multiplication by the Hessian
+  authors: Barak A. Pearlmutter
+  year: '1994'
+  first_arxiv_year: ''
+  venue: Neural Computation 6(1):147-160
+  url: https://doi.org/10.1162/neco.1994.6.1.147
+  full_text: https://www.bcl.hamilton.ie/~barak/papers/nc-hessian.pdf
+  central_method: Directional differentiation computes Hessian-vector products without
+    dense H
+  mathematical_contribution: ''
+  theoretical_assumptions: Differentiable fixed-data loss
+  experiments: ''
+  overhead: Differentiation multiple per vector; graph/activation storage
+  limitations: No automatic population curvature from a stochastic or nonsmooth loss
+  relevance: Sprint 4 noise/curvature identification
+  overlap: Established mechanism; no estimator or optimizer novelty claimed
+  extraction_level: Sections 2-4
+  verified_on: '2026-10-12'
+- id: hessianfree2010
+  title: Deep learning via Hessian-free optimization
+  authors: James Martens
+  year: '2010'
+  first_arxiv_year: ''
+  venue: ICML 2010
+  url: https://icml.cc/Conferences/2010/papers/458.pdf
+  full_text: https://icml.cc/Conferences/2010/papers/458.pdf
+  central_method: Curvature products and damped CG; PSD Gauss-Newton choice
+  mathematical_contribution: ''
+  theoretical_assumptions: Local approximation and fixed curvature batch/solver
+  experiments: ''
+  overhead: Several products per solve and curvature sampling
+  limitations: Damping and local-model error; no gradient-noise isolation guarantee
+  relevance: Sprint 4 noise/curvature identification
+  overlap: Established mechanism; no estimator or optimizer novelty claimed
+  extraction_level: Sections 3-4
+  verified_on: '2026-10-12'
+- id: empiricalfisher2019
+  title: Limitations of the Empirical Fisher Approximation for Natural Gradient Descent
+  authors: Frederik Kunstner; Lukas Balles; Philipp Hennig
+  year: '2019'
+  first_arxiv_year: ''
+  venue: NeurIPS 2019
+  url: https://arxiv.org/abs/1905.12558
+  full_text: https://arxiv.org/pdf/1905.12558
+  central_method: Distinguishes empirical Fisher, model Fisher, GGN and Hessian
+  mathematical_contribution: ''
+  theoretical_assumptions: Additional statistical conditions required for agreement
+  experiments: ''
+  overhead: Per-example gradients for empirical moments
+  limitations: Observed-label covariance generally does not identify curvature
+  relevance: Sprint 4 noise/curvature identification
+  overlap: Established mechanism; no estimator or optimizer novelty claimed
+  extraction_level: Sections 3-4
+  verified_on: '2026-10-12'
+- id: sqn2016
+  title: A Stochastic Quasi-Newton Method for Large-Scale Optimization
+  authors: R. H. Byrd; S. L. Hansen; Jorge Nocedal; Yoram Singer
+  year: '2016'
+  first_arxiv_year: ''
+  venue: SIAM Journal on Optimization; DOI 10.1137/140954362
+  url: https://epubs.siam.org/doi/10.1137/140954362
+  full_text: https://arxiv.org/pdf/1401.7020
+  central_method: Periodic subsampled HVP secants and limited-memory BFGS
+  mathematical_contribution: ''
+  theoretical_assumptions: Positive/controlled curvature, appropriate sampling and
+    original convergence conditions
+  experiments: ''
+  overhead: O(pm) state plus periodic curvature batch products
+  limitations: Small-batch noisy secants and inadequate curvature estimates
+  relevance: Sprint 4 noise/curvature identification
+  overlap: Established mechanism; no estimator or optimizer novelty claimed
+  extraction_level: Section 2 and computational cost Section 2.1
+  verified_on: '2026-10-12'
+- id: psgd2015
+  title: Preconditioned Stochastic Gradient Descent
+  authors: Xi-Lin Li
+  year: '2015'
+  first_arxiv_year: ''
+  venue: arXiv first posting; final publication metadata not audited
+  url: https://arxiv.org/abs/1512.04202
+  full_text: https://arxiv.org/pdf/1512.04202
+  central_method: Parameter/gradient perturbation magnitude matching with SPD preconditioner
+    criterion
+  mathematical_contribution: ''
+  theoretical_assumptions: Perturbation/local curvature model and defined expectations
+  experiments: ''
+  overhead: Additional products/perturbations and structured factor updates
+  limitations: Noise damping changes target; not exact Hessian identification
+  relevance: Sprint 4 noise/curvature identification
+  overlap: Established mechanism; no estimator or optimizer novelty claimed
+  extraction_level: Section IV, Equation 31
+  verified_on: '2026-10-12'
+- id: psgd2024
+  title: Curvature-Informed SGD via General Purpose Lie-Group Preconditioners
+  authors: Omead Pooladzandi; Xi-Lin Li
+  year: '2024'
+  first_arxiv_year: ''
+  venue: arXiv preprint; final venue not audited
+  url: https://arxiv.org/abs/2402.04553
+  full_text: https://arxiv.org/pdf/2402.04553
+  central_method: Matrix-free/low-rank Lie-group preconditioner fitting from HVPs
+    or finite differences
+  mathematical_contribution: ''
+  theoretical_assumptions: Curvature/perturbation model and factor parametrization
+  experiments: ''
+  overhead: Probe and factor fitting beyond first-order update
+  limitations: Numerics and approximation/refresh limitations; empirical claims not
+    replicated here
+  relevance: Sprint 4 noise/curvature identification
+  overlap: Established mechanism; no estimator or optimizer novelty claimed
+  extraction_level: Section 2 and preconditioner appendix
+  verified_on: '2026-10-12'
+- id: noisescale2018
+  title: An Empirical Model of Large-Batch Training
+  authors: Sam McCandlish; Jared Kaplan; Dario Amodei; OpenAI Dota Team
+  year: '2018'
+  first_arxiv_year: ''
+  venue: arXiv preprint
+  url: https://arxiv.org/abs/1812.06162
+  full_text: https://arxiv.org/pdf/1812.06162
+  central_method: Different-size gradient norm statistics estimate noise trace and
+    squared signal
+  mathematical_contribution: ''
+  theoretical_assumptions: Specified minibatch sampling; noise scale interpretation
+    needs optimizer/conditioning assumptions
+  experiments: ''
+  overhead: Cheap when parallel gradients already exist; otherwise extra calls
+  limitations: Scalar noise scale does not identify a Hessian eigenspace
+  relevance: Sprint 4 noise/curvature identification
+  overlap: Established mechanism; no estimator or optimizer novelty claimed
+  extraction_level: Appendix A.1
+  verified_on: '2026-10-12'
+- id: svrg2013
+  title: Accelerating Stochastic Gradient Descent using Predictive Variance Reduction
+  authors: Rie Johnson; Tong Zhang
+  year: '2013'
+  first_arxiv_year: ''
+  venue: NeurIPS 2013
+  url: https://papers.nips.cc/paper/2013/file/ac1dd209cbcc5e5d1c6e28598e8cbbe8-Paper.pdf
+  full_text: https://papers.nips.cc/paper/2013/file/ac1dd209cbcc5e5d1c6e28598e8cbbe8-Paper.pdf
+  central_method: Common-sample gradient differences with reference full-gradient
+    control variate
+  mathematical_contribution: ''
+  theoretical_assumptions: Smooth finite-sum strong-convex setting for original rate
+  experiments: ''
+  overhead: Periodic full gradient and two component gradients per inner step
+  limitations: Batch curvature/local nonlinear error persists in secants
+  relevance: Sprint 4 noise/curvature identification
+  overlap: Established mechanism; no estimator or optimizer novelty claimed
+  extraction_level: Algorithm and strong-convexity analysis
+  verified_on: '2026-10-12'
+- id: rangfinder2011
+  title: 'Finding Structure with Randomness: Probabilistic Algorithms for Constructing
+    Approximate Matrix Decompositions'
+  authors: N. Halko; P. G. Martinsson; J. A. Tropp
+  year: '2011'
+  first_arxiv_year: ''
+  venue: SIAM Review 53(2):217-288
+  url: https://arxiv.org/abs/0909.4061
+  full_text: https://arxiv.org/pdf/0909.4061
+  central_method: Randomized range finding, QR/power refinement and projected spectral
+    solves
+  mathematical_contribution: ''
+  theoretical_assumptions: Fixed operator, adequate rank/probes and spectrum; PSD
+    for our Ritz implementation
+  experiments: ''
+  overhead: O(p(r+s)) workspace; (q+2)(r+s) actions in our implementation
+  limitations: Weak gaps, noisy/changing operator and stale space
+  relevance: Sprint 4 noise/curvature identification
+  overlap: Established mechanism; no estimator or optimizer novelty claimed
+  extraction_level: Sections 4-5
+  verified_on: '2026-10-12'
+- id: daviskahan2015
+  title: A useful variant of the Davis-Kahan theorem for statisticians
+  authors: Yi Yu; Tengyao Wang; Richard J. Samworth
+  year: '2015'
+  first_arxiv_year: ''
+  venue: Biometrika 102:315-323
+  url: https://arxiv.org/abs/1405.0680
+  full_text: https://arxiv.org/pdf/1405.0680
+  central_method: Population eigengap perturbation control
+  mathematical_contribution: ''
+  theoretical_assumptions: Symmetric matrices and positive reference cluster gap
+  experiments: ''
+  overhead: Mathematical bound, not an optimizer
+  limitations: Requires desired reference eigenspace and sample-error control; cannot
+    assume iid histories
+  relevance: Sprint 4 noise/curvature identification
+  overlap: Established mechanism; no estimator or optimizer novelty claimed
+  extraction_level: Theorem 2
+  verified_on: '2026-10-12'
+- id: streamingpca2016
+  title: 'Streaming PCA: Matching Matrix Bernstein and Near-Optimal Finite Sample
+    Guarantees for Oja''s Algorithm'
+  authors: Prateek Jain; Chi Jin; Sham M. Kakade; Praneeth Netrapalli; Aaron Sidford
+  year: '2016'
+  first_arxiv_year: ''
+  venue: COLT; PMLR 49
+  url: https://proceedings.mlr.press/v49/jain16.html
+  full_text: https://proceedings.mlr.press/v49/jain16.pdf
+  central_method: Streaming covariance principal components
+  mathematical_contribution: ''
+  theoretical_assumptions: Statistical covariance/eigengap sampling conditions
+  experiments: ''
+  overhead: O(pr) state
+  limitations: Tracks covariance, not necessarily curvature; optimizer histories are
+    nonstationary/dependent
+  relevance: Sprint 4 noise/curvature identification
+  overlap: Established mechanism; no estimator or optimizer novelty claimed
+  extraction_level: Algorithm and statistical assumptions
+  verified_on: '2026-10-12'
+- id: multipass2026
+  title: On-Average Stability of Multipass Preconditioned SGD and Effective Dimension
+  authors: Simon Vary; Tyler Farghly; Ilja Kuzborskij; Patrick Rebeschini
+  year: '2026'
+  first_arxiv_year: ''
+  venue: arXiv preprint; peer review not established
+  url: https://arxiv.org/abs/2603.11989
+  full_text: https://arxiv.org/html/2603.11989v1
+  central_method: Curvature/noise compatibility and effective dimension in multipass
+    stability
+  mathematical_contribution: ''
+  theoretical_assumptions: Original statistical/data-reuse model; not stateful Adam
+  experiments: ''
+  overhead: Theoretical prior overlap, not benchmarked here
+  limitations: Improper preconditioning can trade contraction for noise/generalization
+    instability
+  relevance: Sprint 4 noise/curvature identification
+  overlap: Established mechanism; no estimator or optimizer novelty claimed
+  extraction_level: Introduction and theorem assumptions; no guarantee imported
+  verified_on: '2026-10-12'
+- id: crossfit2026
+  title: Correcting Stochastic Update Bias in Preconditioned Language Model Optimizers
+  authors: Nikhil Nayak and colleagues
+  year: '2026'
+  first_arxiv_year: ''
+  venue: arXiv preprint; peer review not established
+  url: https://arxiv.org/abs/2605.20756
+  full_text: https://arxiv.org/html/2605.20756v1
+  central_method: Microbatch cross-fitting and inverse-preconditioner bias correction
+  mathematical_contribution: ''
+  theoretical_assumptions: Finite-sample smooth inversion/delta-method or jackknife
+    conditions
+  experiments: ''
+  overhead: Microbatch statistics, splitting and inversion correction
+  limitations: No Hessian-identification claim imported; not benchmarked here
+  relevance: Sprint 4 noise/curvature identification
+  overlap: Established mechanism; no estimator or optimizer novelty claimed
+  extraction_level: Sections 4-5 and 8
+  verified_on: '2026-10-12'
+- id: foldedfoam2025
+  title: 'FOAM: Blocked State Folding for Memory-Efficient LLM Training'
+  authors: Ziqing Wen; Jiahuan Wang; Ping Luo; Dongsheng Li; Tao Sun
+  year: '2025'
+  first_arxiv_year: ''
+  venue: arXiv preprint; abstract-only screening
+  url: https://arxiv.org/abs/2512.07112
+  full_text: ''
+  central_method: Blocked optimizer moment compression with residual correction
+  mathematical_contribution: ''
+  theoretical_assumptions: Not extracted at theorem level
+  experiments: ''
+  overhead: Optimizer state reduction claimed by authors; not replicated
+  limitations: Different FOAM acronym from Shampoo staleness paper; not noise-isolating
+    Hessian estimation
+  relevance: Sprint 4 noise/curvature identification
+  overlap: Established mechanism; no estimator or optimizer novelty claimed
+  extraction_level: Abstract only; not theorem audited
+  verified_on: '2026-10-12'
